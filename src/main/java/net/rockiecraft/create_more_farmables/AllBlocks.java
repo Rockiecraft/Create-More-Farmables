@@ -20,7 +20,7 @@ public class AllBlocks {
 
     public static final RegistryObject<Block> BLACK_DYED_WATER = REGISTRY.register("black_dyed_water", () -> new BlackDyedWaterBlock());
 
-    public static final RegistryObject<Block> GREY_DYED_WATER = REGISTRY.register("grey_dyed_water", () -> new GrayDyedWaterBlock());
+    public static final RegistryObject<Block> GRAY_DYED_WATER = REGISTRY.register("gray_dyed_water", () -> new GrayDyedWaterBlock());
 
     public static final RegistryObject<Block> BLUE_DYED_WATER = REGISTRY.register("blue_dyed_water", () -> new BlueDyedWaterBlock());
 
@@ -32,7 +32,7 @@ public class AllBlocks {
 
     public static final RegistryObject<Block> MAGENTA_DYED_WATER = REGISTRY.register("magenta_dyed_water", () -> new MagentaDyedWaterBlock());
 
-    public static final RegistryObject<Block> LIGHT_GRAY_DYED_WATER = REGISTRY.register("light_grey_dyed_water", () -> new LightGrayDyedWaterBlock());
+    public static final RegistryObject<Block> LIGHT_GRAY_DYED_WATER = REGISTRY.register("light_gray_dyed_water", () -> new LightGrayDyedWaterBlock());
 
     public static final RegistryObject<Block> GREEN_DYED_WATER = REGISTRY.register("green_dyed_water", () -> new GreenDyedWaterBlock());
 

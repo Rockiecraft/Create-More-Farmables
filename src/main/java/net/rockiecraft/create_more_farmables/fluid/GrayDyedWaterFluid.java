@@ -12,8 +12,8 @@ import net.rockiecraft.create_more_farmables.AllItems;
 
 public abstract class GrayDyedWaterFluid extends ForgeFlowingFluid{
 
-    public static final Properties PROPERTIES = new Properties(AllFluidTypes.GREY_DYED_WATER_TYPE, AllFluids.GREY_DYED_WATER,
-            AllFluids.FLOWING_GREY_DYED_WATER).explosionResistance(100f).bucket(AllItems.GRAY_DYED_WATER_BUCKET).block(() -> (LiquidBlock) AllBlocks.GREY_DYED_WATER.get());
+    public static final Properties PROPERTIES = new Properties(AllFluidTypes.GRAY_DYED_WATER_TYPE, AllFluids.GRAY_DYED_WATER,
+            AllFluids.FLOWING_GRAY_DYED_WATER).explosionResistance(100f).bucket(AllItems.GRAY_DYED_WATER_BUCKET).block(() -> (LiquidBlock) AllBlocks.GRAY_DYED_WATER.get());
 
 
 

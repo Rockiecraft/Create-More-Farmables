@@ -1,0 +1,26 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:stick"
+    },
+    {
+      "item": "minecraft:stick"
+    },
+    {
+      "item": "minecraft:stick"
+    },
+    {
+      "item": "minecraft:stick"
+    },
+    {
+      "fluid": "create_more_farmables:white_dyed_water",
+      "amount": 100
+    }
+  ],
+  "results": [
+    {
+    "item": "create_more_farmables:dye_template"
+    }
+  ]
+}

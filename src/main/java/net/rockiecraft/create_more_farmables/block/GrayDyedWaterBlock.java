@@ -9,7 +9,7 @@ import net.rockiecraft.create_more_farmables.AllFluids;
 
 public class GrayDyedWaterBlock extends LiquidBlock {
    public GrayDyedWaterBlock() {
-        super(AllFluids.GREY_DYED_WATER, BlockBehaviour.Properties.of().mapColor(MapColor.WATER).strength(100f).noCollission().noLootTable().liquid().pushReaction(PushReaction.DESTROY).sound(SoundType.EMPTY).replaceable());
+        super(AllFluids.GRAY_DYED_WATER, BlockBehaviour.Properties.of().mapColor(MapColor.WATER).strength(100f).noCollission().noLootTable().liquid().pushReaction(PushReaction.DESTROY).sound(SoundType.EMPTY).replaceable());
     }
 
 }

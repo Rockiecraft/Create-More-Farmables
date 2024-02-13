@@ -35,12 +35,11 @@ public class AllFluids {
 	public static final RegistryObject<FlowingFluid> BLACK_DYED_WATER = REGISTRY.register("black_dyed_water", () -> new BlackDyedWaterFluid.Source());
 	public static final RegistryObject<FlowingFluid> FLOWING_BLACK_DYED_WATER = REGISTRY.register("flowing_black_dyed_water", () -> new BlackDyedWaterFluid.Flowing());
 
-
-	public static final RegistryObject<FlowingFluid> LIGHT_GRAY_DYED_WATER = REGISTRY.register("light_grey_dyed_water", () -> new LightGrayDyedWaterFluid.Source());
+	public static final RegistryObject<FlowingFluid> LIGHT_GRAY_DYED_WATER = REGISTRY.register("light_gray_dyed_water", () -> new LightGrayDyedWaterFluid.Source());
 	public static final RegistryObject<FlowingFluid> FLOWING_LIGHT_GRAY_DYED_WATER = REGISTRY.register("flowing_light_gray_dyed_water", () -> new LightGrayDyedWaterFluid.Flowing());
 
-	public static final RegistryObject<FlowingFluid> GREY_DYED_WATER = REGISTRY.register("grey_dyed_water", () -> new GrayDyedWaterFluid.Source());
-	public static final RegistryObject<FlowingFluid> FLOWING_GREY_DYED_WATER = REGISTRY.register("flowing_grey_dyed_water", () -> new GrayDyedWaterFluid.Flowing());
+	public static final RegistryObject<FlowingFluid> GRAY_DYED_WATER = REGISTRY.register("gray_dyed_water", () -> new GrayDyedWaterFluid.Source());
+	public static final RegistryObject<FlowingFluid> FLOWING_GRAY_DYED_WATER = REGISTRY.register("flowing_gray_dyed_water", () -> new GrayDyedWaterFluid.Flowing());
 
 	public static final RegistryObject<FlowingFluid> BLUE_DYED_WATER = REGISTRY.register("blue_dyed_water", () -> new BlueDyedWaterFluid.Source());
 	public static final RegistryObject<FlowingFluid> FLOWING_BLUE_DYED_WATER = REGISTRY.register("flowing_blue_dyed_water", () -> new BlueDyedWaterFluid.Flowing());
@@ -105,8 +104,8 @@ public class AllFluids {
 			ItemBlockRenderTypes.setRenderLayer(BLACK_DYED_WATER.get(), translucent());
 			ItemBlockRenderTypes.setRenderLayer(FLOWING_BLACK_DYED_WATER.get(), translucent());
 
-            ItemBlockRenderTypes.setRenderLayer(GREY_DYED_WATER.get(), translucent());
-			ItemBlockRenderTypes.setRenderLayer(FLOWING_GREY_DYED_WATER.get(), translucent());
+            ItemBlockRenderTypes.setRenderLayer(GRAY_DYED_WATER.get(), translucent());
+			ItemBlockRenderTypes.setRenderLayer(FLOWING_GRAY_DYED_WATER.get(), translucent());
 
             ItemBlockRenderTypes.setRenderLayer(BLUE_DYED_WATER.get(), translucent());
 			ItemBlockRenderTypes.setRenderLayer(FLOWING_BLUE_DYED_WATER.get(), translucent());

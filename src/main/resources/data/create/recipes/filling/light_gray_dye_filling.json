@@ -1,0 +1,17 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "create_more_farmables:dye_template"
+    },
+    {
+      "amount": 100,
+      "fluid": "create_more_farmables:light_gray_dyed_water"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:light_gray_dye"
+    }
+  ]
+}

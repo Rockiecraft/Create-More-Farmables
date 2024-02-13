@@ -26,21 +26,21 @@ public class ModCreativeModTabs {
                         pOutput.accept(AllItems.DYE_TEMPLATE.get());
                         pOutput.accept(AllItems.MOLTEN_ENDSTONE_BUCKET.get());
                         pOutput.accept(AllItems.WHITE_DYED_WATER_BUCKET.get());
-                        pOutput.accept(AllItems.BLACK_DYED_WATER_BUCKET.get());
-                        pOutput.accept(AllItems.GRAY_DYED_WATER_BUCKET.get());
                         pOutput.accept(AllItems.LIGHT_GRAY_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.GRAY_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.BLACK_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.BROWN_DYED_WATER_BUCKET.get());
                         pOutput.accept(AllItems.RED_DYED_WATER_BUCKET.get());
-                        pOutput.accept(AllItems.BLUE_DYED_WATER_BUCKET.get());
-                        pOutput.accept(AllItems.PURPLE_DYED_WATER_BUCKET.get());
-                        pOutput.accept(AllItems.LIGHT_BLUE_DYED_WATER_BUCKET.get());
-                        pOutput.accept(AllItems.CYAN_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.ORANGE_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.YELLOW_DYED_WATER_BUCKET.get());
                         pOutput.accept(AllItems.GREEN_DYED_WATER_BUCKET.get());
                         pOutput.accept(AllItems.LIME_DYED_WATER_BUCKET.get());
-                        pOutput.accept(AllItems.YELLOW_DYED_WATER_BUCKET.get());
-                        pOutput.accept(AllItems.PINK_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.CYAN_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.LIGHT_BLUE_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.BLUE_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.PURPLE_DYED_WATER_BUCKET.get());
                         pOutput.accept(AllItems.MAGENTA_DYED_WATER_BUCKET.get());
-                        pOutput.accept(AllItems.ORANGE_DYED_WATER_BUCKET.get());
-                        pOutput.accept(AllItems.BROWN_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.PINK_DYED_WATER_BUCKET.get());
                     })
                     .build());
 

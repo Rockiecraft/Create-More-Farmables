@@ -16,7 +16,7 @@ public class AllFluidTypes {
 
 	public static final RegistryObject<FluidType> BLACK_DYED_WATER_TYPE = REGISTRY.register("black_dyed_water", BlackDyedWaterFluidType::new);
 
-	public static final RegistryObject<FluidType> GREY_DYED_WATER_TYPE = REGISTRY.register("grey_dyed_water", () -> new GrayDyedWaterFluidType());
+	public static final RegistryObject<FluidType> GRAY_DYED_WATER_TYPE = REGISTRY.register("gray_dyed_water", () -> new GrayDyedWaterFluidType());
 
 	public static final RegistryObject<FluidType> BLUE_DYED_WATER_TYPE = REGISTRY.register("blue_dyed_water", () -> new BlueDyedWaterFluidType());
 
@@ -28,7 +28,7 @@ public class AllFluidTypes {
 
 	public static final RegistryObject<FluidType> MAGENTA_DYED_WATER_TYPE = REGISTRY.register("magenta_dyed_water", () -> new MagentaDyedWaterFluidType());
 
-	public static final RegistryObject<FluidType> LIGHT_GRAY_DYED_WATER_TYPE = REGISTRY.register("light_grey_dyed_water", () -> new LightGrayDyedWaterFluidType());
+	public static final RegistryObject<FluidType> LIGHT_GRAY_DYED_WATER_TYPE = REGISTRY.register("light_gray_dyed_water", () -> new LightGrayDyedWaterFluidType());
 
 	public static final RegistryObject<FluidType> GREEN_DYED_WATER_TYPE = REGISTRY.register("green_dyed_water", () -> new GreenDyedWaterFluidType());
 

@@ -8,6 +8,6 @@ import net.rockiecraft.create_more_farmables.AllFluids;
 
 public class GrayDyedWaterBucketItem extends BucketItem {
    public GrayDyedWaterBucketItem() {
-       super(AllFluids.GREY_DYED_WATER, new Properties().craftRemainder(Items.BUCKET).stacksTo(1).rarity(Rarity.COMMON));
+       super(AllFluids.GRAY_DYED_WATER, new Properties().craftRemainder(Items.BUCKET).stacksTo(1).rarity(Rarity.COMMON));
    }
 }
