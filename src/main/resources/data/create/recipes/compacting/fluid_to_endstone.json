@@ -1,0 +1,15 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "amount": 500,
+      "fluid": "create_more_farmables:molten_endstone"
+    }
+
+  ],
+  "results": [
+    {
+      "item": "minecraft:end_stone"
+    }
+  ]
+}

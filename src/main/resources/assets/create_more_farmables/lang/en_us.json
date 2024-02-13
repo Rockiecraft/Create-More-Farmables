@@ -1,0 +1,90 @@
+{
+    "item.create_more_farmables.shulker_compound": "Shulker Compound",
+    "item.create_more_farmables.shulker_shell_fragment": "Shulker Shell Fragment",
+    "item.create_more_farmables.dye_template": "Dye Template",
+
+    "item.create_more_farmables.molten_endstone_bucket": "Molten Endstone Bucket",
+    "item.create_more_farmables.white_dyed_water_bucket": "White Dyed Water Bucket",
+    "item.create_more_farmables.black_dyed_water_bucket": "Black Dyed Water Bucket",
+    "item.create_more_farmables.gray_dyed_water_bucket": "Gray Dyed Water Bucket",
+    "item.create_more_farmables.light_gray_dyed_water_bucket": "Light Gray Dyed Water Bucket",
+    "item.create_more_farmables.blue_dyed_water_bucket": "Blue Dyed Water Bucket",
+    "item.create_more_farmables.red_dyed_water_bucket": "Red Dyed Water Bucket",
+    "item.create_more_farmables.purple_dyed_water_bucket": "Purple Dyed Water Bucket",
+    "item.create_more_farmables.pink_dyed_water_bucket": "Pink Dyed Water Bucket",
+    "item.create_more_farmables.magenta_dyed_water_bucket": "Magenta Dyed Water Bucket",
+    "item.create_more_farmables.green_dyed_water_bucket": "Green Dyed Water Bucket",
+    "item.create_more_farmables.cyan_dyed_water_bucket": "Cyan Dyed Water Bucket",
+    "item.create_more_farmables.lime_dyed_water_bucket": "Lime Dyed Water Bucket",
+    "item.create_more_farmables.light_blue_dyed_water_bucket": "Light Blue Dyed Water Bucket",
+    "item.create_more_farmables.brown_dyed_water_bucket": "Brown Dyed Water Bucket",
+    "item.create_more_farmables.yellow_dyed_water_bucket": "Yellow Dyed Water Bucket",
+    "item.create_more_farmables.orange_dyed_water_bucket": "Orange Dyed Water Bucket",
+
+
+
+    "block.create_more_farmables.molten_endstone": "Molten Endstone",
+    "block.create_more_farmables.black_dyed_water": "Black Dyed Water",
+    "block.create_more_farmables.white_dyed_water": "White Dyed Water",
+    "block.create_more_farmables.gray_dyed_water": "Gray Dyed Water",
+    "block.create_more_farmables.light_gray_dyed_water": "Light Gray Dyed Water",
+    "block.create_more_farmables.blue_dyed_water": "Blue Dyed Water",
+    "block.create_more_farmables.red_dyed_water": "Red Dyed Water",
+    "block.create_more_farmables.purple_dyed_water": "Purple Dyed Water",
+    "block.create_more_farmables.pink_dyed_water": "Pink Dyed Water",
+    "block.create_more_farmables.green_dyed_water": "Green Dyed Water",
+    "block.create_more_farmables.cyan_dyed_water": "Cyan Dyed Water",
+    "block.create_more_farmables.lime_dyed_water": "Lime Dyed Water",
+    "block.create_more_farmables.light_blue_dyed_water": "Light Blue Dyed Water",
+    "block.create_more_farmables.brown_dyed_water": "Brown Dyed Water",
+    "block.create_more_farmables.yellow_dyed_water": "Yellow Dyed Water",
+    "block.create_more_farmables.orange_dyed_water": "Orange Dyed Water",
+    "block.create_more_farmables.light_magenta_dyed_water": "Magenta Dyed Water",
+
+
+
+
+    "fluid_type.create_more_farmables.molten_endstone": "Molten Endstone",
+    "fluid_type.create_more_farmables.white_dyed_water": "White Dyed Water",
+    "fluid_type.create_more_farmables.black_dyed_water": "Black Dyed Water",
+    "fluid_type.create_more_farmables.gray_dyed_water": "Gray Dyed Water",
+    "fluid_type.create_more_farmables.light_gray_dyed_water": "Light Gray Dyed Water",
+    "fluid_type.create_more_farmables.blue_dyed_water": "Blue Dyed Water",
+    "fluid_type.create_more_farmables.red_dyed_water": "Red Dyed Water",
+    "fluid_type.create_more_farmables.purple_dyed_water": "Purple Dyed Water",
+    "fluid_type.create_more_farmables.pink_dyed_water": "Pink Dyed Water",
+    "fluid_type.create_more_farmables.magenta_dyed_water": "Magenta Dyed Water",
+    "fluid_type.create_more_farmables.green_dyed_water": "Green Dyed Water",
+    "fluid_type.create_more_farmables.cyan_dyed_water": "Cyan Dyed Water",
+    "fluid_type.create_more_farmables.lime_dyed_water": "Lime Dyed Water",
+    "fluid_type.create_more_farmables.light_blue_dyed_water": "Light Blue Dyed Water",
+    "fluid_type.create_more_farmables.brown_dyed_water": "Brown Dyed Water",
+    "fluid_type.create_more_farmables.yellow_dyed_water": "Yellow Dyed Water",
+    "fluid_type.create_more_farmables.orange_dyed_water": "Orange Dyed Water",
+
+
+
+
+    "fluid.create_more_farmables.molten_endstone": "Molten Endstone",
+    "fluid.create_more_farmables.white_dyed_water": "White Dyed Water",
+    "fluid.create_more_farmables.black_dyed_water": "Black Dyed Water",
+    "fluid.create_more_farmables.gray_dyed_water": "Gray Dyed Water",
+    "fluid.create_more_farmables.light_gray_dyed_water": "Light Gray Dyed Water",
+    "fluid.create_more_farmables.blue_dyed_water": "Blue Dyed Water",
+    "fluid.create_more_farmables.red_dyed_water": "Red Dyed Water",
+    "fluid.create_more_farmables.purple_dyed_water": "Purple Dyed Water",
+    "fluid.create_more_farmables.pink_dyed_water": "Pink Dyed Water",
+    "fluid.create_more_farmables.magenta_dyed_water": "Magenta Dyed Water",
+    "fluid.create_more_farmables.green_dyed_water": "Green Dyed Water",
+    "fluid.create_more_farmables.cyan_dyed_water": "Cyan Dyed Water",
+    "fluid.create_more_farmables.lime_dyed_water": "Lime Dyed Water",
+    "fluid.create_more_farmables.light_blue_dyed_water": "Light Blue Dyed Water",
+    "fluid.create_more_farmables.brown_dyed_water": "Brown Dyed Water",
+    "fluid.create_more_farmables.yellow_dyed_water": "Yellow Dyed Water",
+    "fluid.create_more_farmables.orange_dyed_water": "Orange Dyed Water",
+
+
+
+    "creativetab.shulker_compound_tab": "Shulker Compound tab",
+    "Create: More Farmables": "Create: More Farmables"
+}

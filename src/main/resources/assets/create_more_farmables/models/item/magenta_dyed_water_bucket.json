@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "create_more_farmables:item/magenta_dyed_water_bucket"
+  }
+}
