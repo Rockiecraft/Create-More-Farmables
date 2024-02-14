@@ -26,7 +26,7 @@ public class MoltenEndstoneFluidType extends FluidType {
              * replace the "create_more_farmables" with your mod id, replace "block/molten_endstone" with your block name.
              */
             private static final ResourceLocation
-                    STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/molten_endstone"),
+                    STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_molten_endstone"),
                     FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_molten_endstone");
 
 
