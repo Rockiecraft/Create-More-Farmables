@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:cobblestone"
+    },
+    {
+      "fluid": "create_more_farmables:green_dyed_water",
+      "amount": 200
+    }
+  ],
+  "results": [
+    {
+      "item": "create:veridium",
+      "amount": 1
+    }
+  ]
+}

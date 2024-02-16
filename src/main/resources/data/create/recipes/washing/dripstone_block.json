@@ -1,0 +1,14 @@
+{
+  "type": "create:washing",
+  "ingredients": [
+    {
+      "item": "minecraft:stone"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:dripstone_block",
+      "amount": 1
+    }
+  ]
+}

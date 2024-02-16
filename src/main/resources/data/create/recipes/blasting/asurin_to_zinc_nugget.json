@@ -1,0 +1,14 @@
+{
+  "type": "create:blasting",
+  "ingredients": [
+    {
+      "item": "create:asurine"
+    }
+  ],
+  "results": [
+    {
+      "item": "create:zinc_nugget",
+      "amount": 3
+    }
+  ]
+}
