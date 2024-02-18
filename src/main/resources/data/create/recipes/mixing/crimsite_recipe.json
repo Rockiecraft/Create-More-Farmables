@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:stone"
+    },
+    {
+      "fluid": "create_more_farmables:red_dyed_water",
+      "amount": 200
+    }
+  ],
+  "results": [
+    {
+      "item": "create:crimsite",
+      "amount": 1
+    }
+  ]
+}

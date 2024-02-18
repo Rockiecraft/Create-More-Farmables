@@ -30,10 +30,13 @@ public class CreateMoreFarmables
         MinecraftForge.EVENT_BUS.register(this);
 
         AllFluids.REGISTRY.register(modEventBus);
-        AllBlocks.REGISTRY.register(modEventBus);
-        AllFluidTypes.REGISTRY.register(modEventBus);
+      //AllBlocks.REGISTRY.register(modEventBus);
         AllItems.register(modEventBus);
         ModCreativeModTabs.register(modEventBus);
+
+        AllFluids.BLOCKS.register(modEventBus);
+        AllFluids.FLUIDS.register(modEventBus);
+        AllFluids.FLUID_TYPES.register(modEventBus);
     }
     private void commonSetup(final FMLCommonSetupEvent event)
     {
