@@ -1,5 +1,4 @@
-<p style="text-align: center"><img src="![Create_More_Farmables2](https://github.com/Rockiecraft/Create-More-Farmables/blob/cmfMC1.20.1/dev/Create_More_Farmables2.png?raw=true)
- " alt="Create: More Farmables" width="4094" height="938" /></p>
+<p style="text-align: center"><img src="(https://github.com/Rockiecraft/Create-More-Farmables/blob/cmfMC1.20.1/dev/Create_More_Farmables2.png?raw=true)" alt="Create: More Farmables" width="4094" height="938" /></p>
 <h1 align="center">Create: More Farmables<br>
 	<a href="https://www.curseforge.com/minecraft/mc-mods/create-more-farmables">Curseforge,  </a>
 	<a href="https://modrinth.com/mod/create-more-farmables">Modrinth,  </a>
