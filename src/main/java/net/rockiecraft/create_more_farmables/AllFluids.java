@@ -461,7 +461,7 @@ public class AllFluids {
 						public ResourceLocation getFlowingTexture() {
 							return FLOWING_TEXTURE;
 						}
-
+						
 						public int getTintColor() {
 							return -8170446;
 						}
