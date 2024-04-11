@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "PPP",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "create_more_farmables:wood_string"
+    }
+  },
+  "result": {
+    "item": "create_more_farmables:wood_string_wool_block",
+    "count": 1
+  }
+}

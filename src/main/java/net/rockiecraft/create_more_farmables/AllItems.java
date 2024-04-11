@@ -1,26 +1,25 @@
 package net.rockiecraft.create_more_farmables;
 
 
-
-import net.minecraft.world.item.BucketItem;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.Rarity;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
-import net.minecraft.world.item.Item;
-
-import net.rockiecraft.create_more_farmables.item.*;
 
 public class AllItems {
 
    public static final DeferredRegister<Item> ITEMS;
 
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CreateMoreFarmables.ID);
    /**
     * replace "MOLTEN_ENDSTONE_" with the name of the custom liquid you wish to put in a bucket.
     * keep in mind that the name is case-sensitive.
     */
+
 // -----------------------------------------------------------------------------
 // BucketItems
    public static final RegistryObject<BucketItem> MOLTEN_ENDSTONE_BUCKET;
@@ -46,6 +45,45 @@ public class AllItems {
    public static final RegistryObject<Item> SHULKER_SHELL_FRAGMENT;
    public static final RegistryObject<Item> DYE_TEMPLATE;
 
+   public static final RegistryObject<Item> WOOD_STRING;
+
+   // -----------------------------------------------------------------------------
+
+
+    public static final RegistryObject<CreativeModeTab> CREATE_MORE_FARMABLES_TAB = CREATIVE_MODE_TABS.register("create_more_farmables",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(AllItems.SHULKER_SHELL_FRAGMENT.get()))
+                    .title(Component.translatable("Create: More Farmables"))
+                    .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(AllItems.SHULKER_COMPOUND.get());
+                        pOutput.accept(AllItems.SHULKER_SHELL_FRAGMENT.get());
+                        pOutput.accept(AllItems.DYE_TEMPLATE.get());
+                        pOutput.accept(AllItems.WOOD_STRING.get());
+
+
+                        pOutput.accept(AllBlocks.WOOD_STRING_WOOL_BLOCK.get());
+
+                        pOutput.accept(AllItems.MOLTEN_ENDSTONE_BUCKET.get());
+                        pOutput.accept(AllItems.WHITE_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.LIGHT_GRAY_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.GRAY_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.BLACK_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.BROWN_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.RED_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.ORANGE_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.YELLOW_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.GREEN_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.LIME_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.CYAN_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.LIGHT_BLUE_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.BLUE_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.PURPLE_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.MAGENTA_DYED_WATER_BUCKET.get());
+                        pOutput.accept(AllItems.PINK_DYED_WATER_BUCKET.get());
+
+                    })
+                    .build());
+   // -----------------------------------------------------------------------------
+
    static {
       ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, "create_more_farmables");
 
@@ -54,6 +92,8 @@ public class AllItems {
       SHULKER_SHELL_FRAGMENT = ITEMS.register("shulker_shell_fragment", () -> new Item(new Item.Properties()));
 
       DYE_TEMPLATE = ITEMS.register("dye_template", () -> new Item(new Item.Properties()));
+
+      WOOD_STRING = ITEMS.register("wood_string", () -> new Item(new Item.Properties()));
 
 
 

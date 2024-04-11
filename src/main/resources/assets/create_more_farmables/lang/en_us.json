@@ -2,6 +2,9 @@
     "item.create_more_farmables.shulker_compound": "Shulker Compound",
     "item.create_more_farmables.shulker_shell_fragment": "Shulker Shell Fragment",
     "item.create_more_farmables.dye_template": "Dye Template",
+    "item.create_more_farmables.wood_string":"Wood String",
+    "item.create_more_farmables.wood_string_wool_block":"Wood String Wool",
+
 
     "item.create_more_farmables.molten_endstone_bucket": "Molten Endstone Bucket",
     "item.create_more_farmables.white_dyed_water_bucket": "White Dyed Water Bucket",
@@ -40,6 +43,7 @@
     "block.create_more_farmables.yellow_dyed_water_block": "Yellow Dyed Water",
     "block.create_more_farmables.orange_dyed_water_block": "Orange Dyed Water",
     "block.create_more_farmables.magenta_dyed_water_block": "Magenta Dyed Water",
+    "block.create_more_farmables.wood_string_wool_block": "Wood String Wool",
 
 
 
@@ -81,8 +85,6 @@
     "fluid.create_more_farmables.brown_dyed_water_fluid": "Brown Dyed Water",
     "fluid.create_more_farmables.yellow_dyed_water_fluid": "Yellow Dyed Water",
     "fluid.create_more_farmables.orange_dyed_water_fluid": "Orange Dyed Water",
-
-
 
     "creativetab.shulker_compound_tab": "Shulker Compound tab",
     "Create: More Farmables": "Create: More Farmables"

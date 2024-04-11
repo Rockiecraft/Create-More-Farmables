@@ -3,6 +3,7 @@ package net.rockiecraft.create_more_farmables;
 
 
 import net.minecraft.client.Camera;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.resources.ResourceLocation;
@@ -29,11 +30,13 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.joml.Vector3f;
 
 import java.util.function.Consumer;
 
 import static net.minecraft.client.renderer.RenderType.translucent;
+import static net.minecraft.client.resources.model.ModelBakery.WATER_OVERLAY;
 
 
 public class AllFluids {
@@ -244,7 +247,7 @@ public class AllFluids {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
 						private static final ResourceLocation
-								STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_molten_endstone"),
+								STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/molten_endstone"),
 								FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_molten_endstone");
 
 						public ResourceLocation getStillTexture() {
@@ -253,6 +256,15 @@ public class AllFluids {
 
 						public ResourceLocation getFlowingTexture() {
 							return FLOWING_TEXTURE;
+						}
+
+						public int getTintColor() {
+							return -75715;
+						}
+
+						public @NotNull Vector3f modifyFogColor(Camera camera, float partialTick, ClientLevel level, int renderDistance, float darkenWorldAmount, Vector3f fluidFogColor) {
+							int color = this.getTintColor();
+							return new Vector3f((float)(color >> 16 & 255) / 255.0F, (float)(color >> 8 & 255) / 255.0F, (float)(color & 255) / 255.0F);
 						}
 
 					});
@@ -279,9 +291,10 @@ public class AllFluids {
 					.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation
-								STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water"),
-								FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
+						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
 
 						public ResourceLocation getStillTexture() {
 							return STILL_TEXTURE;
@@ -289,6 +302,13 @@ public class AllFluids {
 
 						public ResourceLocation getFlowingTexture() {
 							return FLOWING_TEXTURE;
+						}
+						public ResourceLocation getOverlayTexture() {
+							return OVERLAY;
+						}
+
+						public ResourceLocation getRenderOverlayTexture(Minecraft mc) {
+							return VIEW_OVERLAY;
 						}
 
 						public int getTintColor() {
@@ -322,9 +342,10 @@ public class AllFluids {
 					.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation
-								STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water"),
-								FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
+						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
 
 						public ResourceLocation getStillTexture() {
 							return STILL_TEXTURE;
@@ -332,6 +353,13 @@ public class AllFluids {
 
 						public ResourceLocation getFlowingTexture() {
 							return FLOWING_TEXTURE;
+						}
+						public ResourceLocation getOverlayTexture() {
+							return OVERLAY;
+						}
+
+						public ResourceLocation getRenderOverlayTexture(Minecraft mc) {
+							return VIEW_OVERLAY;
 						}
 
 						public int getTintColor() {
@@ -364,9 +392,10 @@ public class AllFluids {
 					.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation
-								STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water"),
-								FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
+						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
 
 						public ResourceLocation getStillTexture() {
 							return STILL_TEXTURE;
@@ -374,6 +403,13 @@ public class AllFluids {
 
 						public ResourceLocation getFlowingTexture() {
 							return FLOWING_TEXTURE;
+						}
+						public ResourceLocation getOverlayTexture() {
+							return OVERLAY;
+						}
+
+						public ResourceLocation getRenderOverlayTexture(Minecraft mc) {
+							return VIEW_OVERLAY;
 						}
 
 						public int getTintColor() {
@@ -407,9 +443,10 @@ public class AllFluids {
 					.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation
-								STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water"),
-								FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
+						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
 
 						public ResourceLocation getStillTexture() {
 							return STILL_TEXTURE;
@@ -417,6 +454,13 @@ public class AllFluids {
 
 						public ResourceLocation getFlowingTexture() {
 							return FLOWING_TEXTURE;
+						}
+						public ResourceLocation getOverlayTexture() {
+							return OVERLAY;
+						}
+
+						public ResourceLocation getRenderOverlayTexture(Minecraft mc) {
+							return VIEW_OVERLAY;
 						}
 
 						public int getTintColor() {
@@ -450,9 +494,10 @@ public class AllFluids {
 					.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation
-								STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water"),
-								FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
+						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
 
 						public ResourceLocation getStillTexture() {
 							return STILL_TEXTURE;
@@ -461,7 +506,13 @@ public class AllFluids {
 						public ResourceLocation getFlowingTexture() {
 							return FLOWING_TEXTURE;
 						}
-						
+						public ResourceLocation getOverlayTexture() {
+							return OVERLAY;
+						}
+
+						public ResourceLocation getRenderOverlayTexture(Minecraft mc) {
+							return VIEW_OVERLAY;
+						}
 						public int getTintColor() {
 							return -8170446;
 						}
@@ -493,17 +544,25 @@ public class AllFluids {
                     .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation
-                                STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water"),
-                                FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
+						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
 
-                        public ResourceLocation getStillTexture() {
-                            return STILL_TEXTURE;
-                        }
+						public ResourceLocation getStillTexture() {
+							return STILL_TEXTURE;
+						}
 
-                        public ResourceLocation getFlowingTexture() {
-                            return FLOWING_TEXTURE;
-                        }
+						public ResourceLocation getFlowingTexture() {
+							return FLOWING_TEXTURE;
+						}
+						public ResourceLocation getOverlayTexture() {
+							return OVERLAY;
+						}
+
+						public ResourceLocation getRenderOverlayTexture(Minecraft mc) {
+							return VIEW_OVERLAY;
+						}
 
                         public int getTintColor() {
                             return -5231066;
@@ -533,17 +592,25 @@ public class AllFluids {
                   .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation
-                                STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water"),
-                                FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
+						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
 
-                        public ResourceLocation getStillTexture() {
-                            return STILL_TEXTURE;
-                        }
+						public ResourceLocation getStillTexture() {
+							return STILL_TEXTURE;
+						}
 
-                        public ResourceLocation getFlowingTexture() {
-                            return FLOWING_TEXTURE;
-                        }
+						public ResourceLocation getFlowingTexture() {
+							return FLOWING_TEXTURE;
+						}
+						public ResourceLocation getOverlayTexture() {
+							return OVERLAY;
+						}
+
+						public ResourceLocation getRenderOverlayTexture(Minecraft mc) {
+							return VIEW_OVERLAY;
+						}
 
                         public int getTintColor() {
                             return -425955;
@@ -571,17 +638,25 @@ public class AllFluids {
                 .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation
-                                STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water"),
-                                FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
+						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
 
-                        public ResourceLocation getStillTexture() {
-                            return STILL_TEXTURE;
-                        }
+						public ResourceLocation getStillTexture() {
+							return STILL_TEXTURE;
+						}
 
-                        public ResourceLocation getFlowingTexture() {
-                            return FLOWING_TEXTURE;
-                        }
+						public ResourceLocation getFlowingTexture() {
+							return FLOWING_TEXTURE;
+						}
+						public ResourceLocation getOverlayTexture() {
+							return OVERLAY;
+						}
+
+						public ResourceLocation getRenderOverlayTexture(Minecraft mc) {
+							return VIEW_OVERLAY;
+						}
 
                         public int getTintColor() {
                             return -75715;
@@ -609,17 +684,25 @@ public class AllFluids {
               .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation
-                                STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water"),
-                                FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
+						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
 
-                        public ResourceLocation getStillTexture() {
-                            return STILL_TEXTURE;
-                        }
+						public ResourceLocation getStillTexture() {
+							return STILL_TEXTURE;
+						}
 
-                        public ResourceLocation getFlowingTexture() {
-                            return FLOWING_TEXTURE;
-                        }
+						public ResourceLocation getFlowingTexture() {
+							return FLOWING_TEXTURE;
+						}
+						public ResourceLocation getOverlayTexture() {
+							return OVERLAY;
+						}
+
+						public ResourceLocation getRenderOverlayTexture(Minecraft mc) {
+							return VIEW_OVERLAY;
+						}
 
                         public int getTintColor() {
                             return -10585066;
@@ -647,17 +730,25 @@ public class AllFluids {
             .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation
-                                STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water"),
-                                FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
+						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
 
-                        public ResourceLocation getStillTexture() {
-                            return STILL_TEXTURE;
-                        }
+						public ResourceLocation getStillTexture() {
+							return STILL_TEXTURE;
+						}
 
-                        public ResourceLocation getFlowingTexture() {
-                            return FLOWING_TEXTURE;
-                        }
+						public ResourceLocation getFlowingTexture() {
+							return FLOWING_TEXTURE;
+						}
+						public ResourceLocation getOverlayTexture() {
+							return OVERLAY;
+						}
+
+						public ResourceLocation getRenderOverlayTexture(Minecraft mc) {
+							return VIEW_OVERLAY;
+						}
 
                         public int getTintColor() {
                             return -8337633;
@@ -685,17 +776,25 @@ public class AllFluids {
           		.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-                        private static final ResourceLocation
-                                STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water"),
-                                FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
+						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
 
-                        public ResourceLocation getStillTexture() {
-                            return STILL_TEXTURE;
-                        }
+						public ResourceLocation getStillTexture() {
+							return STILL_TEXTURE;
+						}
 
-                        public ResourceLocation getFlowingTexture() {
-                            return FLOWING_TEXTURE;
-                        }
+						public ResourceLocation getFlowingTexture() {
+							return FLOWING_TEXTURE;
+						}
+						public ResourceLocation getOverlayTexture() {
+							return OVERLAY;
+						}
+
+						public ResourceLocation getRenderOverlayTexture(Minecraft mc) {
+							return VIEW_OVERLAY;
+						}
 
                         public int getTintColor() {
                             return -15295332;
@@ -723,17 +822,25 @@ public class AllFluids {
         			.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation
-                                STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water"),
-                                FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
+						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
 
-                        public ResourceLocation getStillTexture() {
-                            return STILL_TEXTURE;
-                        }
+						public ResourceLocation getStillTexture() {
+							return STILL_TEXTURE;
+						}
 
-                        public ResourceLocation getFlowingTexture() {
-                            return FLOWING_TEXTURE;
-                        }
+						public ResourceLocation getFlowingTexture() {
+							return FLOWING_TEXTURE;
+						}
+						public ResourceLocation getOverlayTexture() {
+							return OVERLAY;
+						}
+
+						public ResourceLocation getRenderOverlayTexture(Minecraft mc) {
+							return VIEW_OVERLAY;
+						}
 
                         public int getTintColor() {
                             return -12930086;
@@ -761,17 +868,25 @@ public class AllFluids {
       			.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation
-                                STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water"),
-                                FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
+						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
 
-                        public ResourceLocation getStillTexture() {
-                            return STILL_TEXTURE;
-                        }
+						public ResourceLocation getStillTexture() {
+							return STILL_TEXTURE;
+						}
 
-                        public ResourceLocation getFlowingTexture() {
-                            return FLOWING_TEXTURE;
-                        }
+						public ResourceLocation getFlowingTexture() {
+							return FLOWING_TEXTURE;
+						}
+						public ResourceLocation getOverlayTexture() {
+							return OVERLAY;
+						}
+
+						public ResourceLocation getRenderOverlayTexture(Minecraft mc) {
+							return VIEW_OVERLAY;
+						}
 
                         public int getTintColor() {
                             return -12827478;
@@ -799,17 +914,25 @@ public class AllFluids {
                   .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation
-                                STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water"),
-                                FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
+						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
 
-                        public ResourceLocation getStillTexture() {
-                            return STILL_TEXTURE;
-                        }
+						public ResourceLocation getStillTexture() {
+							return STILL_TEXTURE;
+						}
 
-                        public ResourceLocation getFlowingTexture() {
-                            return FLOWING_TEXTURE;
-                        }
+						public ResourceLocation getFlowingTexture() {
+							return FLOWING_TEXTURE;
+						}
+						public ResourceLocation getOverlayTexture() {
+							return OVERLAY;
+						}
+
+						public ResourceLocation getRenderOverlayTexture(Minecraft mc) {
+							return VIEW_OVERLAY;
+						}
 
                         public int getTintColor() {
                             return -7785800;
@@ -837,17 +960,25 @@ public class AllFluids {
                 .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation
-                                STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water"),
-                                FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
+						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
 
-                        public ResourceLocation getStillTexture() {
-                            return STILL_TEXTURE;
-                        }
+						public ResourceLocation getStillTexture() {
+							return STILL_TEXTURE;
+						}
 
-                        public ResourceLocation getFlowingTexture() {
-                            return FLOWING_TEXTURE;
-                        }
+						public ResourceLocation getFlowingTexture() {
+							return FLOWING_TEXTURE;
+						}
+						public ResourceLocation getOverlayTexture() {
+							return OVERLAY;
+						}
+
+						public ResourceLocation getRenderOverlayTexture(Minecraft mc) {
+							return VIEW_OVERLAY;
+						}
 
                         public int getTintColor() {
                             return -3715395;
@@ -875,17 +1006,25 @@ public class AllFluids {
               .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation
-                                STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water"),
-                                FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
+						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
 
-                        public ResourceLocation getStillTexture() {
-                            return STILL_TEXTURE;
-                        }
+						public ResourceLocation getStillTexture() {
+							return STILL_TEXTURE;
+						}
 
-                        public ResourceLocation getFlowingTexture() {
-                            return FLOWING_TEXTURE;
-                        }
+						public ResourceLocation getFlowingTexture() {
+							return FLOWING_TEXTURE;
+						}
+						public ResourceLocation getOverlayTexture() {
+							return OVERLAY;
+						}
+
+						public ResourceLocation getRenderOverlayTexture(Minecraft mc) {
+							return VIEW_OVERLAY;
+						}
 
                         public int getTintColor() {
                             return -816214;

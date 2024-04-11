@@ -1,0 +1,39 @@
+{
+  "type": "createsifter:sifting",
+  "ingredients": [
+    {
+      "item": "createsifter:advanced_brass_mesh"
+    },
+    {
+      "item": "minecraft:gravel"
+    }
+  ],
+  "processingTime": 500,
+  "results": [
+    {
+      "chance": 0.45,
+      "item": "create:crushed_raw_iron"
+    },
+    {
+      "chance": 0.45,
+      "item": "minecraft:iron_nugget"
+    },
+    {
+      "chance": 0.45,
+      "item": "create:crushed_raw_zinc"
+    },
+    {
+      "chance": 0.45,
+      "item": "minecraft:flint"
+    },
+    {
+      "chance": 0.45,
+      "item": "minecraft:lapis_lazuli"
+    },
+    {
+      "chance": 0.35,
+      "item": "create:experience_nugget"
+    }
+  ],
+  "waterlogged": true
+}
