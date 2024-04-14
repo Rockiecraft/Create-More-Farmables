@@ -86,6 +86,6 @@
     "fluid.create_more_farmables.yellow_dyed_water_fluid": "Yellow Dyed Water",
     "fluid.create_more_farmables.orange_dyed_water_fluid": "Orange Dyed Water",
 
-    "creativetab.shulker_compound_tab": "Shulker Compound tab",
+    "itemgroup.shulker_shell_fragment": "Create: More Farmables",
     "Create: More Farmables": "Create: More Farmables"
 }

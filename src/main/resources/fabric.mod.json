@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "create_more_farmables",
+	"version": "${version}",
+	"name": "Create: More Farmables",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Rockiecraft/RockieFT"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/create_more_farmables/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.rockiecraft.create_more_farmables.CreateMoreFarmables"
+		],
+		"client": [
+			"net.rockiecraft.create_more_farmables.CreateMoreFarmablesClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.14.24",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+		"create": ">=0.5.1-d-build.1161+mc1.20.1"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

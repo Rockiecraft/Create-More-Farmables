@@ -1,40 +1,34 @@
 package net.rockiecraft.create_more_farmables;
 
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 
-import java.util.function.Supplier;
-
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.Identifier;
 public class AllBlocks {
 
-    public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, CreateMoreFarmables.ID);
+    public static final Block WOOD_STRING_WOOL_BLOCK = registerBlock("wood_string_wool_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).sounds(BlockSoundGroup.WOOL)));
 
 
-    public static final RegistryObject<Block> WOOD_STRING_WOOL_BLOCK =  registerBlock("wood_string_wool_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).sound(SoundType.WOOL)));
 
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn);
-        return toReturn;
+    private static Block registerBlock(String name, Block block) {
+        registerBlockItem(name, block);
+        return Registry.register(Registries.BLOCK, new Identifier(CreateMoreFarmables.ID, name), block);
     }
 
-    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-        return AllItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    private static Item registerBlockItem(String name, Block block) {
+        return Registry.register(Registries.ITEM, new Identifier(CreateMoreFarmables.ID, name),
+                new BlockItem(block, new FabricItemSettings()));
     }
 
-
-
-    public static void register(IEventBus eventBus) {
-        BLOCKS.register(eventBus);
+    public static void registerModBlocks() {
+        CreateMoreFarmables.LOGGER.info("Registering ModBlocks for " + CreateMoreFarmables.ID);
     }
 }
