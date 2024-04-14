@@ -3,7 +3,7 @@
 	"id": "create_more_farmables",
 	"version": "${version}",
 	"name": "Create: More Farmables",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "an addon for Create that adds items, Recipes, blocks and Fluids to make automation possible or easier",
 	"authors": [
 		"Rockiecraft/RockieFT"
 	],

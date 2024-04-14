@@ -11,27 +11,27 @@
   "processingTime": 500,
   "results": [
     {
-      "chance": 0.45,
+      "chance": 45.0,
       "item": "create:crushed_raw_iron"
     },
     {
-      "chance": 0.45,
+      "chance": 45.0,
       "item": "minecraft:iron_nugget"
     },
     {
-      "chance": 0.45,
+      "chance": 45.0,
       "item": "create:crushed_raw_zinc"
     },
     {
-      "chance": 0.45,
+      "chance": 45.0,
       "item": "minecraft:flint"
     },
     {
-      "chance": 0.45,
+      "chance": 45.0,
       "item": "minecraft:lapis_lazuli"
     },
     {
-      "chance": 0.35,
+      "chance": 45.0,
       "item": "create:experience_nugget"
     }
   ],

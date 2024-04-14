@@ -1,7 +1,14 @@
-## 0.7 
+## 0.7
 
-### PORTED TO FABRIC
+### Port to fabric!
 
+### Added to Fabric & Forge
+
+- tags to dyed water(water) and molten endstone(lava)
+
+### Fixed (Fabric)
+
+- Create recipes since they are different on fabric
 
 ## 0.6
 Sort of in and out of developing the mod cause busy or doing other things in coding. 

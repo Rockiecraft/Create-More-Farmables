@@ -10,12 +10,12 @@
     {
       "item": "create:crushed_raw_iron",
       "count": 1,
-      "chance": 0.70
+      "chance": 7.0
     },
     {
       "item": "minecraft:iron_nugget",
       "count": 3,
-      "chance": 0.50
+      "chance": 5.0
     }
   ],
   "processingTime": 250

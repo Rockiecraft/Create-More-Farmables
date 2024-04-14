@@ -2,7 +2,7 @@
   "type": "create:compacting",
   "ingredients": [
     {
-      "amount": 500,
+      "amount": 50000,
       "fluid": "create_more_farmables:molten_endstone"
     }
 

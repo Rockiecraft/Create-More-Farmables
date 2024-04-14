@@ -11,23 +11,23 @@
   "processingTime": 500,
   "results": [
     {
-      "chance": 0.45,
+      "chance": 45.0,
       "item": "create:crushed_raw_gold"
     },
     {
-      "chance": 0.45,
+      "chance": 45.0,
       "item": "create:crushed_raw_copper"
     },
     {
-      "chance": 0.45,
+      "chance": 45.0,
       "item": "minecraft:gold_nugget"
     },
     {
-      "chance": 0.45,
+      "chance": 45.0,
       "item": "minecraft:stick"
     },
     {
-      "chance": 0.35,
+      "chance": 45.0,
       "item": "create:experience_nugget"
     }
   ],

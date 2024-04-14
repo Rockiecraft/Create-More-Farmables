@@ -5,7 +5,7 @@
       "item": "create_more_farmables:dye_template"
     },
     {
-      "amount": 100,
+      "amount": 10000,
       "fluid": "create_more_farmables:light_gray_dyed_water"
     }
   ],

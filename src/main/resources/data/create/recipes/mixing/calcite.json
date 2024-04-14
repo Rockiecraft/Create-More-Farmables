@@ -7,7 +7,7 @@
       "item": "minecraft:stone"
     },
     {
-      "amount": 200,
+      "amount": 20000,
       "fluid": "create_more_farmables:white_dyed_water"
     }
   ],
