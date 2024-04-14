@@ -242,7 +242,7 @@ public class AllFluids {
 		BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, "create_more_farmables");
 		// -----------------------------------------------------------------------------
 		MOLTEN_ENDSTONE_FLUID_TYPE = FLUID_TYPES.register("molten_endstone", () -> {
-			return new FluidType(Properties.create().fallDistanceModifier(0F).canExtinguish(true).supportsBoating(true).canHydrate(true).canPushEntity(true).pathType(BlockPathTypes.WATER).motionScale(0.007D).canConvertToSource(true)
+			return new FluidType(Properties.create().fallDistanceModifier(0F).viscosity(2000).canExtinguish(true).supportsBoating(true).canHydrate(true).canPushEntity(true).pathType(BlockPathTypes.LAVA).motionScale(0.007D).canConvertToSource(true)
 					.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
