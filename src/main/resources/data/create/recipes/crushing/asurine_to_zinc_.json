@@ -10,12 +10,12 @@
     {
       "item": "create:crushed_raw_zinc",
       "count": 1,
-      "chance": 4.0
+      "chance": 0.7
     },
     {
       "item": "create:zinc_nugget",
       "count": 3,
-      "chance": 4.0
+      "chance": 0.7
     }
   ],
   "processingTime": 250
