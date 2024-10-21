@@ -12,10 +12,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.FlowingFluid;
-import net.minecraft.world.level.material.Fluid;
-import net.minecraft.world.level.material.MapColor;
-import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.level.material.*;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.extensions.common.IClientFluidTypeExtensions;
@@ -36,6 +33,7 @@ import org.joml.Vector3f;
 import java.util.function.Consumer;
 
 import static net.minecraft.client.renderer.RenderType.translucent;
+import static net.minecraft.client.resources.model.ModelBakery.LAVA_FLOW;
 import static net.minecraft.client.resources.model.ModelBakery.WATER_OVERLAY;
 
 
@@ -157,6 +155,18 @@ public class AllFluids {
  	public static final RegistryObject<Fluid> FLOWING_MOLTEN_ENDSTONE;
  	public static final RegistryObject<LiquidBlock> MOLTEN_ENDSTONE_BLOCK;
 
+	//-----------------------------------------------------------------------------
+
+	public static final RegistryObject<FluidType> LIQUID_REDSTONE_FLUID_TYPE;
+	public static final RegistryObject<FlowingFluid> LIQUID_REDSTONE;
+	public static final RegistryObject<Fluid> FLOWING_LIQUID_REDSTONE;
+	public static final RegistryObject<LiquidBlock> LIQUID_REDSTONE_BLOCK;
+
+
+	public static ForgeFlowingFluid.Properties LIQUIDREDSTONEFluidProperties() {
+		return (new ForgeFlowingFluid.Properties(LIQUID_REDSTONE_FLUID_TYPE, LIQUID_REDSTONE, FLOWING_LIQUID_REDSTONE)).block(LIQUID_REDSTONE_BLOCK).bucket(AllItems.LIQUID_REDSTONE_BUCKET);
+
+	}
 
     public static ForgeFlowingFluid.Properties MOLTENENDSTONEFluidProperties() {
 		return (new ForgeFlowingFluid.Properties(MOLTEN_ENDSTONE_FLUID_TYPE, MOLTEN_ENDSTONE, FLOWING_MOLTEN_ENDSTONE)).block(MOLTEN_ENDSTONE_BLOCK).bucket(AllItems.MOLTEN_ENDSTONE_BUCKET);
@@ -241,58 +251,13 @@ public class AllFluids {
 		FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS, "create_more_farmables");
 		BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, "create_more_farmables");
 		// -----------------------------------------------------------------------------
-		MOLTEN_ENDSTONE_FLUID_TYPE = FLUID_TYPES.register("molten_endstone", () -> {
-			return new FluidType(Properties.create().fallDistanceModifier(0F).viscosity(2000).canExtinguish(true).supportsBoating(true).canHydrate(true).canPushEntity(true).pathType(BlockPathTypes.LAVA).motionScale(0.007D).canConvertToSource(true)
-					.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
+		LIQUID_REDSTONE_FLUID_TYPE = FLUID_TYPES.register("liquid_redstone", () -> {
+			return new FluidType(Properties.create().fallDistanceModifier(0F).lightLevel(10).canExtinguish(true).supportsBoating(true).canHydrate(true).canPushEntity(true).pathType(BlockPathTypes.WATER).motionScale(0.007D)
+					.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH).canDrown(true)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation
-								STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/molten_endstone"),
-								FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_molten_endstone");
-
-						public ResourceLocation getStillTexture() {
-							return STILL_TEXTURE;
-						}
-
-						public ResourceLocation getFlowingTexture() {
-							return FLOWING_TEXTURE;
-						}
-
-						public int getTintColor() {
-							return -75715;
-						}
-
-						public @NotNull Vector3f modifyFogColor(Camera camera, float partialTick, ClientLevel level, int renderDistance, float darkenWorldAmount, Vector3f fluidFogColor) {
-							int color = this.getTintColor();
-							return new Vector3f((float)(color >> 16 & 255) / 255.0F, (float)(color >> 8 & 255) / 255.0F, (float)(color & 255) / 255.0F);
-						}
-
-					});
-				}
-			};
-		});
-
-		MOLTEN_ENDSTONE = FLUIDS.register("molten_endstone", () -> {
-			return new ForgeFlowingFluid.Source(MOLTENENDSTONEFluidProperties());
-		});
-		FLOWING_MOLTEN_ENDSTONE= FLUIDS.register("flowing_molten_endstone", () -> {
-			return new ForgeFlowingFluid.Flowing(MOLTENENDSTONEFluidProperties());
-		});
-
-		MOLTEN_ENDSTONE_BLOCK = BLOCKS.register("molten_endstone_block",() -> {
-			return new LiquidBlock(AllFluids.MOLTEN_ENDSTONE, BlockBehaviour.Properties.of().mapColor(MapColor.FIRE).strength(100f).noCollission().noLootTable().liquid().pushReaction(PushReaction.DESTROY).sound(SoundType.EMPTY).replaceable());
-		});
-
-
-
-		// -----------------------------------------------------------------------------
-		WHITE_DYED_WATER_FLUID_TYPE = FLUID_TYPES.register("white_dyed_water", () -> {
-			return new FluidType(Properties.create().fallDistanceModifier(0F).canExtinguish(true).supportsBoating(true).canHydrate(true).canPushEntity(true).pathType(BlockPathTypes.WATER).motionScale(0.007D).canConvertToSource(true)
-					.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
-				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
-					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
-						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/liquid_redstone");
+						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_liquid_redstone");
 						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
 						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
 
@@ -303,6 +268,7 @@ public class AllFluids {
 						public ResourceLocation getFlowingTexture() {
 							return FLOWING_TEXTURE;
 						}
+
 						public ResourceLocation getOverlayTexture() {
 							return OVERLAY;
 						}
@@ -312,12 +278,12 @@ public class AllFluids {
 						}
 
 						public int getTintColor() {
-							return -393218;
+							return -5231066;
 						}
 
 						public @NotNull Vector3f modifyFogColor(Camera camera, float partialTick, ClientLevel level, int renderDistance, float darkenWorldAmount, Vector3f fluidFogColor) {
 							int color = this.getTintColor();
-							return new Vector3f((float)(color >> 16 & 255) / 255.0F, (float)(color >> 8 & 255) / 255.0F, (float)(color & 255) / 255.0F);
+							return new Vector3f((float) (color >> 16 & 255) / 255.0F, (float) (color >> 8 & 255) / 255.0F, (float) (color & 255) / 255.0F);
 						}
 
 					});
@@ -325,16 +291,113 @@ public class AllFluids {
 			};
 		});
 
-		WHITE_DYED_WATER = FLUIDS.register("white_dyed_water", () -> {
-			return new ForgeFlowingFluid.Source(WHITEDYEDWATERFluidProperties());
+		LIQUID_REDSTONE = FLUIDS.register("liquid_redstone", () -> {
+			return new ForgeFlowingFluid.Source(LIQUIDREDSTONEFluidProperties());
 		});
-		FLOWING_WHITE_DYED_WATER = FLUIDS.register("flowing_white_dyed_water", () -> {
-			return new ForgeFlowingFluid.Flowing(WHITEDYEDWATERFluidProperties());
+		FLOWING_LIQUID_REDSTONE = FLUIDS.register("flowing_liquid_redstone", () -> {
+			return new ForgeFlowingFluid.Flowing(LIQUIDREDSTONEFluidProperties());
 		});
 
-		WHITE_DYED_WATER_BLOCK = BLOCKS.register("white_dyed_water_block",() -> {
-			return new LiquidBlock(AllFluids.WHITE_DYED_WATER, BlockBehaviour.Properties.of().mapColor(MapColor.WATER).strength(100f).noCollission().noLootTable().liquid().pushReaction(PushReaction.DESTROY).sound(SoundType.EMPTY).replaceable());
+		LIQUID_REDSTONE_BLOCK = BLOCKS.register("liquid_redstone_block", () -> {
+			return new LiquidBlock(AllFluids.LIQUID_REDSTONE, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_RED).strength(100f).noCollission().noLootTable().liquid().pushReaction(PushReaction.DESTROY).sound(SoundType.EMPTY).replaceable());
 		});
+
+		// -----------------------------------------------------------------------------
+			MOLTEN_ENDSTONE_FLUID_TYPE = FLUID_TYPES.register("molten_endstone", () -> {
+				return new FluidType(Properties.create().fallDistanceModifier(0F).viscosity(2000).canExtinguish(true).supportsBoating(true).canHydrate(true).canPushEntity(true).pathType(BlockPathTypes.LAVA).motionScale(0.007D)
+						.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
+					public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
+						consumer.accept(new IClientFluidTypeExtensions() {
+							private static final ResourceLocation
+									STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/molten_endstone"),
+									FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_molten_endstone");
+
+							public ResourceLocation getStillTexture() {
+								return STILL_TEXTURE;
+							}
+
+							public ResourceLocation getFlowingTexture() {
+								return FLOWING_TEXTURE;
+							}
+
+							public int getTintColor() {
+								return -75715;
+							}
+
+							public @NotNull Vector3f modifyFogColor(Camera camera, float partialTick, ClientLevel level, int renderDistance, float darkenWorldAmount, Vector3f fluidFogColor) {
+								int color = this.getTintColor();
+								return new Vector3f((float) (color >> 16 & 255) / 255.0F, (float) (color >> 8 & 255) / 255.0F, (float) (color & 255) / 255.0F);
+							}
+
+						});
+					}
+				};
+			});
+
+			MOLTEN_ENDSTONE = FLUIDS.register("molten_endstone", () -> {
+				return new ForgeFlowingFluid.Source(MOLTENENDSTONEFluidProperties());
+			});
+			FLOWING_MOLTEN_ENDSTONE = FLUIDS.register("flowing_molten_endstone", () -> {
+				return new ForgeFlowingFluid.Flowing(MOLTENENDSTONEFluidProperties());
+			});
+
+			MOLTEN_ENDSTONE_BLOCK = BLOCKS.register("molten_endstone_block", () -> {
+				return new LiquidBlock(AllFluids.MOLTEN_ENDSTONE, BlockBehaviour.Properties.of().mapColor(MapColor.FIRE).strength(100f).noCollission().noLootTable().liquid().pushReaction(PushReaction.DESTROY).sound(SoundType.EMPTY).replaceable());
+			});
+
+
+
+		// -----------------------------------------------------------------------------
+			WHITE_DYED_WATER_FLUID_TYPE = FLUID_TYPES.register("white_dyed_water", () -> {
+				return new FluidType(Properties.create().fallDistanceModifier(0F).canExtinguish(true).supportsBoating(true).canHydrate(true).canPushEntity(true).pathType(BlockPathTypes.WATER).motionScale(0.007D).canConvertToSource(true)
+						.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH).canDrown(true)) {
+					public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
+						consumer.accept(new IClientFluidTypeExtensions() {
+							private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/white_dyed_water");
+							private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
+							private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
+							private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
+
+							public ResourceLocation getStillTexture() {
+								return STILL_TEXTURE;
+							}
+
+							public ResourceLocation getFlowingTexture() {
+								return FLOWING_TEXTURE;
+							}
+
+							public ResourceLocation getOverlayTexture() {
+								return OVERLAY;
+							}
+
+							public ResourceLocation getRenderOverlayTexture(Minecraft mc) {
+								return VIEW_OVERLAY;
+							}
+
+							public int getTintColor() {
+								return -393218;
+							}
+
+							public @NotNull Vector3f modifyFogColor(Camera camera, float partialTick, ClientLevel level, int renderDistance, float darkenWorldAmount, Vector3f fluidFogColor) {
+								int color = this.getTintColor();
+								return new Vector3f((float) (color >> 16 & 255) / 255.0F, (float) (color >> 8 & 255) / 255.0F, (float) (color & 255) / 255.0F);
+							}
+
+						});
+					}
+				};
+			});
+
+			WHITE_DYED_WATER = FLUIDS.register("white_dyed_water", () -> {
+				return new ForgeFlowingFluid.Source(WHITEDYEDWATERFluidProperties());
+			});
+			FLOWING_WHITE_DYED_WATER = FLUIDS.register("flowing_white_dyed_water", () -> {
+				return new ForgeFlowingFluid.Flowing(WHITEDYEDWATERFluidProperties());
+			});
+
+			WHITE_DYED_WATER_BLOCK = BLOCKS.register("white_dyed_water_block", () -> {
+				return new LiquidBlock(AllFluids.WHITE_DYED_WATER, BlockBehaviour.Properties.of().mapColor(MapColor.WATER).strength(100f).noCollission().noLootTable().liquid().pushReaction(PushReaction.DESTROY).sound(SoundType.EMPTY).replaceable());
+			});
 
 		// -----------------------------------------------------------------------------
 		LIGHT_GRAY_DYED_WATER_FLUID_TYPE = FLUID_TYPES.register("light_gray_dyed_water", () -> {
@@ -342,7 +405,7 @@ public class AllFluids {
 					.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/light_gray_dyed_water");
 						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
 						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
 						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
@@ -392,7 +455,7 @@ public class AllFluids {
 					.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/gray_dyed_water");
 						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
 						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
 						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
@@ -443,7 +506,7 @@ public class AllFluids {
 					.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/black_dyed_water");
 						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
 						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
 						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
@@ -494,7 +557,7 @@ public class AllFluids {
 					.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/brown_dyed_water");
 						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
 						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
 						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
@@ -544,7 +607,7 @@ public class AllFluids {
                     .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/red_dyed_water");
 						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
 						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
 						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
@@ -592,7 +655,7 @@ public class AllFluids {
                   .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/orange_dyed_water");
 						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
 						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
 						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
@@ -638,7 +701,7 @@ public class AllFluids {
                 .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/yellow_dyed_water");
 						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
 						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
 						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
@@ -684,7 +747,7 @@ public class AllFluids {
               .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/green_dyed_water");
 						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
 						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
 						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
@@ -730,7 +793,7 @@ public class AllFluids {
             .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/lime_dyed_water");
 						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
 						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
 						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
@@ -776,7 +839,7 @@ public class AllFluids {
           		.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/cyan_dyed_water");
 						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
 						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
 						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
@@ -822,7 +885,7 @@ public class AllFluids {
         			.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/light_blue_dyed_water");
 						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
 						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
 						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
@@ -868,7 +931,7 @@ public class AllFluids {
       			.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/blue_dyed_water");
 						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
 						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
 						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
@@ -914,7 +977,7 @@ public class AllFluids {
                   .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/purple_dyed_water");
 						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
 						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
 						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
@@ -960,7 +1023,7 @@ public class AllFluids {
                 .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/magenta_dyed_water");
 						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
 						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
 						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
@@ -1006,7 +1069,7 @@ public class AllFluids {
               .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)) {
 				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 					consumer.accept(new IClientFluidTypeExtensions() {
-						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/dyed_water");
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/pink_dyed_water");
 						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_dyed_water");
 						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
 						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");

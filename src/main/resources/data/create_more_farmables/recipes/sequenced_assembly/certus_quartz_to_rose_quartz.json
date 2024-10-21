@@ -1,0 +1,72 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "ae2:certus_quartz"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "chance": 100.0,
+      "item": "create:rose_quartz"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "ae2:certus_quartz"
+        },
+        {
+          "amount": 100,
+          "fluid": "create_more_farmables:liquid_redstone",
+          "nbt": {}
+        }
+      ],
+      "results": [
+        {
+          "item": "ae2:certus_quartz"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "ae2:certus_quartz"
+        },
+        {
+          "amount": 100,
+          "fluid": "create_more_farmables:liquid_redstone",
+          "nbt": {}
+        }
+      ],
+      "results": [
+        {
+          "item": "ae2:certus_quartz"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "ae2:certus_quartz"
+        },
+        {
+          "amount": 100,
+          "fluid": "create_more_farmables:liquid_redstone",
+          "nbt": {}
+        }
+      ],
+      "results": [
+        {
+          "item": "ae2:certus_quartz"
+        }
+      ]
+    }
+  ],
+  "transitionalItem": {
+    "item": "ae2:certus_quartz"
+  }
+}

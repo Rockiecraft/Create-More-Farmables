@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "create_more_farmables:block/wood_string_wool_block"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "ae2:certus_quartz_dust"
+    },
+    {
+      "item": "minecraft:quartz"
+    },
+    {
+      "item": "minecraft:quartz"
+    },
+    {
+      "item": "minecraft:quartz"
+    },
+    {
+      "item": "minecraft:quartz"
+    },
+    {
+      "fluid": "create_more_farmables:light_blue_dyed_water",
+      "amount": 100
+    }
+  ],
+  "results": [
+    {
+      "item": "ae2:certus_quartz_crystal",
+      "count": 4
+    }
+  ]
+}

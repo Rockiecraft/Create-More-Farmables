@@ -1,0 +1,35 @@
+{
+  "type": "createsifter:sifting",
+  "ingredients": [
+    {
+      "item": "createsifter:advanced_brass_mesh"
+    },
+    {
+      "item": "minecraft:sand"
+    }
+  ],
+  "processingTime": 500,
+  "results": [
+    {
+      "chance": 0.45,
+      "item": "minecraft:clay_ball"
+    },
+    {
+      "chance": 0.55,
+      "item": "minecraft:scute"
+    },
+    {
+      "chance": 0.35,
+      "item": "minecraft:diamond"
+    },
+    {
+      "chance": 0.45,
+      "item": "minecraft:coal"
+    },
+    {
+      "chance": 0.35,
+      "item": "create:experience_nugget"
+    }
+  ],
+  "waterlogged": true
+}

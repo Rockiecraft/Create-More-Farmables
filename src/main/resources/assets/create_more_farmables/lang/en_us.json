@@ -4,8 +4,11 @@
     "item.create_more_farmables.dye_template": "Dye Template",
     "item.create_more_farmables.wood_string":"Wood String",
     "item.create_more_farmables.wood_string_wool_block":"Wood String Wool",
+    "item.create_more_farmables.netherite_dust": "Netherite Dust",
+    "item.create_more_farmables.unprocessed_netherite_dust": "Unprocessed Netherite Dust",
+    "item.create_more_farmables.unprocessed_blaze_rod": "Unprocessed Blaze Rod",
 
-
+    "item.create_more_farmables.liquid_redstone_bucket": "liquid Redstone Bucket",
     "item.create_more_farmables.molten_endstone_bucket": "Molten Endstone Bucket",
     "item.create_more_farmables.white_dyed_water_bucket": "White Dyed Water Bucket",
     "item.create_more_farmables.black_dyed_water_bucket": "Black Dyed Water Bucket",
@@ -25,7 +28,7 @@
     "item.create_more_farmables.orange_dyed_water_bucket": "Orange Dyed Water Bucket",
 
 
-
+    "block.create_more_farmables.liquid_redstone_block": "liquid Redstone",
     "block.create_more_farmables.molten_endstone_block": "Molten Endstone",
     "block.create_more_farmables.black_dyed_water_block": "Black Dyed Water",
     "block.create_more_farmables.white_dyed_water_block": "White Dyed Water",
@@ -46,7 +49,7 @@
     "block.create_more_farmables.wood_string_wool_block": "Wood String Wool",
 
 
-
+    "fluid_type.create_more_farmables.liquid_redstone": "liquid Redstone",
     "fluid_type.create_more_farmables.molten_endstone": "Molten Endstone",
     "fluid_type.create_more_farmables.white_dyed_water": "White Dyed Water",
     "fluid_type.create_more_farmables.black_dyed_water": "Black Dyed Water",
@@ -67,7 +70,7 @@
 
 
 
-
+    "fluid.create_more_farmables.liquid_redstone_fluid": "liquid Redstone",
     "fluid.create_more_farmables.molten_endstone_fluid": "Molten Endstone",
     "fluid.create_more_farmables.white_dyed_water_fluid": "White Dyed Water",
     "fluid.create_more_farmables.black_dyed_water_fluid": "Black Dyed Water",
@@ -86,6 +89,6 @@
     "fluid.create_more_farmables.yellow_dyed_water_fluid": "Yellow Dyed Water",
     "fluid.create_more_farmables.orange_dyed_water_fluid": "Orange Dyed Water",
 
-    "creativetab.shulker_compound_tab": "Shulker Compound tab",
+    "itemGroup.create_more_farmables_tab": "Create: More Farmables",
     "Create: More Farmables": "Create: More Farmables"
 }

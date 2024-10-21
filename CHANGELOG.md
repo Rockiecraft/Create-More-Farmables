@@ -1,3 +1,60 @@
+## 0.8
+
+## New additions & changes
+i'll get to updating fabric ver eventually
+
+### Creative Tab changes -
+
+- separated code into its own separate file for creative mode tabs
+- added CMF buckets to TOOLS_AND_UTILITIES tab
+- added CMF ingredients to the ingredients tab
+
+### Fluid changes -
+
+- Molten endstone is no longer infinite. you need to make more by melting it down and compacting it onto cobblestone
+
+### Recipe Changes -
+
+- added and increased chances for not so desired items to sifting recipes for balancing
+
+### New Items -
+
+- Netherite Dust
+- Unprocessed Netherite Dust
+- Unprocessed Blaze Rod
+
+### New Liquid -
+
+- Liquid Redstone
+
+### New Recipes -
+
+#### these custom splashing recipes require another mod to work (these recipes are only on the forge ver)
+installing said mod is optional though. you just won't be able to used these recipes without it. [Create: More Recipes](https://www.curseforge.com/minecraft/mc-mods/create-morerecipes)
+
+#### Custom splashing - (forge)
+- using dyed water in front of a fan can be used to stain glass and dye wool
+- using dyed water in front of a fan can be used to dye beds and banners
+
+#### filling and haunting -
+- spouting lava onto netherack makes magmablocks 
+- haunting basalt makes netherack
+
+#### Mixing recipes  -
+- mixing cinder flour and iron nuggets in a heated basin makes redstone
+- mixing redstone in a heated basin makes Liquid redstone 
+- mixing powdered obsidian and cinder flour in a superheated basin makes netherite dust
+
+
+#### Splashing recipes -
+- splashing magmablocks turns them into obsidian
+
+#### Sequenced Assembly recipes -
+###### The netherite recipe will require [Create Enchantment Industry](https://www.curseforge.com/minecraft/mc-mods/create-enchantment-industry)
+- stick to blazerod using cinder flour, lava and pressing **1X loop**
+- Turn Certus Quartz(AE2) or Quartz into Rose Quartz(Create) using Liquid Redstone by Spouts **1X loop**
+- netherite dust to netherite scrap using, experience, lava and pressing  **5X loops**
+
 ## 0.7
 
 ### Port to fabric! 
@@ -15,14 +72,17 @@ Sort of in and out of developing the mod cause busy or doing other things in cod
 
 ### Added
 
+#### Client
 - Overlay for the Dyed Water
+#### item/block
 - Wood String
 - Wood String Wool Block
+#### Recipes
 - Dirt Recipe
 - Red Sand Recipe
 - Wood String Recipe
 - Wood String Wool Recipe
-- adding more recipes for another mod \/
+#### Create sifter recipes (only on forge ver)
 - Create sifter recipes, different recipe sifting for gravel, red sand, sand, and a new one for wet sponges.
 - Increased chances for materials from sifting gravel in advanced brass mesh and brass sifter
 - Increased chances for materials from sifting sand in advanced brass mesh and brass sifter

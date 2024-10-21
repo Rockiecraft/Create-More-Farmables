@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "create_more_farmables:item/pink_dyed_water_bucket"
-  }
-}

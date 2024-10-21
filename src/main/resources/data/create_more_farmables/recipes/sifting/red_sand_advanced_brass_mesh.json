@@ -1,0 +1,39 @@
+{
+  "type": "createsifter:sifting",
+  "ingredients": [
+    {
+      "item": "createsifter:advanced_brass_mesh"
+    },
+    {
+      "item": "minecraft:red_sand"
+    }
+  ],
+  "processingTime": 500,
+  "results": [
+    {
+      "chance": 0.35,
+      "item": "create:crushed_raw_gold"
+    },
+    {
+      "chance": 0.35,
+      "item": "create:crushed_raw_copper"
+    },
+    {
+      "chance": 0.45,
+      "item": "minecraft:gold_nugget"
+    },
+    {
+      "chance": 0.45,
+      "item": "create:copper_nugget"
+    },
+    {
+      "chance": 0.45,
+      "item": "minecraft:stick"
+    },
+    {
+      "chance": 0.35,
+      "item": "create:experience_nugget"
+    }
+  ],
+  "waterlogged": true
+}

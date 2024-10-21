@@ -1,0 +1,18 @@
+{
+  "type": "cmr:custom_fan",
+  "ingredients": [
+    {
+      "tag": "minecraft:beds"
+    },
+    {
+      "amount": 1000,
+      "fluid": "create_more_farmables:blue_dyed_water",
+      "nbt": {}
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:blue_bed"
+    }
+  ]
+}
