@@ -1,3 +1,12 @@
+## 0.8.1 HOTFIX
+## Update to Create 0.5.1.j-55
+
+### changes -
+- Create enchantment industry is no longer required. 
+### changelog from the Create update
+#### "Fixed crash when recipes contain invalid fluid ingredients (IThundxr)"  
+#### which fixes the crash caused when CEI is not installed and CMF is installed. Experience fluid from CEI was required in a recipe from CMF.
+
 ## 0.8
 
 ## New additions & changes
