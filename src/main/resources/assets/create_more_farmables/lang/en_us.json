@@ -8,6 +8,7 @@
     "item.create_more_farmables.unprocessed_netherite_dust": "Unprocessed Netherite Dust",
     "item.create_more_farmables.unprocessed_blaze_rod": "Unprocessed Blaze Rod",
 
+    "item.create_more_farmables.liquid_quartz_bucket": "liquid Quartz Bucket",
     "item.create_more_farmables.liquid_redstone_bucket": "liquid Redstone Bucket",
     "item.create_more_farmables.molten_endstone_bucket": "Molten Endstone Bucket",
     "item.create_more_farmables.white_dyed_water_bucket": "White Dyed Water Bucket",
@@ -28,6 +29,7 @@
     "item.create_more_farmables.orange_dyed_water_bucket": "Orange Dyed Water Bucket",
 
 
+    "block.create_more_farmables.liquid_quartz_block": "liquid Quartz",
     "block.create_more_farmables.liquid_redstone_block": "liquid Redstone",
     "block.create_more_farmables.molten_endstone_block": "Molten Endstone",
     "block.create_more_farmables.black_dyed_water_block": "Black Dyed Water",
@@ -49,6 +51,7 @@
     "block.create_more_farmables.wood_string_wool_block": "Wood String Wool",
 
 
+    "fluid_type.create_more_farmables.liquid_quartz": "liquid Quartz",
     "fluid_type.create_more_farmables.liquid_redstone": "liquid Redstone",
     "fluid_type.create_more_farmables.molten_endstone": "Molten Endstone",
     "fluid_type.create_more_farmables.white_dyed_water": "White Dyed Water",
@@ -69,7 +72,7 @@
     "fluid_type.create_more_farmables.orange_dyed_water": "Orange Dyed Water",
 
 
-
+    "fluid.create_more_farmables.liquid_quartz_fluid": "liquid Quartz",
     "fluid.create_more_farmables.liquid_redstone_fluid": "liquid Redstone",
     "fluid.create_more_farmables.molten_endstone_fluid": "Molten Endstone",
     "fluid.create_more_farmables.white_dyed_water_fluid": "White Dyed Water",

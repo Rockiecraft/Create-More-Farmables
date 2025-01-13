@@ -155,13 +155,26 @@ public class AllFluids {
  	public static final RegistryObject<Fluid> FLOWING_MOLTEN_ENDSTONE;
  	public static final RegistryObject<LiquidBlock> MOLTEN_ENDSTONE_BLOCK;
 
-	//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 
 	public static final RegistryObject<FluidType> LIQUID_REDSTONE_FLUID_TYPE;
 	public static final RegistryObject<FlowingFluid> LIQUID_REDSTONE;
 	public static final RegistryObject<Fluid> FLOWING_LIQUID_REDSTONE;
 	public static final RegistryObject<LiquidBlock> LIQUID_REDSTONE_BLOCK;
 
+//-----------------------------------------------------------------------------
+
+	public static final RegistryObject<FluidType> LIQUID_QUARTZ_FLUID_TYPE;
+	public static final RegistryObject<FlowingFluid> LIQUID_QUARTZ;
+	public static final RegistryObject<Fluid> FLOWING_LIQUID_QUARTZ;
+	public static final RegistryObject<LiquidBlock> LIQUID_QUARTZ_BLOCK;
+
+//-----------------------------------------------------------------------------
+
+	public static ForgeFlowingFluid.Properties LIQUIDQUARTZFluidProperties() {
+		return (new ForgeFlowingFluid.Properties(LIQUID_QUARTZ_FLUID_TYPE, LIQUID_QUARTZ, FLOWING_LIQUID_QUARTZ)).block(LIQUID_QUARTZ_BLOCK).bucket(AllItems.LIQUID_QUARTZ_BUCKET);
+
+	}
 
 	public static ForgeFlowingFluid.Properties LIQUIDREDSTONEFluidProperties() {
 		return (new ForgeFlowingFluid.Properties(LIQUID_REDSTONE_FLUID_TYPE, LIQUID_REDSTONE, FLOWING_LIQUID_REDSTONE)).block(LIQUID_REDSTONE_BLOCK).bucket(AllItems.LIQUID_REDSTONE_BUCKET);
@@ -250,6 +263,58 @@ public class AllFluids {
 		FLUID_TYPES = DeferredRegister.create(ForgeRegistries.Keys.FLUID_TYPES, "create_more_farmables");
 		FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS, "create_more_farmables");
 		BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, "create_more_farmables");
+		// -----------------------------------------------------------------------------
+		LIQUID_QUARTZ_FLUID_TYPE = FLUID_TYPES.register("liquid_quartz", () -> {
+			return new FluidType(Properties.create().fallDistanceModifier(0F).lightLevel(10).canExtinguish(true).supportsBoating(true).canHydrate(true).canPushEntity(true).pathType(BlockPathTypes.WATER).motionScale(0.007D)
+					.sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL).sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY).sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH).canDrown(true)) {
+				public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
+					consumer.accept(new IClientFluidTypeExtensions() {
+						private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("create_more_farmables:block/liquid_quartz");
+						private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("create_more_farmables:block/flowing_liquid_quartz");
+						private static final ResourceLocation OVERLAY = new ResourceLocation("block/water_overlay");
+						private static final ResourceLocation VIEW_OVERLAY = new ResourceLocation("textures/block/water_overlay.png");
+
+						public ResourceLocation getStillTexture() {
+							return STILL_TEXTURE;
+						}
+
+						public ResourceLocation getFlowingTexture() {
+							return FLOWING_TEXTURE;
+						}
+
+						public ResourceLocation getOverlayTexture() {
+							return OVERLAY;
+						}
+
+						public ResourceLocation getRenderOverlayTexture(Minecraft mc) {
+							return VIEW_OVERLAY;
+						}
+
+						public int getTintColor() {
+							return -393218;
+						}
+
+						public @NotNull Vector3f modifyFogColor(Camera camera, float partialTick, ClientLevel level, int renderDistance, float darkenWorldAmount, Vector3f fluidFogColor) {
+							int color = this.getTintColor();
+							return new Vector3f((float) (color >> 16 & 255) / 255.0F, (float) (color >> 8 & 255) / 255.0F, (float) (color & 255) / 255.0F);
+						}
+
+					});
+				}
+			};
+		});
+
+		LIQUID_QUARTZ = FLUIDS.register("liquid_quartz", () -> {
+			return new ForgeFlowingFluid.Source(LIQUIDQUARTZFluidProperties());
+		});
+		FLOWING_LIQUID_QUARTZ = FLUIDS.register("flowing_liquid_quartz", () -> {
+			return new ForgeFlowingFluid.Flowing(LIQUIDQUARTZFluidProperties());
+		});
+
+		LIQUID_QUARTZ_BLOCK = BLOCKS.register("liquid_quartz_block", () -> {
+			return new LiquidBlock(AllFluids.LIQUID_QUARTZ, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_GRAY).strength(100f).noCollission().noLootTable().liquid().pushReaction(PushReaction.DESTROY).sound(SoundType.EMPTY).replaceable());
+		});
+
 		// -----------------------------------------------------------------------------
 		LIQUID_REDSTONE_FLUID_TYPE = FLUID_TYPES.register("liquid_redstone", () -> {
 			return new FluidType(Properties.create().fallDistanceModifier(0F).lightLevel(10).canExtinguish(true).supportsBoating(true).canHydrate(true).canPushEntity(true).pathType(BlockPathTypes.WATER).motionScale(0.007D)

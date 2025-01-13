@@ -66,6 +66,13 @@ public class AllItems {
 
     //-----------------------------------------------------------------------------
 
+    public static final RegistryObject<BucketItem> LIQUID_QUARTZ_BUCKET = addToTab(ITEMS.register("liquid_quartz_bucket",
+            () -> new BucketItem(AllFluids.LIQUID_QUARTZ, new Item.Properties()
+                    .craftRemainder(Items.BUCKET)
+                    .stacksTo(1)
+                    .rarity(Rarity.COMMON))
+    ));
+
     public static final RegistryObject<BucketItem> LIQUID_REDSTONE_BUCKET = addToTab(ITEMS.register("liquid_redstone_bucket",
             () -> new BucketItem(AllFluids.LIQUID_REDSTONE, new Item.Properties()
                     .craftRemainder(Items.BUCKET)
