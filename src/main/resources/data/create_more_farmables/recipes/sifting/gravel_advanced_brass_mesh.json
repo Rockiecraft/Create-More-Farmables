@@ -35,6 +35,10 @@
       "item": "minecraft:lapis_lazuli"
     },
     {
+      "chance": 0.25,
+      "item": "minecraft:emerald"
+    },
+    {
       "chance": 0.35,
       "item": "create:experience_nugget"
     }
