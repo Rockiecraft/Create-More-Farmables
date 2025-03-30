@@ -1,3 +1,17 @@
+## 0.8.2 INDEV
+
+### New additions & changes
+
+- Updated Dyed Water bucket Textures - [v3lsk](https://github.com/v3lsk)
+- Updated Dye Template Textures - [v3lsk](https://github.com/v3lsk)
+- Added Emerald to Sifting Recipe
+- Added Liquid Quartz
+- Added Mixing & Sequenced Assembly Recipes for Diorite
+- Added Mixing Recipe for Andesite
+
+---
+
+
 ## 0.8.1 HOTFIX
 ## Update to Create 0.5.1.j-55
 
@@ -7,8 +21,8 @@
 #### "Fixed crash when recipes contain invalid fluid ingredients (IThundxr)"  
 #### which fixes the crash caused when CEI is not installed and CMF is installed. Experience fluid from CEI was required in a recipe from CMF.
 
+---
 ## 0.8
-
 ## New additions & changes
 i'll get to updating fabric ver eventually
 
@@ -63,7 +77,7 @@ installing said mod is optional though. you just won't be able to used these rec
 - stick to blazerod using cinder flour, lava and pressing **1X loop**
 - Turn Certus Quartz(AE2) or Quartz into Rose Quartz(Create) using Liquid Redstone by Spouts **1X loop**
 - netherite dust to netherite scrap using, experience, lava and pressing  **5X loops**
-
+---
 ## 0.7
 
 ### Port to fabric! 
@@ -71,7 +85,7 @@ installing said mod is optional though. you just won't be able to used these rec
 ### Added to Fabric & Forge
 
 - tags to dyed water(water) and molten endstone(lava)
-
+---
 ## 0.6
 Sort of in and out of developing the mod cause busy or doing other things in coding. 
 ### changes
@@ -100,7 +114,7 @@ Sort of in and out of developing the mod cause busy or doing other things in cod
 ### fixed
 
 - Log Being spammed with "Exception loading blockstate definition: 'create_more_farmables:blockstates/.json' missing model for variant: 'create_more_farmables:#level=x"
-
+---
 
 ## 0.3 
 
@@ -124,7 +138,7 @@ Sort of in and out of developing the mod cause busy or doing other things in cod
 
 - buckets from this mod now works correctly with create fluid tanks/basins/fluid drains
 
-
+---
 ## 0.2 
 
 ### Changes
@@ -138,7 +152,7 @@ Sort of in and out of developing the mod cause busy or doing other things in cod
 - Dye Template
 - Recipes to automate Minecraft dye
   
-
+---
 ## 0.1 
 
 ### First verson

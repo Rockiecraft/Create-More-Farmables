@@ -2,7 +2,7 @@
 <h1 align="center">Create: More Farmables<br>
 	<a href="https://www.curseforge.com/minecraft/mc-mods/create-more-farmables">Curseforge,  </a>
 	<a href="https://modrinth.com/mod/create-more-farmables">Modrinth,  </a>
-	<a href="https://github.com/Rockiecraft/Create-More-Farmables/blob/Create-More-Farmables/LICENSE">LICENSE  </a>
+	<a href="https://github.com/Rockiecraft/Create-More-Farmables/blob/cmfMC1.20.1/dev-forge/LICENSE">LICENSE  </a>
     <br><br>
 </h1>
 
