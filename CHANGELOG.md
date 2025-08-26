@@ -13,7 +13,7 @@
 
 ### Fixes
 
-- Fixed orestone crushing recipes not replacing Creates base recipes
+- Fixed orestone crushing recipes not replacing Creates base recipes [#4](https://github.com/Rockiecraft/Create-More-Farmables/issues/4)
 
 ---
 
