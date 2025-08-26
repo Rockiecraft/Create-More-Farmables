@@ -11,6 +11,10 @@
 - New recipe with Create more recipes for Dying Sand -> Red sand
 - New Haunting recipe for Redstone -> Glowstone
 
+### Fixes
+
+- Fixed orestone crushing recipes not replacing Creates base recipes
+
 ---
 
 
@@ -26,7 +30,7 @@
 ---
 ## 0.8
 ## New additions & changes
-i'll get to updating fabric ver eventually
+i'll get to updating fabric ver eventually (if i ever feel like it, i hate working in fabric)
 
 ### Creative Tab changes -
 
