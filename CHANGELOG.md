@@ -1,4 +1,4 @@
-## 0.8.2 INDEV
+## 0.8.2
 
 ### New additions & changes
 
@@ -6,8 +6,10 @@
 - Updated Dye Template Textures - [v3lsk](https://github.com/v3lsk)
 - Added Emerald to Sifting Recipe
 - Added Liquid Quartz
-- Added Mixing & Sequenced Assembly Recipes for Diorite
-- Added Mixing Recipe for Andesite
+- New Mixing & Sequenced Assembly Recipes for Diorite
+- New Mixing Recipe for Andesite
+- New recipe with Create more recipes for Dying Sand -> Red sand
+- New Haunting recipe for Redstone -> Glowstone
 
 ---
 
