@@ -1,0 +1,133 @@
+package net.rockiecraft;
+
+import com.teamresourceful.resourcefullib.common.registry.RegistryEntry;
+import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistries;
+import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistry;
+import earth.terrarium.botarium.common.registry.fluid.FluidBucketItem;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.item.*;
+import net.rockiecraft.fluids.AllFluidProperties;
+
+
+public class AllItems {
+
+    public static final ResourcefulRegistry<Item> ITEMS = ResourcefulRegistries.create(BuiltInRegistries.ITEM, CreateMoreFarmables.MOD_ID);
+
+    // Items with item textures.
+    public static final ResourcefulRegistry<Item> BASIC_ITEMS = ResourcefulRegistries.create(ITEMS);
+
+//    public static final RegistryEntry<Item> __BUCKET = BASIC_ITEMS.register("_bucket", () -> new FluidBucketItem(
+//            AllFluidProperties.FLUIDHERE,
+//            new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))
+//    );
+
+//    public static final RegistryEntry<Item> _BLOCK  = BASIC_ITEMS.register("_block", () -> new BlockItem(
+//            AllBlocks._BLOCK.get(),
+//            new Item.Properties().rarity(Rarity.UNCOMMON)
+//                    .stacksTo(64)
+//    ));
+
+//    public static final RegistryEntry<Item>  = BASIC_ITEMS.register("", () -> new Item(new Item.Properties()));
+
+    public static final RegistryEntry<Item> SHULKER_SHELL_FRAGMENT  = BASIC_ITEMS.register("shulker_shell_fragment", () -> new Item(new Item.Properties()));
+    public static final RegistryEntry<Item> NETHERITE_DUST = BASIC_ITEMS.register("netherite_dust", () -> new Item(new Item.Properties()));
+    public static final RegistryEntry<Item> UNPROCESSED_NETHERITE_DUST = BASIC_ITEMS.register("unprocessed_netherite_dust", () -> new Item(new Item.Properties()));
+    public static final RegistryEntry<Item> UNPROCESSED_BLAZE_ROD = BASIC_ITEMS.register("unprocessed_blaze_rod", () -> new Item(new Item.Properties()));
+    public static final RegistryEntry<Item> SHULKER_COMPOUND = BASIC_ITEMS.register("shulker_compound", () -> new Item(new Item.Properties()));
+    public static final RegistryEntry<Item> DYE_TEMPLATE = BASIC_ITEMS.register("dye_template", () -> new Item(new Item.Properties()));
+    public static final RegistryEntry<Item> WOOD_STRING = BASIC_ITEMS.register("wood_string", () -> new Item(new Item.Properties()));
+
+
+    public static final RegistryEntry<Item> WOOD_STRING_WOOL_BLOCK  = BASIC_ITEMS.register("wood_string_wool_block", () -> new BlockItem(
+            AllBlocks.WOOD_STRING_WOOL_BLOCK.get(),
+            new Item.Properties().rarity(Rarity.UNCOMMON)
+                    .stacksTo(64)
+    ));
+
+    public static final RegistryEntry<Item> LIQUID_QUARTZ_BUCKET = BASIC_ITEMS.register("liquid_quartz_bucket", () -> new FluidBucketItem(
+            AllFluidProperties.LIQUID_QUARTZ,
+            new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))
+    );
+
+    public static final RegistryEntry<Item> LIQUID_REDSTONE_BUCKET = BASIC_ITEMS.register("liquid_redstone_bucket", () -> new FluidBucketItem(
+            AllFluidProperties.LIQUID_REDSTONE,
+            new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))
+    );
+    public static final RegistryEntry<Item> MOLTEN_ENDSTONE_BUCKET = BASIC_ITEMS.register("molten_endstone_bucket", () -> new FluidBucketItem(
+            AllFluidProperties.MOLTEN_ENDSTONE,
+            new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))
+    );
+
+
+
+
+    public static final RegistryEntry<Item> WHITE_DYED_WATER_BUCKET = BASIC_ITEMS.register("white_dyed_water_bucket", () -> new FluidBucketItem(
+            AllFluidProperties.WHITE_DYED_WATER,
+            new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))
+    );
+    public static final RegistryEntry<Item> LIGHT_GRAY_DYED_WATER_BUCKET = BASIC_ITEMS.register("light_gray_dyed_water_bucket", () -> new FluidBucketItem(
+            AllFluidProperties.LIGHT_GRAY_DYED_WATER,
+            new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))
+    );
+    public static final RegistryEntry<Item> GRAY_DYED_WATER_BUCKET = BASIC_ITEMS.register("gray_dyed_water_bucket", () -> new FluidBucketItem(
+            AllFluidProperties.GRAY_DYED_WATER,
+            new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))
+    );
+    public static final RegistryEntry<Item> BLACK_DYED_WATER_BUCKET = BASIC_ITEMS.register("black_dyed_water_bucket", () -> new FluidBucketItem(
+            AllFluidProperties.BLACK_DYED_WATER,
+            new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))
+    );
+    public static final RegistryEntry<Item> BROWN_DYED_WATER_BUCKET = BASIC_ITEMS.register("brown_dyed_water_bucket", () -> new FluidBucketItem(
+            AllFluidProperties.BROWN_DYED_WATER,
+            new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))
+    );
+    public static final RegistryEntry<Item> RED_DYED_WATER_BUCKET = BASIC_ITEMS.register("red_dyed_water_bucket", () -> new FluidBucketItem(
+            AllFluidProperties.RED_DYED_WATER,
+            new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))
+    );
+    public static final RegistryEntry<Item> ORANGE_DYED_WATER_BUCKET = BASIC_ITEMS.register("orange_dyed_water_bucket", () -> new FluidBucketItem(
+            AllFluidProperties.ORANGE_DYED_WATER,
+            new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))
+    );
+    public static final RegistryEntry<Item> YELLOW_DYED_WATER_BUCKET = BASIC_ITEMS.register("yellow_dyed_water_bucket", () -> new FluidBucketItem(
+            AllFluidProperties.YELLOW_DYED_WATER,
+            new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))
+    );
+    public static final RegistryEntry<Item> GREEN_DYED_WATER_BUCKET = BASIC_ITEMS.register("green_dyed_water_bucket", () -> new FluidBucketItem(
+            AllFluidProperties.GREEN_DYED_WATER,
+            new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))
+    );
+    public static final RegistryEntry<Item> LIME_DYED_WATER_BUCKET = BASIC_ITEMS.register("lime_dyed_water_bucket", () -> new FluidBucketItem(
+            AllFluidProperties.LIME_DYED_WATER,
+            new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))
+    );
+    public static final RegistryEntry<Item> CYAN_DYED_WATER_BUCKET = BASIC_ITEMS.register("cyan_dyed_water_bucket", () -> new FluidBucketItem(
+            AllFluidProperties.CYAN_DYED_WATER,
+            new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))
+    );
+    public static final RegistryEntry<Item> LIGHT_BLUE_DYED_WATER_BUCKET = BASIC_ITEMS.register("light_blue_dyed_water_bucket", () -> new FluidBucketItem(
+            AllFluidProperties.LIGHT_BLUE_DYED_WATER,
+            new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))
+    );
+    public static final RegistryEntry<Item> BLUE_DYED_WATER_BUCKET = BASIC_ITEMS.register("blue_dyed_water_bucket", () -> new FluidBucketItem(
+            AllFluidProperties.BLUE_DYED_WATER,
+            new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))
+    );
+    public static final RegistryEntry<Item> PURPLE_DYED_WATER_BUCKET = BASIC_ITEMS.register("purple_dyed_water_bucket", () -> new FluidBucketItem(
+            AllFluidProperties.PURPLE_DYED_WATER,
+            new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))
+    );
+    public static final RegistryEntry<Item> MAGENTA_DYED_WATER_BUCKET = BASIC_ITEMS.register("magenta_dyed_water_bucket", () -> new FluidBucketItem(
+            AllFluidProperties.MAGENTA_DYED_WATER,
+            new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))
+    );
+    public static final RegistryEntry<Item> PINK_DYED_WATER_BUCKET = BASIC_ITEMS.register("pink_dyed_water_bucket", () -> new FluidBucketItem(
+            AllFluidProperties.PINK_DYED_WATER,
+            new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))
+    );
+
+    public static void init() {
+        AllItems.ITEMS.init();
+        AllItems.BASIC_ITEMS.init();
+    }
+}

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "create_more_farmables",
+  "version": "${version}-fabric",
+  "name": "Create: More Farmables",
+  "description": "A Create Addon that brings full automation to More Items, More Blocks, More Fluids, More Mods",
+  "authors": [
+    "RockieFT, Rockiecraft"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/create-more-farmables, https://modrinth.com/mod/create-more-farmables ",
+    "sources": "https://github.com/Rockiecraft/Create-More-Farmables"
+  },
+  "license": "MIT",
+  "icon": "logo.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.rockiecraft.fabric.CreateMoreFarmablesFabric"
+    ],
+    "client": [
+      "net.rockiecraft.fabric.client.CreateMoreFarmablesFabricClient"
+    ]
+  },
+  "mixins": [
+    "create_more_farmables.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.3",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "architectury": ">=9.2.14",
+    "fabric-api": "*",
+    "botarium": ">=2.3.3",
+    "resourcefullib": ">=2.1.23"
+
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

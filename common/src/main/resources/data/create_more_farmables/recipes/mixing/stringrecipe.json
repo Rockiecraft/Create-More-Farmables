@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "count": 1,
+      "item": "create_more_farmables:wood_string"
+    },
+    {
+      "amount": 50,
+      "fluid": "create_more_farmables:white_dyed_water"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "item": "minecraft:string"
+    }
+  ]
+}

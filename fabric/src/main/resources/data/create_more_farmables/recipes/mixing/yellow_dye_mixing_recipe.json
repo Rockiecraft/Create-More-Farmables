@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:yellow_dye"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 4050
+    }
+  ],
+  "results": [
+    {
+      "amount": 8100,
+      "fluid": "create_more_farmables:yellow_dyed_water"
+    }
+  ]
+}

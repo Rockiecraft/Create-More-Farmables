@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:purple_dye"
+    },
+    {
+      "fluid": "minecraft:water",
+      "amount": 50
+    }
+  ],
+  "results": [
+    {
+      "amount": 100,
+      "fluid": "create_more_farmables:purple_dyed_water"
+    }
+  ]
+}

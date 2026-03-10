@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:sand"
+    },
+    {
+      "fluid": "create_more_farmables:red_dyed_water",
+      "amount": 250
+    }
+  ],
+  "results": [
+    {
+      "amount": 1,
+      "item": "minecraft:red_sand"
+    }
+  ]
+}

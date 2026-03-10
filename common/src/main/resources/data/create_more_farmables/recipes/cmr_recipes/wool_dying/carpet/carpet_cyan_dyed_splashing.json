@@ -1,0 +1,18 @@
+{
+  "type": "cmr:custom_fan",
+  "ingredients": [
+    {
+      "tag": "minecraft:wool_carpets"
+    },
+    {
+      "amount": 1000,
+      "fluid": "create_more_farmables:cyan_dyed_water",
+      "nbt": {}
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:cyan_carpet"
+    }
+  ]
+}

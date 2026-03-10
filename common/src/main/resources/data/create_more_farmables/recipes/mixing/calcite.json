@@ -1,0 +1,20 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "count": 1,
+      "item": "minecraft:stone"
+    },
+    {
+      "amount": 200,
+      "fluid": "create_more_farmables:white_dyed_water"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "item": "minecraft:calcite"
+    }
+  ]
+}

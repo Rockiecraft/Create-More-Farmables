@@ -1,0 +1,21 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "create:scoria"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:lapis_lazuli",
+      "amount": 1,
+      "chance": 0.8
+    },
+    {
+    "item": "minecraft:lapis_lazuli",
+    "count": 3,
+    "chance": 0.4
+    }
+  ],
+  "processingTime": 250
+}

@@ -1,0 +1,54 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "minecraft:cobblestone"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "chance": 100.0,
+      "item": "minecraft:diorite"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "minecraft:cobblestone"
+        },
+        {
+          "amount": 100,
+          "fluid": "create_more_farmables:liquid_quartz",
+          "nbt": {}
+        }
+      ],
+      "results": [
+        {
+          "item": "minecraft:cobblestone"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "minecraft:cobblestone"
+        },
+        {
+          "amount": 100,
+          "fluid": "create_more_farmables:liquid_quartz",
+          "nbt": {}
+        }
+      ],
+      "results": [
+        {
+          "item": "minecraft:cobblestone"
+        }
+      ]
+    }
+  ],
+  "transitionalItem": {
+    "item": "minecraft:cobblestone"
+  }
+}
