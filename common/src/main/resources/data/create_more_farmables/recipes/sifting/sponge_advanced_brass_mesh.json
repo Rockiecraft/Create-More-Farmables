@@ -11,11 +11,11 @@
   "processingTime": 500,
   "results": [
     {
-      "chance": 0.35,
+      "chance": 0.15,
       "item": "minecraft:prismarine_shard"
     },
     {
-      "chance": 0.25,
+      "chance": 0.15,
       "item": "minecraft:prismarine_crystals"
     },
     {

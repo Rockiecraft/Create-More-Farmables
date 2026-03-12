@@ -6,9 +6,10 @@ license="MIT"
 [[mods]]
 modId = "create_more_farmables"
 version = "${version}"
+displayURL="https://modrinth.com/mod/create-more-farmables"
 displayName = "Create: More Farmables"
 authors = "RockieFT or Rockiecraft"
-logoFile= "../logo.png"
+logoFile= "logo.png"
 description = '''
 A Create Addon that brings full automation to More Items, More Blocks, More Fluids, More Mods
 '''

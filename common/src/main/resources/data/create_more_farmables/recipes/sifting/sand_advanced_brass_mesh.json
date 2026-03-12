@@ -11,23 +11,23 @@
   "processingTime": 500,
   "results": [
     {
-      "chance": 0.45,
+      "chance": 0.25,
       "item": "minecraft:clay_ball"
     },
     {
-      "chance": 0.55,
+      "chance": 0.35,
       "item": "minecraft:scute"
     },
     {
-      "chance": 0.35,
+      "chance": 0.8,
       "item": "minecraft:diamond"
     },
     {
-      "chance": 0.45,
+      "chance": 0.25,
       "item": "minecraft:coal"
     },
     {
-      "chance": 0.35,
+      "chance": 0.15,
       "item": "create:experience_nugget"
     }
   ],

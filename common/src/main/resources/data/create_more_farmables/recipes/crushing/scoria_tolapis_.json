@@ -9,12 +9,12 @@
     {
       "item": "minecraft:lapis_lazuli",
       "amount": 1,
-      "chance": 0.8
+      "chance": 0.7
     },
     {
     "item": "minecraft:lapis_lazuli",
     "count": 3,
-    "chance": 0.4
+    "chance": 0.35
     }
   ],
   "processingTime": 250
