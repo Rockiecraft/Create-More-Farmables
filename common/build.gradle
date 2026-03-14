@@ -12,7 +12,7 @@ dependencies {
     modImplementation "dev.architectury:architectury:$rootProject.architectury_api_version"
     modImplementation "com.teamresourceful.resourcefullib:resourcefullib-common-1.20.1:${resourcefulLibVersion}"
 
-    // Create
+//     Create
 //    modImplementation("com.simibubi.create:create-${minecraft_version}:${create_forge_version}:slim") { transitive = false }
 //    modImplementation("net.createmod.ponder:Ponder-Forge-${minecraft_version}:${ponder_forge_version}")
 

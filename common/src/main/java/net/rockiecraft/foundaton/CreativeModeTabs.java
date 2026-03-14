@@ -1,4 +1,4 @@
-package net.rockiecraft;
+package net.rockiecraft.foundaton;
 
 import dev.architectury.registry.CreativeTabRegistry;
 import dev.architectury.registry.registries.DeferredRegister;
@@ -7,6 +7,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.rockiecraft.CreateMoreFarmables;
 
 public class CreativeModeTabs {
 
@@ -20,17 +21,23 @@ public class CreativeModeTabs {
                             .title(Component.translatable("Create: More Farmables"))
                             .icon(() -> new ItemStack(AllItems.SHULKER_SHELL_FRAGMENT.get()))
                             .displayItems((parameters, output) -> {
+
+                                output.accept(AllItems.ECHO_SHARD_DUST.get());
+                                output.accept(AllItems.ENDER_PEARL_DUST.get());
                                 output.accept(AllItems.NETHERITE_DUST.get());
                                 output.accept(AllItems.UNPROCESSED_NETHERITE_DUST.get());
-                                output.accept(AllItems.UNPROCESSED_BLAZE_ROD.get());
-
-                                output.accept(AllItems.SHULKER_COMPOUND.get());
                                 output.accept(AllItems.SHULKER_SHELL_FRAGMENT.get());
+                                output.accept(AllItems.HEART_OF_THE_SEA_FRAGMENT.get());
+                                output.accept(AllItems.NAUTLIUS_SHELL_FRAGMENT.get());
+
+                                output.accept(AllItems.UNPROCESSED_BLAZE_ROD.get());
+                                output.accept(AllItems.SHULKER_COMPOUND.get());
                                 output.accept(AllItems.DYE_TEMPLATE.get());
                                 output.accept(AllItems.WOOD_STRING.get());
 
 
                                 output.accept(AllItems.WOOD_STRING_WOOL_BLOCK.get());
+
                                 output.accept(AllItems.LIQUID_QUARTZ_BUCKET.get());
                                 output.accept(AllItems.LIQUID_REDSTONE_BUCKET.get());
                                 output.accept(AllItems.MOLTEN_ENDSTONE_BUCKET.get());

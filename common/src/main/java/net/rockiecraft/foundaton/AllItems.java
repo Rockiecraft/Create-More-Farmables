@@ -1,4 +1,4 @@
-package net.rockiecraft;
+package net.rockiecraft.foundaton;
 
 import com.teamresourceful.resourcefullib.common.registry.RegistryEntry;
 import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistries;
@@ -6,7 +6,8 @@ import com.teamresourceful.resourcefullib.common.registry.ResourcefulRegistry;
 import earth.terrarium.botarium.common.registry.fluid.FluidBucketItem;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.*;
-import net.rockiecraft.fluids.AllFluidProperties;
+import net.rockiecraft.CreateMoreFarmables;
+import net.rockiecraft.foundaton.registry.fluids.AllFluidProperties;
 
 
 public class AllItems {
@@ -29,13 +30,38 @@ public class AllItems {
 
 //    public static final RegistryEntry<Item>  = BASIC_ITEMS.register("", () -> new Item(new Item.Properties()));
 
-    public static final RegistryEntry<Item> SHULKER_SHELL_FRAGMENT  = BASIC_ITEMS.register("shulker_shell_fragment", () -> new Item(new Item.Properties()));
-    public static final RegistryEntry<Item> NETHERITE_DUST = BASIC_ITEMS.register("netherite_dust", () -> new Item(new Item.Properties()));
-    public static final RegistryEntry<Item> UNPROCESSED_NETHERITE_DUST = BASIC_ITEMS.register("unprocessed_netherite_dust", () -> new Item(new Item.Properties()));
-    public static final RegistryEntry<Item> UNPROCESSED_BLAZE_ROD = BASIC_ITEMS.register("unprocessed_blaze_rod", () -> new Item(new Item.Properties()));
-    public static final RegistryEntry<Item> SHULKER_COMPOUND = BASIC_ITEMS.register("shulker_compound", () -> new Item(new Item.Properties()));
-    public static final RegistryEntry<Item> DYE_TEMPLATE = BASIC_ITEMS.register("dye_template", () -> new Item(new Item.Properties()));
-    public static final RegistryEntry<Item> WOOD_STRING = BASIC_ITEMS.register("wood_string", () -> new Item(new Item.Properties()));
+    public static final RegistryEntry<Item> NAUTLIUS_SHELL_FRAGMENT  = BASIC_ITEMS.register("nautilus_shell_fragment",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryEntry<Item> HEART_OF_THE_SEA_FRAGMENT  = BASIC_ITEMS.register("heart_of_the_sea_fragment",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryEntry<Item> SHULKER_SHELL_FRAGMENT  = BASIC_ITEMS.register("shulker_shell_fragment",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryEntry<Item> NETHERITE_DUST = BASIC_ITEMS.register("netherite_dust",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryEntry<Item> UNPROCESSED_NETHERITE_DUST = BASIC_ITEMS.register("unprocessed_netherite_dust",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryEntry<Item> UNPROCESSED_BLAZE_ROD = BASIC_ITEMS.register("unprocessed_blaze_rod",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryEntry<Item> SHULKER_COMPOUND = BASIC_ITEMS.register("shulker_compound",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryEntry<Item> DYE_TEMPLATE = BASIC_ITEMS.register("dye_template",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryEntry<Item> WOOD_STRING = BASIC_ITEMS.register("wood_string",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryEntry<Item> ECHO_SHARD_DUST  = BASIC_ITEMS.register("echo_shard_dust",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryEntry<Item> ENDER_PEARL_DUST  = BASIC_ITEMS.register("ender_pearl_dust",
+            () -> new Item(new Item.Properties()));
 
 
     public static final RegistryEntry<Item> WOOD_STRING_WOOL_BLOCK  = BASIC_ITEMS.register("wood_string_wool_block", () -> new BlockItem(
@@ -57,8 +83,6 @@ public class AllItems {
             AllFluidProperties.MOLTEN_ENDSTONE,
             new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1))
     );
-
-
 
 
     public static final RegistryEntry<Item> WHITE_DYED_WATER_BUCKET = BASIC_ITEMS.register("white_dyed_water_bucket", () -> new FluidBucketItem(

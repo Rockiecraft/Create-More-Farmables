@@ -1,7 +1,10 @@
 package net.rockiecraft;
 
-import dev.architectury.registry.client.rendering.ColorHandlerRegistry;
-import net.rockiecraft.fluids.AllFluidProperties;
+import net.rockiecraft.foundaton.AllBlocks;
+import net.rockiecraft.foundaton.AllFluids;
+import net.rockiecraft.foundaton.AllItems;
+import net.rockiecraft.foundaton.CreativeModeTabs;
+import net.rockiecraft.foundaton.registry.fluids.AllFluidProperties;
 import org.slf4j.LoggerFactory;
 
 import org.slf4j.Logger;

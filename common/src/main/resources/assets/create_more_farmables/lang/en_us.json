@@ -1,11 +1,15 @@
 {
     "item.create_more_farmables.shulker_compound": "Shulker Compound",
     "item.create_more_farmables.shulker_shell_fragment": "Shulker Shell Fragment",
+    "item.create_more_farmables.nautilus_shell_fragment": "Nautilus Shell Fragment",
+    "item.create_more_farmables.heart_of_the_sea_fragment": "Heart Of The Sea Fragment",
     "item.create_more_farmables.dye_template": "Dye Template",
     "item.create_more_farmables.wood_string":"Wood String",
     "item.create_more_farmables.wood_string_wool_block":"Wood String Wool",
     "item.create_more_farmables.netherite_dust": "Netherite Dust",
     "item.create_more_farmables.unprocessed_netherite_dust": "Unprocessed Netherite Dust",
+    "item.create_more_farmables.echo_shard_dust": "Echo Shard Dust",
+    "item.create_more_farmables.ender_pearl_dust": "Ender Pearl Dust",
     "item.create_more_farmables.unprocessed_blaze_rod": "Unprocessed Blaze Rod",
 
     "item.create_more_farmables.liquid_quartz_bucket": "Liquid Quartz Bucket",

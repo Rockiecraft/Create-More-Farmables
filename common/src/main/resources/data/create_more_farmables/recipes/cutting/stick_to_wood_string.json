@@ -8,8 +8,10 @@
   "results": [
     {
       "item": "create_more_farmables:wood_string",
-      "item": "create_more_farmables:wood_string"
+      "count": 2,
+      "amount": 2
     }
+
   ],
   "processingTime": 50
 }

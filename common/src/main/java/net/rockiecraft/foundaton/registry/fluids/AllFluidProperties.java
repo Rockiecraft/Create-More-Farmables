@@ -1,4 +1,4 @@
-package net.rockiecraft.fluids;
+package net.rockiecraft.foundaton.registry.fluids;
 
 import earth.terrarium.botarium.common.registry.fluid.*;
 import net.minecraft.resources.ResourceLocation;
@@ -31,8 +31,8 @@ public class AllFluidProperties {
             .flowing(new ResourceLocation("create_more_farmables:block/flowing_liquid_quartz"))
             .overlay(new ResourceLocation("block/water_overlay"))
             .screenOverlay(new ResourceLocation("textures/misc/underwater.png"))
-            .viscosity(1000)
-            .density(1000)
+            .viscosity(6000)
+            .density(3000)
             .tintColor(-393218)
             .pathType(BlockPathTypes.LAVA)
             .canSwim(true)
@@ -44,8 +44,8 @@ public class AllFluidProperties {
             .flowing(new ResourceLocation("create_more_farmables:block/flowing_liquid_redstone"))
             .overlay(new ResourceLocation("block/water_overlay"))
             .screenOverlay(new ResourceLocation("textures/misc/underwater.png"))
-            .viscosity(1000)
-            .density(1000)
+            .viscosity(6000)
+            .density(3000)
             .tintColor(-5231066)
             .pathType(BlockPathTypes.LAVA)
             .canSwim(true)
@@ -57,13 +57,14 @@ public class AllFluidProperties {
             .flowing(new ResourceLocation("create_more_farmables:block/flowing_molten_endstone"))
             .overlay(new ResourceLocation("block/water_overlay"))
             .screenOverlay(new ResourceLocation("textures/misc/underwater.png"))
-            .viscosity(1000)
-            .density(1000)
+            .viscosity(6000)
+            .density(3000)
             .tintColor(-75715)
             .pathType(BlockPathTypes.LAVA)
             .canSwim(true)
-            .canDrown(true)
-            .canConvertToSource(true)
+            .canDrown(false)
+            .canConvertToSource(false)
+            .temperature(1300)
             .tickRate(30));
 
     public static final FluidData WHITE_DYED_WATER = FLUID_PROPERTIES.register("white_dyed_water", FluidProperties.create()

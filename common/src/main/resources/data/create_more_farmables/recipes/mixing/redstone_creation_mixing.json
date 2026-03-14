@@ -2,32 +2,16 @@
   "type": "create:mixing",
   "heatRequirement": "heated",
   "ingredients": [
-    {
-      "item": "create:cinder_flour"
-    },
-    {
-      "item": "create:cinder_flour"
-    },
-    {
-      "item": "create:cinder_flour"
-    },
-    {
-      "item": "create:cinder_flour",
-      "item": "create:cinder_flour",
-      "item": "create:cinder_flour"
-    },
-    {
-      "item": "minecraft:iron_nugget"
-    },
-    {
-      "item": "minecraft:iron_nugget"
-    },
-    {
-      "item": "minecraft:iron_nugget"
-    },
-    {
-      "item": "minecraft:iron_nugget"
-    }
+    {"item": "create:cinder_flour"},
+    {"item": "create:cinder_flour"},
+    {"item": "create:cinder_flour"},
+    {"item": "create:cinder_flour"},
+    {"item": "create:cinder_flour"},
+    {"item": "create:cinder_flour"},
+    {"item": "minecraft:iron_nugget"},
+    {"item": "minecraft:iron_nugget"},
+    {"item": "minecraft:iron_nugget"},
+    {"item": "minecraft:iron_nugget"}
   ],
   "results": [
     {

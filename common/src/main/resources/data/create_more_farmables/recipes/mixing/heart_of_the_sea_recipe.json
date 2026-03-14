@@ -1,0 +1,17 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "create_more_farmables:heart_of_the_sea_fragment"
+    },
+    {
+      "item": "create_more_farmables:heart_of_the_sea_fragment"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:heart_of_the_sea",
+      "count": 2
+    }
+  ]
+}

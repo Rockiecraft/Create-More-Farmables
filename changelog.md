@@ -1,3 +1,28 @@
+
+---
+## 0.9
+
+
+### New Additions 
+
+- Echo Shard dust
+- Ender Pearl Dust
+- Heart of the Sea fragment
+- Nautilus Shell Fragment
+-
+
+### Changes & Balances
+
+- #### CMF now runs on Architectury & Botarium allowing for both forge and fabric to have parity and to manage fluids better
+- 
+- Balanced sifting recipes as they were op and are not anymore
+- 
+
+### Fixes
+
+-
+
+---
 ## 0.8.2
 
 ### New additions & changes
