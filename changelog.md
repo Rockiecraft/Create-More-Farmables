@@ -5,22 +5,21 @@
 
 ### New Additions 
 
-- Echo Shard dust
-- Ender Pearl Dust
-- Heart of the Sea fragment
-- Nautilus Shell Fragment
--
+- Echo Shard dust + Recipe
+- Ender Pearl Dust + recipe
+- Heart of the Sea fragment + Recipe
+- Nautilus Shell Fragment + recipe
 
 ### Changes & Balances
 
 - #### CMF now runs on Architectury & Botarium allowing for both forge and fabric to have parity and to manage fluids better
 - 
 - Balanced sifting recipes as they were op and are not anymore
-- 
+- Molten Endstone, Liquid Redstone and Liquid Quartz now deal fire damage when stepped in
 
 ### Fixes
 
--
+- liquid amounts in recipes on Fabric
 
 ---
 ## 0.8.2

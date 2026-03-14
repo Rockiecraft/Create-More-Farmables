@@ -1,0 +1,17 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "minecraft:prismarine_crystals"
+    },
+    {
+      "item": "minecraft:prismarine_shard"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "item": "create_more_farmables:nautilus_shell_fragment"
+    }
+  ]
+}
