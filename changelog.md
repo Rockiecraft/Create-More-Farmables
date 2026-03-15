@@ -1,25 +1,34 @@
 
----
 ## 0.9
 
 
-### New Additions 
+### New Additions -
 
 - Echo Shard dust + Recipe
 - Ender Pearl Dust + recipe
 - Heart of the Sea fragment + Recipe
+- Heart of the Sea can now be crafted with 2 Heart of the Sea Fragments
 - Nautilus Shell Fragment + recipe
+- Nautilus Shells can now be crafted with 2 Nautilus Shell Fragments
 
-### Changes & Balances
+### Changes & Balances -
 
 - #### CMF now runs on Architectury & Botarium allowing for both forge and fabric to have parity and to manage fluids better
 - 
 - Balanced sifting recipes as they were op and are not anymore
 - Molten Endstone, Liquid Redstone and Liquid Quartz now deal fire damage when stepped in
+- Molten Endstone, Liquid Redstone and Liquid Quartz now have a reaction when touching water producing a block
+- 
 
-### Fixes
+### Fixes -
 
 - liquid amounts in recipes on Fabric
+
+### Credits - 
+
+- Echo shard dust & Ender Pearl dust textures - [v3lsk](https://github.com/v3lsk)
+- Nautilus Shell fragment & Heart of the sea fragment textures - [v3lsk](https://github.com/v3lsk)
+- Molten Endstone Bucket, Liquid Redstone bucket And Liquid Quartz Bucket textures - [v3lsk](https://github.com/v3lsk)
 
 ---
 ## 0.8.2
@@ -32,7 +41,7 @@
 - Added Liquid Quartz
 - New Mixing & Sequenced Assembly Recipes for Diorite
 - New Mixing Recipe for Andesite
-- New recipe with Create more recipes for Dying Sand -> Red sand
+- New recipe with Create more recipes for Dying Sand → Red sand
 - New Haunting recipe for Redstone -> Glowstone
 
 ### Fixes
@@ -54,7 +63,7 @@
 ---
 ## 0.8
 ## New additions & changes
-i'll get to updating fabric ver eventually (if i ever feel like it, i hate working in fabric)
+I'll get to updating fabric ver eventually (if I ever feel like it, I hate working in fabric)
 
 ### Creative Tab changes -
 
@@ -83,7 +92,7 @@ i'll get to updating fabric ver eventually (if i ever feel like it, i hate worki
 ### New Recipes -
 
 #### these custom splashing recipes require another mod to work (these recipes are only on the forge ver)
-installing said mod is optional though. you just won't be able to used these recipes without it. [Create: More Recipes](https://www.curseforge.com/minecraft/mc-mods/create-morerecipes)
+installing said mod is optional though. you just won't be able to use these recipes without it. [Create: More Recipes](https://www.curseforge.com/minecraft/mc-mods/create-morerecipes)
 
 #### Custom splashing - (forge)
 - using dyed water in front of a fan can be used to stain glass and dye wool

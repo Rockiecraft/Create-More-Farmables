@@ -31,6 +31,15 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
 
+      - name: Extract Changelog Section
+        id: extract_changelog
+        run: |
+          VERSION="${{ github.event.inputs.version }}"
+          # This finds the line starting with "## " + your version
+          # and extracts everything until it hits a line that is exactly "---"
+          sed -n "/^## $VERSION/,/^---/p" changelog.md | sed '$d' > release_notes.md
+          echo "Notes extracted to release_notes.md"
+
       - name: Create GitHub Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
