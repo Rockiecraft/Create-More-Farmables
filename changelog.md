@@ -14,6 +14,7 @@
 ### Changes & Balances -
 
 - #### CMF now runs on Architectury & Botarium allowing for both forge and fabric to have parity and to manage fluids better
+- #### Forge and Fabric will be shipped in the same jar using [forgix](https://github.com/PacifistMC/Forgix)
 - 
 - Balanced sifting recipes as they were op and are not anymore
 - Molten Endstone, Liquid Redstone and Liquid Quartz now deal fire damage when stepped in
