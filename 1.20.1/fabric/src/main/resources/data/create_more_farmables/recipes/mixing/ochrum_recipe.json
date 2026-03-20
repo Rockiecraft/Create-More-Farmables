@@ -1,0 +1,40 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "fabricloader"
+        }
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "fabric:all_mods_loaded",
+          "values": [
+            "fabricloader"
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "create:mixing",
+        "heatRequirement": "heated",
+        "ingredients": [
+          {
+            "item": "minecraft:dripstone_block"
+          },
+          {
+            "fluid": "create_more_farmables:yellow_dyed_water",
+            "amount": 16200
+          }
+        ],
+        "results": [
+          {
+            "item": "create:ochrum",
+            "amount": 1
+          }
+        ]
+      }
+    }
+  ]
+}

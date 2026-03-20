@@ -1,0 +1,18 @@
+{
+  "type": "cmr:custom_fan",
+  "ingredients": [
+    {
+      "tag": "forge:glass"
+    },
+    {
+      "amount": 1000,
+      "fluid": "create_more_farmables:light_gray_dyed_water",
+      "nbt": {}
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:light_gray_stained_glass"
+    }
+  ]
+}

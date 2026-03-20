@@ -1,0 +1,15 @@
+pluginManagement {
+    repositories {
+        maven { url = "https://maven.firstdarkdev.xyz/releases" }
+        maven { url = "https://nexus.resourcefulbees.com/repository/maven-public/" }
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+
+
+includeBuild '1.19.2'
+includeBuild '1.20.1'
+include 'build'
+include ':build'
+//includeBuild '1.21.1'

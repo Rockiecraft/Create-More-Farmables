@@ -1,0 +1,28 @@
+plugins {
+    id 'io.github.pacifistmc.forgix' version '2.+'
+}
+
+forgix {
+
+    group = 'net.rockiecraft'
+    archiveBaseName = "c_more_farmables"
+    archiveVersion = mod_version
+    archiveClassifier = "universal"
+    merge("build")
+
+    merge("build") {
+        // Use .set() to assign the file to the RegularFileProperty
+        inputJar.set(layout.projectDirectory.file("build/libs/c_more_farmables-1.19.2-0.9.0-combo.jar"))
+    }
+
+    merge("build") {
+        inputJar.set(layout.projectDirectory.file("build/libs/c_more_farmables-1.20.1-0.9.0-combo.jar"))
+    }
+autoRun=true
+}
+
+tasks.named('mergeJars') {
+    mustRunAfter tasks.named('build')
+}
+
+

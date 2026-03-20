@@ -1,0 +1,17 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "create_more_farmables:nautilus_shell_fragment"
+    },
+    {
+      "item": "create_more_farmables:nautilus_shell_fragment"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:nautilus_shell",
+      "count": 1
+    }
+  ]
+}

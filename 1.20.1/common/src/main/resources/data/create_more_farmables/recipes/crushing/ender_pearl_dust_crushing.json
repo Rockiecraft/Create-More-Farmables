@@ -1,0 +1,15 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "minecraft:ender_pearl"
+    }
+  ],
+  "results": [
+    {
+      "item": "create_more_farmables:ender_pearl_dust",
+      "amount": 1
+    }
+  ],
+  "processingTime": 25
+}
