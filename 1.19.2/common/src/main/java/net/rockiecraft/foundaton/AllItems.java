@@ -78,8 +78,6 @@ public class AllItems {
             items.add(new ItemStack(AllItems.MAGENTA_DYED_WATER_BUCKET.get()));
             items.add(new ItemStack(AllItems.PINK_DYED_WATER_BUCKET.get()));
         }
-
-        // Helper method used by Steam 'n' Rails to simplify adding items
         private void add(NonNullList<ItemStack> items, Supplier<? extends ItemLike> item) {
             items.add(new ItemStack(item.get()));
         }

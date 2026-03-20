@@ -29,7 +29,6 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build and Merge Jars
-        # Exactly as shown in your image: builds first, then merges for both versions
         run: ./gradlew :1.19.2:build :1.20.1:build :1.19.2:mergeJars :1.20.1:mergeJars
 
       - name: Extract Changelog Section
@@ -43,8 +42,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Grabs the resulting combo jars from the build/libs of each subproject
-          # Note: Adjust the "-combo.jar" suffix if Forgix names yours differently
           gh release create "v${{ github.event.inputs.version }}" \
             1.19.2/build/forgix/*-combo.jar \
             1.20.1/build/forgix/*-combo.jar \
