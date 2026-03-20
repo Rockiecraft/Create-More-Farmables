@@ -15,7 +15,7 @@ out
 
 # gradle
 .gradle/
-**/build/
+build/libs/*.jar
 1.19.2/.gradle/
 1.20.1/.gradle/
 1.21.1
