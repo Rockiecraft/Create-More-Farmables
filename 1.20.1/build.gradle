@@ -1,7 +1,7 @@
 plugins {
     id 'dev.architectury.loom' version '1.11-SNAPSHOT' apply false
     id 'architectury-plugin' version '3.4-SNAPSHOT'
-    id 'io.github.pacifistmc.forgix' version '2.+'
+    id "io.github.pacifistmc.forgix" version "1.2.9"
     id 'com.gradleup.shadow' version '8.3.6' apply false
     id "maven-publish"
 }
@@ -101,25 +101,41 @@ subprojects {
     }
 }
 
+//forgix {
+//   destinationDirectory = layout.projectDirectory.dir("forgix")
+//    archiveClassifier = "combo"
+//      archiveVersion = minecraft_version+"-"+mod_version
+//      archiveBaseName = "c_more_farmables"
+//    fabric()
+//    forge()
+//
+//    // Optional: Point directly to the remapped jars if auto-detect fails
+//
+//    fabric {
+//        inputJar = project(":fabric").tasks.remapJar.archiveFile
+//    }
+//    forge {
+//        inputJar = project(":forge").tasks.remapJar.archiveFile
+//    }
+//
+//    autoRun = true
+//}
+//tasks.named('mergeJars') {
+//    dependsOn tasks.named('build')
+//}
+
 forgix {
-   destinationDirectory = layout.projectDirectory.dir("forgix")
-    archiveClassifier = "combo"
-      archiveVersion = minecraft_version+"-"+mod_version
-      archiveBaseName = "c_more_farmables"
-    fabric()
-    forge()
+    mergedJarName = "${rootProject.archives_name}-1.20.1-${rootProject.mod_version}.jar"
+    outputDir = "/build/forgix"
+    version = '${rootProject.mod_version}'
 
-    // Optional: Point directly to the remapped jars if auto-detect fails
-
-    fabric {
-        inputJar = project(":fabric").tasks.remapJar.archiveFile
-    }
     forge {
-        inputJar = project(":forge").tasks.remapJar.archiveFile
+        projectName = "forge"
+        jarLocation = "build/libs/*.jar"
     }
+    fabric {
+        projectName = "fabric"
+        jarLocation = "build/libs/*.jar"
 
-    autoRun = true
-}
-tasks.named('mergeJars') {
-    dependsOn tasks.named('build')
+    }
 }
