@@ -42,6 +42,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          FILES=$(find . -path "*/forgix/*.jar")
           gh release create "v${{ github.event.inputs.version }}" \
             $FILES \
             1.19.2/*/build/libs/*.jar \
