@@ -43,8 +43,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release create "v${{ github.event.inputs.version }}" \
-            1.19.2/build/forgix/*.jar \
-            1.20.1/build/forgix/*.jar \
+            $FILES \
             1.19.2/*/build/libs/*.jar \
             1.20.1/*/build/libs/*.jar \
             --repo="$GITHUB_REPOSITORY" \
