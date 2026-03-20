@@ -102,7 +102,7 @@ subprojects {
 }
 
 forgix {
-   destinationDirectory = layout.projectDirectory.dir("/build/forgix")
+   destinationDirectory = layout.projectDirectory.dir("forgix")
     archiveClassifier = "combo"
       archiveVersion = minecraft_version+"-"+mod_version
       archiveBaseName = "c_more_farmables"
