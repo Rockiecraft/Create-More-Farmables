@@ -120,3 +120,6 @@ forgix {
 
     autoRun = true
 }
+tasks.named('mergeJars') {
+    dependsOn tasks.named('build')
+}

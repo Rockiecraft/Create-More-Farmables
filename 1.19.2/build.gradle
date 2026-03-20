@@ -116,8 +116,6 @@ forgix {
     autoRun=true
 }
 
-tasks.named("mergeJars").configure {
-    // This forces the JARs to be created before merging starts
-    dependsOn(project(":fabric").tasks.named("remapJar"))
-    dependsOn(project(":forge").tasks.named("remapJar"))
+tasks.named('mergeJars') {
+    dependsOn tasks.named('build')
 }
