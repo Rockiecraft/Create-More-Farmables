@@ -101,8 +101,8 @@ forgix {
     archiveClassifier = "combo"
     archiveVersion = minecraft_version+"-"+mod_version
     archiveBaseName = "c_more_farmables"
-//    fabric()
-//    forge()
+    fabric()
+    forge()
 
     fabric {
         // Use the project object directly to get the task

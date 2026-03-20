@@ -29,7 +29,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build and Merge Jars
-        run: ./gradlew assemble :1.19.2:mergeJars :1.20.1:mergeJars --no-daemon
+        run: ./gradlew :1.19.2:mergeJars :1.20.1:mergeJars --no-daemon
 
       - name: Extract Changelog Section
         id: extract_changelog
