@@ -20,8 +20,8 @@ allprojects {
             url = 'https://maven.parchmentmc.org'
         }
         maven {
-            name = "Resourceful Maven";
-            description = "Baubly, Botarium & ResourcefulLib";
+            name = "Resourceful Maven"
+            description = "Baubly, Botarium & ResourcefulLib"
             url = "https://maven.teamresourceful.com/repository/maven-public/"
         }
         maven { url = "https://maven.neoforged.net" }
@@ -106,11 +106,7 @@ forgix {
     archiveClassifier = "combo"
       archiveVersion = minecraft_version+"-"+mod_version
       archiveBaseName = "c_more_farmables"
-    fabric {
-        inputJar = project(":fabric").tasks.remapJar.archiveFile
-    }
-    forge {
-        inputJar = project(":forge").tasks.remapJar.archiveFile
-    }
+    fabric()
+    forge()
     autoRun = true
 }
