@@ -108,5 +108,15 @@ forgix {
       archiveBaseName = "c_more_farmables"
     fabric()
     forge()
+
+    // Optional: Point directly to the remapped jars if auto-detect fails
+
+    fabric {
+        inputJar = project(":fabric").tasks.remapJar.archiveFile
+    }
+    forge {
+        inputJar = project(":forge").tasks.remapJar.archiveFile
+    }
+
     autoRun = true
 }
