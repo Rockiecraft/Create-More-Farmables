@@ -46,7 +46,7 @@ jobs:
         run: |
           # Grabs only the specific combo/universal jars from the root build folder
           gh release create "v${{ github.event.inputs.version }}" \
-            build/libs/*.jar \
+            github_build/libs/*.jar \
             --repo="$GITHUB_REPOSITORY" \
             --title="Release v${{ github.event.inputs.version }}" \
             --notes-file release_notes.md
