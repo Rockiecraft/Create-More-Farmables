@@ -28,15 +28,14 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Build with Gradle
-        run: ./gradlew build
+      - name: Build and Merge Jars
+        # Exactly as shown in your image: builds first, then merges for both versions
+        run: ./gradlew :1.19.2:build :1.20.1:build :1.19.2:mergeJars :1.20.1:mergeJars
 
       - name: Extract Changelog Section
         id: extract_changelog
         run: |
           VERSION="${{ github.event.inputs.version }}"
-          # This finds the line starting with "## " + your version
-          # and extracts everything until it hits a line that is exactly "---"
           sed -n "/^## $VERSION/,/^---/p" changelog.md | sed '$d' > release_notes.md
           echo "Notes extracted to release_notes.md"
 
@@ -44,9 +43,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Grabs only the specific combo/universal jars from the root build folder
+          # Grabs the resulting combo jars from the build/libs of each subproject
+          # Note: Adjust the "-combo.jar" suffix if Forgix names yours differently
           gh release create "v${{ github.event.inputs.version }}" \
-            github_build/libs/*.jar \
+            1.19.2/build/forgix/*-combo.jar \
+            1.20.1/build/forgix/*-combo.jar \
             --repo="$GITHUB_REPOSITORY" \
             --title="Release v${{ github.event.inputs.version }}" \
             --notes-file release_notes.md
