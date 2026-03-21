@@ -42,9 +42,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          FILES=$(find . -path "*/forgix/*.jar")
+          FILES=$(find . -type f -name "*.jar" \
+            ! -name "*transformProduction*" \
+            ! -name "*unmapped*" \
+            ! -name "*-raw.jar" \
+            -path "*/build/*")
           gh release create "v${{ github.event.inputs.version }}" \
             $FILES \
+            1.19.2/build/forgix/*.jar \
+            1.20.1/build/forgix/*.jar \
             1.19.2/*/build/libs/*.jar \
             1.20.1/*/build/libs/*.jar \
             --repo="$GITHUB_REPOSITORY" \
