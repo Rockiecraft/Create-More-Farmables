@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "create_more_farmables:block/orange_dyed_water_block"
+    }
+  }
+}

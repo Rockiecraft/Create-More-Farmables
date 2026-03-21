@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values":
+  [
+    "create_more_farmables:white_dyed_water",
+    "create_more_farmables:flowing_white_dyed_water"
+
+  ]
+}

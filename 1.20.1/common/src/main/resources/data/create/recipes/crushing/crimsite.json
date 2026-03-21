@@ -1,0 +1,22 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "create:crimsite",
+      "count": 2
+    }
+  ],
+  "results": [
+    {
+      "item": "create:crushed_raw_iron",
+      "count": 1,
+      "chance": 0.70
+    },
+    {
+      "item": "minecraft:iron_nugget",
+      "count": 3,
+      "chance": 0.50
+    }
+  ],
+  "processingTime": 250
+}

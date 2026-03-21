@@ -1,0 +1,49 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "fabricloader"
+        }
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "fabric:all_mods_loaded",
+          "values": [
+            "fabricloader"
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "create:compacting",
+        "ingredients": [
+          {
+            "amount": 40500,
+            "fluid": "create_more_farmables:molten_endstone"
+          },
+          {
+            "item": "minecraft:cobblestone"
+          },
+          {
+            "item": "minecraft:cobblestone"
+          },
+          {
+            "item": "minecraft:cobblestone"
+          },
+          {
+            "item": "minecraft:cobblestone"
+          }
+
+        ],
+        "results": [
+          {
+            "count": 4,
+            "item": "minecraft:end_stone"
+          }
+        ]
+      }
+    }
+  ]
+}

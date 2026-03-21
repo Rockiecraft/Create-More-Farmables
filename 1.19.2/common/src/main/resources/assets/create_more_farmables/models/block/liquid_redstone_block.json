@@ -1,0 +1,5 @@
+{
+  "textures": {
+    "particle": "create_more_farmables:block/liquid_redstone"
+  }
+}

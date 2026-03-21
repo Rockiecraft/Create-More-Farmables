@@ -1,0 +1,15 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "minecraft:echo_shard"
+    }
+  ],
+  "results": [
+    {
+      "item": "create_more_farmables:echo_shard_dust",
+      "amount": 1
+    }
+  ],
+  "processingTime": 25
+}
