@@ -117,8 +117,11 @@ forgix {
     forge {
         inputJar = project(":forge").tasks.remapJar.archiveFile
     }
+    autoRun = true
 }
 tasks.named('mergeJars') {
     dependsOn tasks.named('build')
 }
+build.dependsOn(":fabric:build")
+build.dependsOn(":forge:build")
 

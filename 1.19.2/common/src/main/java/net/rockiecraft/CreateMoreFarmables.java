@@ -1,12 +1,10 @@
 package net.rockiecraft;
 import com.teamresourceful.resourcefulconfig.common.config.Configurator;
-import dev.architectury.registry.CreativeTabRegistry;
-import net.minecraft.world.item.ItemStack;
 import net.rockiecraft.foundaton.AllBlocks;
 import net.rockiecraft.foundaton.AllFluids;
 import net.rockiecraft.foundaton.AllItems;
 //import net.rockiecraft.foundaton.CreativeModeTabs;
-import net.rockiecraft.foundaton.registry.MyConfig;
+import net.rockiecraft.foundaton.registry.CreateMoreFarmablesConfig;
 import net.rockiecraft.foundaton.registry.fluids.AllFluidProperties;
 import org.slf4j.LoggerFactory;
 
@@ -26,8 +24,8 @@ public final class CreateMoreFarmables {
         AllBlocks.BLOCKS.init();
 
         AllItems.ITEMS.init();
-        CONFIGURATOR.registerConfig(MyConfig.class);
-        CONFIGURATOR.saveConfig(MyConfig.class);
+        CONFIGURATOR.registerConfig(CreateMoreFarmablesConfig.class);
+        CONFIGURATOR.saveConfig(CreateMoreFarmablesConfig.class);
         // CreativeModeTabs.init();
 // burh
     }

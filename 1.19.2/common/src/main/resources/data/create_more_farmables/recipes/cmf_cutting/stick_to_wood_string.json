@@ -4,12 +4,12 @@
     {
       "conditions": [
         {
-          "type": "create_more_farmables:enable_special_recipe"
+          "type": "create_more_farmables:config_toggle"
         }
       ],
       "fabric:load_conditions": [
         {
-          "condition": "create_more_farmables:enable_special_recipe"
+          "condition": "create_more_farmables:config_toggle"
         }
       ],
       "recipe": {

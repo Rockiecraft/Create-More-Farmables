@@ -1,23 +1,26 @@
 package net.rockiecraft.fabric;
 
+import com.teamresourceful.resourcefulconfig.common.config.Configurator;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions;
-import net.minecraft.resources.ResourceLocation;
 import net.rockiecraft.CreateMoreFarmables;
-import net.rockiecraft.foundaton.registry.MyConfig;
+import net.rockiecraft.foundaton.registry.AllRecipeConditionSerializers;
+import net.rockiecraft.foundaton.registry.CreateMoreFarmablesConfig;
+import net.rockiecraft.foundaton.registry.recipe.config.condition.IRecipeCondition;
+import net.rockiecraft.foundaton.registry.recipe.config.condition.IRecipeConditionSerializer;
 
 public final class CreateMoreFarmablesFabric implements ModInitializer {
+    public static final Configurator CONFIGURATOR = new Configurator(true);
     @Override
     public void onInitialize() {
-        // This code runs as soon as Minecraft is in a mod-load-ready state.
-        // However, some things (like resources) may still be uninitialized.
-        // Proceed with mild caution.
-        ResourceConditions.register(new ResourceLocation("create_more_farmables",
-                "config_toggle"), (jsonObject) -> {
-            return MyConfig.enableSpecialRecipe;
-        });
-        // Run our common setup.
+
+        CONFIGURATOR.registerConfig(CreateMoreFarmablesConfig.class);
+        for (IRecipeConditionSerializer<? extends IRecipeCondition> serializer : AllRecipeConditionSerializers.getSerializers()) {
+            ResourceConditions.register(serializer.getId(), (jsonObject) -> {
+                return serializer.readJson(jsonObject).test();
+            });
+        }
         CreateMoreFarmables.init();
     }
 }
