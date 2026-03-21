@@ -35,18 +35,24 @@ jobs:
         id: extract_changelog
         run: |
           VERSION="${{ github.event.inputs.version }}"
-          sed -n "/^## $VERSION/,/^---/p" changelog.md | sed '$d' > release_notes.md
-          echo "Notes extracted to release_notes.md"
+          sed -n "/^## $VERSION/,/## /p" changelog.md | sed '$d' > release_notes.md
+          if [ ! -s release_notes.md ]; then
+            sed -n "/^## $VERSION/,\$p" changelog.md > release_notes.md
+          fi
+          
+          echo "Notes extracted for v$VERSION"
 
       - name: Create GitHub Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          FILES=$(find . -type f -name "*.jar" \
+          mapfile -t FILES < <(find . -type f -name "*.jar" \
+            \( -path "*/build/libs/*" -o -path "*/build/forgix/*" \) \
+            ! -path "*/loom-cache/*" \
             ! -name "*transformProduction*" \
             ! -name "*unmapped*" \
             ! -name "*-raw.jar" \
-            -path "*/build/*")
+            ! -name "*-dev.jar")
           gh release create "v${{ github.event.inputs.version }}" \
           
             $FILES \
