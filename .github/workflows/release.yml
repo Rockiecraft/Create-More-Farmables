@@ -48,6 +48,7 @@ jobs:
             ! -name "*-raw.jar" \
             -path "*/build/*")
           gh release create "v${{ github.event.inputs.version }}" \
+          
             $FILES \
             1.19.2/build/forgix/*.jar \
             1.20.1/build/forgix/*.jar \
