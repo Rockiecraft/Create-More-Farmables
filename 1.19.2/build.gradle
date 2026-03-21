@@ -121,7 +121,7 @@ subprojects {
 //}
 forgix {
     mergedJarName = "${rootProject.archives_name}-1.19.2-${rootProject.mod_version}.jar"
-    outputDir = "/build/forgix"
+    outputDir = "/build/libs"
     version = '${rootProject.mod_version}'
 
     forge {

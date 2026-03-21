@@ -35,31 +35,22 @@ jobs:
         id: extract_changelog
         run: |
           VERSION="${{ github.event.inputs.version }}"
-          sed -n "/^## $VERSION/,/## /p" changelog.md | sed '$d' > release_notes.md
+          sed -n "/^## $VERSION/,/^## /p" changelog.md | sed '1d;$d' > release_notes.md
+          
+          # Fallback: if it's the last entry in the file
           if [ ! -s release_notes.md ]; then
-            sed -n "/^## $VERSION/,\$p" changelog.md > release_notes.md
+            sed -n "/^## $VERSION/,\$p" changelog.md | sed '1d' > release_notes.md
           fi
           
-          echo "Notes extracted for v$VERSION"
+          echo "Release notes extracted for $VERSION"
 
       - name: Create GitHub Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          mapfile -t FILES < <(find . -type f -name "*.jar" \
-            \( -path "*/build/libs/*" -o -path "*/build/forgix/*" \) \
-            ! -path "*/loom-cache/*" \
-            ! -name "*transformProduction*" \
-            ! -name "*unmapped*" \
-            ! -name "*-raw.jar" \
-            ! -name "*-dev.jar")
-          gh release create "v${{ github.event.inputs.version }}" \
-          
-            $FILES \
-            1.19.2/build/forgix/*.jar \
-            1.20.1/build/forgix/*.jar \
-            1.19.2/*/build/libs/*.jar \
-            1.20.1/*/build/libs/*.jar \
+          gh release create "v${{ github.event.inputs.version }}" \   
+            1.19.2/build/libs/*.jar \
+            1.20.1/build/libs/*.jar \
             --repo="$GITHUB_REPOSITORY" \
             --title="Release v${{ github.event.inputs.version }}" \
             --notes-file release_notes.md
