@@ -5,7 +5,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.rockiecraft.common.forge.recipe.forge.RecipeConditionImpl;
-import net.rockiecraft.foundaton.registry.recipe.config.condition.IRecipeConditionSerializer;
+import net.rockiecraft.foundaton.registry.recipe.condition.IRecipeConditionSerializer;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Supplier;

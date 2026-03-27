@@ -3,7 +3,7 @@ package net.rockiecraft.foundaton.registry.blocks;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.damagesource.DamageEffects;
-import net.rockiecraft.foundaton.registry.AllDamageSources;
+import net.rockiecraft.foundaton.registry.world.AllDamageSources;
 
 public class AllDamageTypeProviders {
 

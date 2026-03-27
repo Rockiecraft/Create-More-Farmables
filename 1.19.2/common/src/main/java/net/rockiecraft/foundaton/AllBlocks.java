@@ -36,11 +36,10 @@ public class AllBlocks {
             () -> new LiquidQuartzLiquidBlock(AllFluidProperties.LIQUID_QUARTZ, BlockBehaviour.Properties.copy(Blocks.LAVA)));
     public static final RegistryEntry<Block> LIQUID_REDSTONE = AllBlocks.BLOCKS.register("liquid_redstone",
             () -> new LiquidRedstoneLiquidBlock(AllFluidProperties.LIQUID_REDSTONE, BlockBehaviour.Properties.copy(Blocks.LAVA)));
-//    public static final RegistryEntry<Block> MOLTEN_ENDSTONE = FLUIDS.register("molten_endstone",
-//            () -> new LiquidRedstoneLiquidBlock(AllFluidProperties.MOLTEN_ENDSTONE, BlockBehaviour.Properties.copy(Blocks.LAVA));
+    public static final RegistryEntry<Block> MOLTEN_ENDSTONE = FLUIDS.register("molten_endstone",
+            () -> new MoltenEndstoneLiquidBlock(AllFluidProperties.MOLTEN_ENDSTONE, BlockBehaviour.Properties.copy(Blocks.LAVA)));
 
-    public static final RegistryEntry<Block> MOLTEN_ENDSTONE = AllBlocks.BLOCKS.register("molten_endstone",
-            () -> new BotariumLiquidBlock(AllFluidProperties.MOLTEN_ENDSTONE, BlockBehaviour.Properties.copy(Blocks.WATER)));
+
 
     public static final RegistryEntry<Block> WHITE_DYED_WATER = AllBlocks.BLOCKS.register("white_dyed_water",
             () -> new BotariumLiquidBlock(AllFluidProperties.WHITE_DYED_WATER, BlockBehaviour.Properties.copy(Blocks.WATER)));

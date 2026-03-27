@@ -28,7 +28,7 @@ public class CreativeModeTabs {
                                 output.accept(AllItems.UNPROCESSED_NETHERITE_DUST.get());
                                 output.accept(AllItems.SHULKER_SHELL_FRAGMENT.get());
                                 output.accept(AllItems.HEART_OF_THE_SEA_FRAGMENT.get());
-                                output.accept(AllItems.NAUTLIUS_SHELL_FRAGMENT.get());
+                                output.accept(AllItems.NAUTILUS_SHELL_FRAGMENT.get());
 
                                 output.accept(AllItems.UNPROCESSED_BLAZE_ROD.get());
                                 output.accept(AllItems.SHULKER_COMPOUND.get());

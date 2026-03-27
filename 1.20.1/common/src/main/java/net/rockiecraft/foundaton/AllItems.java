@@ -30,7 +30,7 @@ public class AllItems {
 
 //    public static final RegistryEntry<Item>  = BASIC_ITEMS.register("", () -> new Item(new Item.Properties()));
 
-    public static final RegistryEntry<Item> NAUTLIUS_SHELL_FRAGMENT  = BASIC_ITEMS.register("nautilus_shell_fragment",
+    public static final RegistryEntry<Item> NAUTILUS_SHELL_FRAGMENT  = BASIC_ITEMS.register("nautilus_shell_fragment",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryEntry<Item> HEART_OF_THE_SEA_FRAGMENT  = BASIC_ITEMS.register("heart_of_the_sea_fragment",

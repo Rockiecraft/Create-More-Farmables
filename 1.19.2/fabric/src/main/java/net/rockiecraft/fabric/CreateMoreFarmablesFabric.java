@@ -5,10 +5,10 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions;
 import net.rockiecraft.CreateMoreFarmables;
-import net.rockiecraft.foundaton.registry.AllRecipeConditionSerializers;
-import net.rockiecraft.foundaton.registry.CreateMoreFarmablesConfig;
-import net.rockiecraft.foundaton.registry.recipe.config.condition.IRecipeCondition;
-import net.rockiecraft.foundaton.registry.recipe.config.condition.IRecipeConditionSerializer;
+import net.rockiecraft.foundaton.registry.recipe.condition.AllRecipeConditionSerializers;
+import net.rockiecraft.foundaton.registry.config.CreateMoreFarmablesConfig;
+import net.rockiecraft.foundaton.registry.recipe.condition.IRecipeCondition;
+import net.rockiecraft.foundaton.registry.recipe.condition.IRecipeConditionSerializer;
 
 public final class CreateMoreFarmablesFabric implements ModInitializer {
     public static final Configurator CONFIGURATOR = new Configurator(true);

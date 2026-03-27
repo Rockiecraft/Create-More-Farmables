@@ -14,7 +14,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.rockiecraft.foundaton.AllFluids;
-import net.rockiecraft.foundaton.registry.AllDamageSources;
+import net.rockiecraft.foundaton.registry.world.AllDamageSources;
 
 @SuppressWarnings("deprecation")
 public class MoltenEndstoneLiquidBlock extends BotariumLiquidBlock {

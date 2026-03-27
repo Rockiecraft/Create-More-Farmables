@@ -21,6 +21,9 @@
     ],
     "client": [
       "net.rockiecraft.fabric.client.CreateMoreFarmablesFabricClient"
+    ],
+    "modmenu": [
+      "net.rockiecraft.common.config.fabric.ModMenuConfig"
     ]
   },
   "mixins": [

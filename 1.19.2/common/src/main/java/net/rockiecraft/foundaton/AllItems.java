@@ -9,6 +9,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.ItemLike;
 import net.rockiecraft.CreateMoreFarmables;
+import net.rockiecraft.foundaton.registry.config.CreateMoreFarmablesConfig;
 import net.rockiecraft.foundaton.registry.fluids.AllFluidProperties;
 import net.minecraft.resources.ResourceLocation;
 import earth.terrarium.botarium.api.registry.fluid.FluidBucketItem;
@@ -39,7 +40,7 @@ public class AllItems {
 
         @Override
         public void fillItemList(NonNullList<ItemStack> items) {
-// Fragments & Dusts
+            // Fragments & Dusts
             items.add(new ItemStack(AllItems.ECHO_SHARD_DUST.get()));
             items.add(new ItemStack(AllItems.ENDER_PEARL_DUST.get()));
             items.add(new ItemStack(AllItems.NETHERITE_DUST.get()));
@@ -48,19 +49,18 @@ public class AllItems {
             items.add(new ItemStack(AllItems.HEART_OF_THE_SEA_FRAGMENT.get()));
             items.add(new ItemStack(AllItems.NAUTILUS_SHELL_FRAGMENT.get()));
 
-// Processing Items
+            //
             items.add(new ItemStack(AllItems.UNPROCESSED_BLAZE_ROD.get()));
             items.add(new ItemStack(AllItems.SHULKER_COMPOUND.get()));
             items.add(new ItemStack(AllItems.DYE_TEMPLATE.get()));
             items.add(new ItemStack(AllItems.WOOD_STRING.get()));
             items.add(new ItemStack(AllItems.WOOD_STRING_WOOL_BLOCK.get()));
-
-// Utility Buckets
+            //
             items.add(new ItemStack(AllItems.LIQUID_QUARTZ_BUCKET.get()));
             items.add(new ItemStack(AllItems.LIQUID_REDSTONE_BUCKET.get()));
             items.add(new ItemStack(AllItems.MOLTEN_ENDSTONE_BUCKET.get()));
 
-// Dyed Water Buckets
+            //
             items.add(new ItemStack(AllItems.WHITE_DYED_WATER_BUCKET.get()));
             items.add(new ItemStack(AllItems.LIGHT_GRAY_DYED_WATER_BUCKET.get()));
             items.add(new ItemStack(AllItems.GRAY_DYED_WATER_BUCKET.get()));

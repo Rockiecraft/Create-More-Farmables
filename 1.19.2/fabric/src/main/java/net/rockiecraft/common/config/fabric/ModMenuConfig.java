@@ -7,7 +7,7 @@ import com.terraformersmc.modmenu.api.ModMenuApi;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.rockiecraft.CreateMoreFarmables;
-import net.rockiecraft.foundaton.registry.CreateMoreFarmablesConfig;
+import net.rockiecraft.foundaton.registry.config.CreateMoreFarmablesConfig;
 
 @Environment(EnvType.CLIENT)
 public class ModMenuConfig implements ModMenuApi {

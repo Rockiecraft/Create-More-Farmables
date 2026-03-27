@@ -1,0 +1,40 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "create_more_farmables:dyed_water_mixing",
+          "config": "light_gray"
+        }
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "fabric:all_mods_loaded",
+          "values": [
+            "forge"
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "create:mixing",
+        "heatRequirement": "heated",
+        "ingredients": [
+          {
+            "item": "minecraft:light_gray_dye"
+          },
+          {
+            "fluid": "minecraft:water",
+            "amount": 50
+          }
+        ],
+        "results": [
+          {
+            "amount": 100,
+            "fluid": "create_more_farmables:light_gray_dyed_water"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -3,8 +3,8 @@ import com.teamresourceful.resourcefulconfig.common.config.Configurator;
 import net.rockiecraft.foundaton.AllBlocks;
 import net.rockiecraft.foundaton.AllFluids;
 import net.rockiecraft.foundaton.AllItems;
-//import net.rockiecraft.foundaton.CreativeModeTabs;
-import net.rockiecraft.foundaton.registry.CreateMoreFarmablesConfig;
+import net.rockiecraft.foundaton.registry.recipe.condition.AllRecipeConditionSerializers;
+import net.rockiecraft.foundaton.registry.config.CreateMoreFarmablesConfig;
 import net.rockiecraft.foundaton.registry.fluids.AllFluidProperties;
 import org.slf4j.LoggerFactory;
 
@@ -18,6 +18,7 @@ public final class CreateMoreFarmables {
     public static void init() {
         // Write common init code here.
         LOGGER.info("Initializing CreateMoreFarmables");
+        CreateMoreFarmablesConfig.init();
         AllFluidProperties.FLUID_PROPERTIES.initialize();
         AllFluids.FLUIDS.init();
         AllBlocks.FLUIDS.init();
@@ -26,7 +27,6 @@ public final class CreateMoreFarmables {
         AllItems.ITEMS.init();
         CONFIGURATOR.registerConfig(CreateMoreFarmablesConfig.class);
         CONFIGURATOR.saveConfig(CreateMoreFarmablesConfig.class);
-        // CreativeModeTabs.init();
-// burh
+        AllRecipeConditionSerializers.init();
     }
 }

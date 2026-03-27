@@ -5,7 +5,7 @@ import net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.rockiecraft.foundaton.registry.recipe.config.condition.IRecipeConditionSerializer;
+import net.rockiecraft.foundaton.registry.recipe.condition.IRecipeConditionSerializer;
 
 import java.util.function.Supplier;
 

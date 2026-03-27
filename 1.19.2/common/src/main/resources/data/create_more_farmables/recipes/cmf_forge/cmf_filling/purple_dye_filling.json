@@ -1,0 +1,40 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:and",
+          "values": [
+            {"type": "create_more_farmables:purple_dye_filling"}
+          ]
+        }
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "fabric:all_mods_loaded",
+          "values": [
+            "forge"
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "create:filling",
+        "ingredients": [
+          {
+            "item": "create_more_farmables:dye_template"
+          },
+          {
+            "amount": 100,
+            "fluid": "create_more_farmables:purple_dyed_water"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:purple_dye"
+          }
+        ]
+      }
+    }
+  ]
+}

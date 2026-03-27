@@ -1,0 +1,22 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "create:asurine",
+      "count": 2
+    }
+  ],
+  "results": [
+    {
+      "item": "create:crushed_raw_zinc",
+      "count": 1,
+      "chance": 0.65
+    },
+    {
+      "item": "create:zinc_nugget",
+      "count": 3,
+      "chance": 0.45
+    }
+  ],
+  "processingTime": 250
+}

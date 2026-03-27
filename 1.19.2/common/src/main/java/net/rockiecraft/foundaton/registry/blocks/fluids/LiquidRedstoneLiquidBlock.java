@@ -1,7 +1,8 @@
 package net.rockiecraft.foundaton.registry.blocks.fluids;
 
 import net.rockiecraft.foundaton.AllFluids;
-import net.rockiecraft.foundaton.registry.AllDamageSources;
+import net.rockiecraft.foundaton.registry.config.CreateMoreFarmablesConfig;
+import net.rockiecraft.foundaton.registry.world.AllDamageSources;
 import earth.terrarium.botarium.api.registry.fluid.BotariumLiquidBlock;
 import earth.terrarium.botarium.api.registry.fluid.FluidData;
 import net.minecraft.core.BlockPos;
@@ -25,7 +26,6 @@ public class LiquidRedstoneLiquidBlock extends BotariumLiquidBlock {
     @Override // Makes the liquid damage players and can make an overlay appear on the players screen
     public void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
         if (entity instanceof LivingEntity) {
-           // entity.isInLava();
             entity.lavaHurt();
             if (!level.isClientSide()) {
                 entity.setSharedFlagOnFire(false);
@@ -48,15 +48,19 @@ public class LiquidRedstoneLiquidBlock extends BotariumLiquidBlock {
         }
     }
 
-    // Turn water fluids into Granite upon contact with liquid redstone
     private boolean shouldSpreadLiquid(Level level, BlockPos pos, BlockState state) {
-        for (Direction direction : new Direction[]{Direction.DOWN, Direction.SOUTH, Direction.NORTH, Direction.EAST, Direction.WEST}) {
-            BlockPos blockPos = pos.relative(direction.getOpposite());
-            FluidState fluidState = level.getFluidState(blockPos);
-            if (fluidState.is(Fluids.WATER) || fluidState.is(Fluids.FLOWING_WATER)) {
-                level.setBlockAndUpdate(blockPos, Blocks.GRANITE .defaultBlockState());
-                level.levelEvent(LevelEvent.LAVA_FIZZ, pos, 0);
-                return false;
+        // Check Master + Individual Toggle
+        if (CreateMoreFarmablesConfig.CreateMoreFarmables_fluid_interactions.ToggleAllInteractions &&
+                CreateMoreFarmablesConfig.CreateMoreFarmables_fluid_interactions.LiquidRedstoneInteraction)
+        {
+            for (Direction direction : new Direction[]{Direction.DOWN, Direction.SOUTH, Direction.NORTH, Direction.EAST, Direction.WEST}) {
+                BlockPos blockPos = pos.relative(direction.getOpposite());
+                FluidState fluidState = level.getFluidState(blockPos);
+                if (fluidState.is(Fluids.WATER) || fluidState.is(Fluids.FLOWING_WATER)) {
+                    level.setBlockAndUpdate(blockPos, Blocks.GRANITE.defaultBlockState());
+                    level.levelEvent(LevelEvent.LAVA_FIZZ, pos, 0);
+                    return false;
+                }
             }
         }
         return true;

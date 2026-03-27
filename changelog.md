@@ -1,9 +1,11 @@
 
-## Pre-release 0.9
+## DEV 0.9
 
 ### New Additions -
 
 - ### Port - 1.19.2
+
+#### Items -
 
 - Echo Shard dust + Recipe
 - Ender Pearl Dust + recipe
@@ -12,12 +14,18 @@
 - Nautilus Shell Fragment + recipe
 - Nautilus Shells can now be crafted with 2 Nautilus Shell Fragments
 
-### Changes & Balances -
+#### Config -
 
-- #### CMF now runs on Architectury, Botarium & Resourcefullib allowing for both forge and fabric to have parity and to manage fluids better
+- There is now a Config to disable recipes for anything
+
+### Changes & Balances -
+#### Mod Infrastructure & Combined jars
+- #### CMF now runs on [Architectury API](https://modrinth.com/mod/architectury-api), [Botarium](https://modrinth.com/mod/botarium), [Resourcefullib](https://modrinth.com/mod/resourceful-lib) & [ResourcefulConfig](https://modrinth.com/mod/resourceful-config) allowing for both forge and fabric to have parity through one set of code & to manage fluids better
 - #### Forge and Fabric will be shipped in the same jar using [forgix](https://github.com/PacifistMC/Forgix)
 
+#### Create sifting -
 - Balanced sifting recipes as they were op and are not anymore
+#### CMF liquid Interactions
 - Molten Endstone, Liquid Redstone and Liquid Quartz now deal fire damage when stepped in
 - Molten Endstone, Liquid Redstone and Liquid Quartz now have a reaction when touching water producing a block
 
