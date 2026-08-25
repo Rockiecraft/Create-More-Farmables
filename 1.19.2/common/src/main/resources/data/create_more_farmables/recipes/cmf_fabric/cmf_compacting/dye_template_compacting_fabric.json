@@ -1,0 +1,43 @@
+
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "fabricloader"
+        }
+      ],
+      "fabric:load_conditions": [
+        {"condition": "create_more_farmables:item_recipes", "config": "dyeTemplateOn"}
+      ],
+      "recipe": {
+        "type": "create:compacting",
+        "ingredients": [
+          {
+            "item": "minecraft:stick"
+          },
+          {
+            "item": "minecraft:stick"
+          },
+          {
+            "item": "minecraft:stick"
+          },
+          {
+            "item": "minecraft:stick"
+          },
+          {
+            "fluid": "create_more_farmables:white_dyed_water",
+            "amount": 8100
+          }
+        ],
+        "results": [
+          {
+            "item": "create_more_farmables:dye_template"
+          }
+        ]
+      }
+    }
+  ]
+}

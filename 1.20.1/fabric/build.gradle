@@ -2,6 +2,20 @@ plugins {
     id 'com.gradleup.shadow'
 }
 
+repositories {
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
+}
+
 architectury {
     platformSetupLoomIde()
     fabric()
@@ -25,6 +39,9 @@ configurations {
 }
 
 dependencies {
+
+    compileOnly "com.google.code.findbugs:jsr305:3.0.2"
+
     modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
 
 
@@ -38,11 +55,28 @@ dependencies {
     shadowBundle project(path: ':common', configuration: 'transformProductionFabric')
 
 
-    modImplementation "earth.terrarium.botarium:botarium-fabric-1.20.1:${botarium_version}"
     modImplementation "com.teamresourceful.resourcefullib:resourcefullib-fabric-1.20.1:${resourcefulLibVersion}"
     modImplementation "com.teamresourceful.resourcefulconfig:resourcefulconfig-fabric-1.20.1:2.1.3"
+    modImplementation "com.terraformersmc:modmenu:$rootProject.modmenu_version"
 
     implementation project(':common')
+
+
+    // https://modrinth.com/mod/create-fabric/versions?l=fabric&g=1.20.1
+    modImplementation "maven.modrinth:create-fabric:${rootProject.create_fabric_version}"
+    modImplementation "dev.engine-room.flywheel:flywheel-fabric-${minecraft_version}:${flywheel_version}"
+
+
+    // https://mvn.devos.one/#/snapshots/com/tterrag/registrate_fabric/Registrate
+    modImplementation "com.tterrag.registrate_fabric:Registrate:${rootProject.registrate_fabric_version}"
+
+    // https://maven.createmod.net/net/createmod/catnip/Catnip-Fabric-1.20.1/
+    modImplementation "net.createmod.catnip:Catnip-Fabric-${minecraft_version}:${catnip_fabric_version}"
+
+    // JEI
+    modCompileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
+    modCompileOnly "mezz.jei:jei-${minecraft_version}-fabric-api:${jei_version}"
+    modRuntimeOnly "mezz.jei:jei-${minecraft_version}-fabric:${jei_version}"
 }
 
 processResources {
@@ -66,5 +100,3 @@ remapJar {
 fabricApi {
     configureDataGeneration()
 }
-
-

@@ -1,0 +1,20 @@
+{
+  "type": "create_more_farmables:dye_splashing",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:stained_glass_pane_dye_splashing",
+      "config": "cyan"
+    }
+  ],
+  "color": "cyan",
+  "ingredients": [
+    {
+      "tag": "create_more_farmables:stained_glass_panes"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:cyan_stained_glass_pane"
+    }
+  ]
+}

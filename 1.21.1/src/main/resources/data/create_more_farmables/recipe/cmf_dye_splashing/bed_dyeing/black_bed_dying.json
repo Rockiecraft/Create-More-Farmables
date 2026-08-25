@@ -1,0 +1,20 @@
+{
+  "type": "create_more_farmables:dye_splashing",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:bed_dye_splashing",
+      "config": "black"
+    }
+  ],
+  "color": "black",
+  "ingredients": [
+    {
+      "tag": "minecraft:beds"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:black_bed"
+    }
+  ]
+}

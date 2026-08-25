@@ -1,0 +1,31 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {"type": "create_more_farmables:item_recipes", "config": "echoShardDustOn"}
+      ],
+      "fabric:load_conditions": [
+        {"condition": "create_more_farmables:item_recipes", "config": "echoShardDustOn"}
+      ],
+      "recipe": {
+        "type": "create:mixing",
+        "heatRequirement": "heated",
+        "ingredients": [
+          {
+            "item": "minecraft:flint"
+          },
+          {
+            "item": "create_more_farmables:ender_pearl_dust"
+          }
+        ],
+        "results": [
+          {
+            "count": 1,
+            "item": "create_more_farmables:echo_shard_dust"
+          }
+        ]
+      }
+    }
+  ]
+}

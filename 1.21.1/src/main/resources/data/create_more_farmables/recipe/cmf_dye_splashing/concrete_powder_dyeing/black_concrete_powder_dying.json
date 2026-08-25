@@ -1,0 +1,20 @@
+{
+  "type": "create_more_farmables:dye_splashing",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:concrete_powder_dye_splashing",
+      "config": "black"
+    }
+  ],
+  "color": "black",
+  "ingredients": [
+    {
+      "tag": "create_more_farmables:concrete_powders"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:black_concrete_powder"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "create_more_farmables:carpet_dye_splashing",
+          "config": "green"
+        }
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "create_more_farmables:carpet_dye_splashing",
+          "config": "green"
+        }
+      ],
+      "recipe": {
+        "type": "create_more_farmables:dye_splashing",
+        "color": "green",
+        "ingredients": [
+          {
+            "tag": "create_more_farmables:carpets"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:green_carpet"
+          }
+        ]
+      }
+    }
+  ]
+}

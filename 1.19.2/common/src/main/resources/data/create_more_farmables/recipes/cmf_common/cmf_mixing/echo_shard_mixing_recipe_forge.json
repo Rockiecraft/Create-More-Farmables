@@ -1,0 +1,31 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {"type": "create_more_farmables:automation_easier_recipes", "config": "echoShardMakingOn"}
+      ],
+      "fabric:load_conditions": [
+        {"condition": "create_more_farmables:automation_easier_recipes", "config": "echoShardMakingOn"}
+      ],
+      "recipe": {
+        "type": "create:mixing",
+        "heatRequirement": "heated",
+        "ingredients": [
+          {
+            "item": "minecraft:amethyst_shard"
+          },
+          {
+            "item": "create_more_farmables:echo_shard_dust"
+          }
+        ],
+        "results": [
+          {
+            "count": 1,
+            "item": "minecraft:echo_shard"
+          }
+        ]
+      }
+    }
+  ]
+}

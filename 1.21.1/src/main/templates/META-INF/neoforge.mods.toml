@@ -1,0 +1,48 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+
+[[mixins]]
+config="${mod_id}.mixins.json"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="RockieFT, Rockiecraft"
+
+# The description text for the mod (multi line!) (#mandatory)
+description='''
+A Create Addon that brings full automation to More Items, More Blocks, More Fluids, More Mods
+'''
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[${neo_version},)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.${mod_id}]]
+    modId="create"
+    type="required"
+    versionRange="[6.0.9,6.1.0)"
+    ordering="BEFORE"
+    side="BOTH"
+[[dependencies.${mod_id}]]
+    modId="resourcefullib"
+    type="required"
+    versionRange="[3.0.0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.${mod_id}]]
+    modId="resourcefulconfig"
+    type="required"
+    versionRange="[3.0.0,)"
+    ordering="NONE"
+    side="BOTH"
+

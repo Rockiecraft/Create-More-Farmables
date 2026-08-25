@@ -1,0 +1,34 @@
+
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "fabricloader"
+        }
+      ],
+      "fabric:load_conditions": [
+        {"condition": "create_more_farmables:dye_template_filling", "config": "magenta"}
+      ],
+      "recipe": {
+        "type": "create:filling",
+        "ingredients": [
+          {
+            "item": "create_more_farmables:dye_template"
+          },
+          {
+            "amount": 8100,
+            "fluid": "create_more_farmables:magenta_dyed_water"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:magenta_dye"
+          }
+        ]
+      }
+    }
+  ]
+}

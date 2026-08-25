@@ -1,0 +1,20 @@
+{
+  "required": true,
+  "minVersion": "0.8.6",
+  "package": "com.rockiecraft.create_more_farmables.v1_21_1.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "AirCurrentMixin",
+    "BasinOperatingBlockEntityMixin",
+    "BeltDeployerCallbacksMixin",
+    "CrushingWheelControllerBlockEntityMixin",
+    "DeployerBlockEntityMixin",
+    "FanProcessingMixin",
+    "FillingBySpoutMixin",
+    "MechanicalPressBlockEntityMixin",
+    "MechanicalMixerBlockEntityMixin",
+    "SawBlockEntityMixin"
+  ],
+  "client": [],
+  "server": []
+}

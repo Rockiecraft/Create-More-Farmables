@@ -1,0 +1,35 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "fabricloader"
+        }
+      ],
+      "fabric:load_conditions": [
+        {"condition": "create_more_farmables:dyed_water_mixing", "config": "green"}
+      ],
+      "recipe": {
+        "type": "create:mixing",
+        "heatRequirement": "heated",
+        "ingredients": [
+          {
+            "item": "minecraft:green_dye"
+          },
+          {
+            "fluid": "minecraft:water",
+            "amount": 4050
+          }
+        ],
+        "results": [
+          {
+            "amount": 8100,
+            "fluid": "create_more_farmables:green_dyed_water"
+          }
+        ]
+      }
+    }
+  ]
+}

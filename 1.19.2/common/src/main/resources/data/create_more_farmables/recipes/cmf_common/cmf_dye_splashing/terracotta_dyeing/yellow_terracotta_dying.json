@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "create_more_farmables:terracotta_dye_splashing",
+          "config": "yellow"
+        }
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "create_more_farmables:terracotta_dye_splashing",
+          "config": "yellow"
+        }
+      ],
+      "recipe": {
+        "type": "create_more_farmables:dye_splashing",
+        "color": "yellow",
+        "ingredients": [
+          {
+            "tag": "create_more_farmables:terracottas"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:yellow_terracotta"
+          }
+        ]
+      }
+    }
+  ]
+}

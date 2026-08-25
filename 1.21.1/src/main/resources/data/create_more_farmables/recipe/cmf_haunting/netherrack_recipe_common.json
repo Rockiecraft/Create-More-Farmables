@@ -1,0 +1,20 @@
+{
+  "type": "create:haunting",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:automation_easier_recipes",
+      "config": "andesiteNetherrackMakingOn"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "minecraft:andesite"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:netherrack",
+      "amount": 1
+    }
+  ]
+}

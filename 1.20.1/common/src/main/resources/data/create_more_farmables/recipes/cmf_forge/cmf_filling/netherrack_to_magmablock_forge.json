@@ -1,0 +1,35 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {"type": "create_more_farmables:automation_easier_recipes", "config": "magmablockMakingOn"}
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "fabric:all_mods_loaded",
+          "values": [
+            "forge"
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "create:filling",
+        "ingredients": [
+          {
+            "item": "minecraft:netherrack"
+          },
+          {
+            "amount": 250,
+            "fluid": "minecraft:lava"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:magma_block"
+          }
+        ]
+      }
+    }
+  ]
+}

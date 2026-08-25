@@ -1,0 +1,83 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {"type": "create_more_farmables:automation_easier_recipes", "config": "blazerodMakingOn"}
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "fabric:all_mods_loaded",
+          "values": [
+            "forge"
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "create:sequenced_assembly",
+        "ingredient": {
+          "tag": "forge:rods/wooden"
+        },
+        "transitionalItem": {
+          "item": "create_more_farmables:unprocessed_blaze_rod"
+        },
+        "sequence": [
+          {
+            "type": "create:deploying",
+            "ingredients": [
+              { "item": "create_more_farmables:unprocessed_blaze_rod" },
+              { "item": "create:cinder_flour" }
+            ],
+            "results": [
+              { "item": "create_more_farmables:unprocessed_blaze_rod" }
+            ]
+          },
+          {
+            "type": "create:filling",
+            "ingredients": [
+              { "item": "create_more_farmables:unprocessed_blaze_rod" },
+              { "fluid": "minecraft:lava", "amount": 500 }
+            ],
+            "results": [
+              { "item": "create_more_farmables:unprocessed_blaze_rod" }
+            ]
+          },
+          {
+            "type": "create:pressing",
+            "ingredients": [
+              { "item": "create_more_farmables:unprocessed_blaze_rod" }
+            ],
+            "results": [
+              { "item": "create_more_farmables:unprocessed_blaze_rod" }
+            ]
+          },
+          {
+            "type": "create:filling",
+            "ingredients": [
+              { "item": "create_more_farmables:unprocessed_blaze_rod" },
+              { "fluid": "minecraft:lava", "amount": 500 }
+            ],
+            "results": [
+              { "item": "create_more_farmables:unprocessed_blaze_rod" }
+            ]
+          },
+          {
+            "type": "create:pressing",
+            "ingredients": [
+              { "item": "create_more_farmables:unprocessed_blaze_rod" }
+            ],
+            "results": [
+              { "item": "create_more_farmables:unprocessed_blaze_rod" }
+            ]
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:blaze_rod"
+          }
+        ],
+        "loops": 1
+      }
+    }
+  ]
+}

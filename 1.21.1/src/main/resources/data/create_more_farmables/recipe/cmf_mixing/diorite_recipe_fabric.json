@@ -1,0 +1,29 @@
+{
+  "type": "create:mixing",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:automation_easier_recipes",
+      "config": "dioriteMakingOn"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "minecraft:cobblestone"
+    },
+    {
+      "item": "minecraft:cobblestone"
+    },
+    {
+      "item": "minecraft:quartz"
+    },
+    {
+      "item": "minecraft:quartz"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:diorite",
+      "count": 2
+    }
+  ]
+}

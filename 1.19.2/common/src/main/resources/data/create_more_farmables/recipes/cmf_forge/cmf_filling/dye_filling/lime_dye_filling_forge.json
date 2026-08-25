@@ -1,0 +1,38 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "create_more_farmables:dye_template_filling",
+          "config": "lime"
+        }
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "fabric:all_mods_loaded",
+          "values": [
+            "forge"
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "create:filling",
+        "ingredients": [
+          {
+            "item": "create_more_farmables:dye_template"
+          },
+          {
+            "amount": 100,
+            "fluid": "create_more_farmables:lime_dyed_water"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:lime_dye"
+          }
+        ]
+      }
+    }
+  ]
+}

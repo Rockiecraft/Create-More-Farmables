@@ -1,0 +1,26 @@
+{
+  "type": "create:mixing",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:automation_easier_recipes",
+      "config": "asurineMakingOn"
+    }
+  ],
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:stone"
+    },
+    {
+      "type": "neoforge:single",
+      "fluid": "create_more_farmables:blue_dyed_water",
+      "amount": 200
+    }
+  ],
+  "results": [
+    {
+      "id": "create:asurine",
+      "amount": 1
+    }
+  ]
+}

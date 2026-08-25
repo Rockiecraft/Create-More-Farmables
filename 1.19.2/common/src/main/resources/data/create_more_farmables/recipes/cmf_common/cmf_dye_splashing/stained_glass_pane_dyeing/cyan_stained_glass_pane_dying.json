@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "create_more_farmables:stained_glass_pane_dye_splashing",
+          "config": "cyan"
+        }
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "create_more_farmables:stained_glass_pane_dye_splashing",
+          "config": "cyan"
+        }
+      ],
+      "recipe": {
+        "type": "create_more_farmables:dye_splashing",
+        "color": "cyan",
+        "ingredients": [
+          {
+            "tag": "create_more_farmables:stained_glass_panes"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:cyan_stained_glass_pane"
+          }
+        ]
+      }
+    }
+  ]
+}

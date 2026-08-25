@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "create_more_farmables:bed_dye_splashing",
+          "config": "black"
+        }
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "create_more_farmables:bed_dye_splashing",
+          "config": "black"
+        }
+      ],
+      "recipe": {
+        "type": "create_more_farmables:dye_splashing",
+        "color": "black",
+        "ingredients": [
+          {
+            "tag": "minecraft:beds"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:black_bed"
+          }
+        ]
+      }
+    }
+  ]
+}

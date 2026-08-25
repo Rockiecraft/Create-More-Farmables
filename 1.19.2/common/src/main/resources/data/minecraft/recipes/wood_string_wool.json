@@ -1,17 +1,30 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "PPP",
-    "PPP",
-    "PPP"
-  ],
-  "key": {
-    "P": {
-      "item": "create_more_farmables:wood_string"
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {"type": "create_more_farmables:item_recipes", "config": "woodstringwoolon"}
+      ],
+      "fabric:load_conditions": [
+        {"condition": "create_more_farmables:item_recipes", "config": "woodstringwoolon"}
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "PPP",
+          "PPP",
+          "PPP"
+        ],
+        "key": {
+          "P": {
+            "item": "create_more_farmables:wood_string"
+          }
+        },
+        "result": {
+          "item": "create_more_farmables:wood_string_wool_block",
+          "count": 1
+        }
+      }
     }
-  },
-  "result": {
-    "item": "create_more_farmables:wood_string_wool_block",
-    "count": 1
-  }
+  ]
 }

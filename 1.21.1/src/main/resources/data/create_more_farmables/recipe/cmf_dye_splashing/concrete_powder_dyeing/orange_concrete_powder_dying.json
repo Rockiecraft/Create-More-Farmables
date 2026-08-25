@@ -1,0 +1,20 @@
+{
+  "type": "create_more_farmables:dye_splashing",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:concrete_powder_dye_splashing",
+      "config": "orange"
+    }
+  ],
+  "color": "orange",
+  "ingredients": [
+    {
+      "tag": "create_more_farmables:concrete_powders"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:orange_concrete_powder"
+    }
+  ]
+}

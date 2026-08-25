@@ -1,0 +1,187 @@
+{
+  "type": "create_more_farmables:advanced_assembly",
+  "ingredient": {
+    "item": "minecraft:raw_gold"
+  },
+  "transitional_item": {
+    "id": "minecraft:gold_nugget",
+    "count": 1
+  },
+  "sequence": [
+    {
+      "type": "create:crushing",
+      "ingredients": [
+        { "item": "minecraft:raw_gold" }
+      ],
+      "results": [
+        { "id": "minecraft:gold_nugget" }
+      ],
+      "processingTime": 50
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        { "item": "minecraft:gold_nugget" },
+        { "item": "create:andesite_alloy" }
+      ],
+      "results": [
+        { "id": "minecraft:gold_nugget" }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        { "item": "minecraft:gold_nugget" }
+      ],
+      "results": [
+        { "id": "minecraft:gold_nugget" }
+      ],
+      "processingTime": 40
+    },
+    {
+      "type": "create:cutting",
+      "ingredients": [
+        { "item": "minecraft:gold_nugget" }
+      ],
+      "results": [
+        { "id": "minecraft:gold_nugget" }
+      ],
+      "processingTime": 40
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        { "item": "minecraft:gold_nugget" },
+        {
+          "type": "neoforge:single",
+          "amount": 250,
+          "fluid": "minecraft:water"
+        }
+      ],
+      "results": [
+        { "id": "minecraft:gold_nugget" }
+      ]
+    },
+    {
+      "type": "create:mixing",
+      "ingredients": [
+        { "item": "minecraft:gold_nugget" },
+        { "item": "minecraft:redstone" },
+        {
+          "type": "neoforge:single",
+          "amount": 250,
+          "fluid": "minecraft:water"
+        }
+      ],
+      "results": [
+        { "id": "minecraft:gold_nugget" }
+      ],
+      "processingTime": 40
+    },
+    {
+      "type": "create:haunting",
+      "ingredients": [
+        { "item": "minecraft:gold_nugget" }
+      ],
+      "results": [
+        { "id": "minecraft:gold_nugget" }
+      ],
+      "processingTime": 50
+    },
+    {
+      "type": "create:splashing",
+      "ingredients": [
+        { "item": "minecraft:gold_nugget" }
+      ],
+      "results": [
+        { "id": "minecraft:gold_nugget" }
+      ],
+      "processingTime": 50
+    },
+    {
+      "type": "minecraft:blasting",
+      "ingredient": {
+        "item": "minecraft:gold_nugget"
+      },
+      "result": {
+        "id": "minecraft:gold_nugget"
+      },
+      "experience": 0.0,
+      "cookingtime": 100
+    },
+    {
+      "type": "minecraft:blasting",
+      "ingredient": {
+        "item": "minecraft:gold_nugget"
+      },
+      "result": {
+        "id": "minecraft:gold_nugget"
+      },
+      "experience": 0.0,
+      "cookingtime": 100
+    },
+    {
+      "type": "minecraft:blasting",
+      "ingredient": {
+        "item": "minecraft:gold_nugget"
+      },
+      "result": {
+        "id": "minecraft:gold_nugget"
+      },
+      "experience": 0.0,
+      "cookingtime": 100
+    },
+    {
+      "type": "minecraft:blasting",
+      "ingredient": {
+        "item": "minecraft:gold_nugget"
+      },
+      "result": {
+        "id": "minecraft:gold_nugget"
+      },
+      "experience": 0.0,
+      "cookingtime": 100
+    },
+    {
+      "type": "minecraft:blasting",
+      "ingredient": {
+        "item": "minecraft:gold_nugget"
+      },
+      "result": {
+        "id": "minecraft:gold_nugget"
+      },
+      "experience": 0.0,
+      "cookingtime": 100
+    },
+    {
+      "type": "minecraft:blasting",
+      "ingredient": {
+        "item": "minecraft:gold_nugget"
+      },
+      "result": {
+        "id": "minecraft:gold_nugget"
+      },
+      "experience": 0.0,
+      "cookingtime": 100
+    },
+    {
+      "type": "minecraft:blasting",
+      "ingredient": {
+        "item": "minecraft:gold_nugget"
+      },
+      "result": {
+        "id": "minecraft:gold_nugget"
+      },
+      "experience": 0.0,
+      "cookingtime": 100
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:gold_ingot",
+      "count": 1,
+      "chance": 1.0
+    }
+  ],
+  "loops": 1
+}

@@ -1,0 +1,100 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "fabric_only_blocker"
+    }
+  ],
+  "fabric:load_conditions": [
+    {
+      "condition": "create_more_farmables:automation_easier_recipes",
+      "config": "heartOfTheSeaFragmentMakingOn"
+    }
+  ],
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "minecraft:slime_ball"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "item": "create_more_farmables:heart_of_the_sea_fragment",
+      "chance": 94.0
+    },
+    {
+      "item": "minecraft:prismarine_crystals",
+      "chance": 3.0
+    },
+    {
+      "item": "minecraft:prismarine_shard",
+      "chance": 3.0
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create_more_farmables:heart_of_the_sea_fragment"
+        },
+        {
+          "item": "minecraft:prismarine_shard"
+        }
+      ],
+      "results": [
+        {
+          "item": "create_more_farmables:heart_of_the_sea_fragment"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create_more_farmables:heart_of_the_sea_fragment"
+        },
+        {
+          "item": "minecraft:prismarine_crystals"
+        }
+      ],
+      "results": [
+        {
+          "item": "create_more_farmables:heart_of_the_sea_fragment"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "create_more_farmables:heart_of_the_sea_fragment"
+        },
+        {
+          "fluid": "create_more_farmables:liquid_redstone",
+          "amount": 32400
+        }
+      ],
+      "results": [
+        {
+          "item": "create_more_farmables:heart_of_the_sea_fragment"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "create_more_farmables:heart_of_the_sea_fragment"
+        }
+      ],
+      "results": [
+        {
+          "item": "create_more_farmables:heart_of_the_sea_fragment"
+        }
+      ]
+    }
+  ],
+  "transitionalItem": {
+    "item": "create_more_farmables:heart_of_the_sea_fragment"
+  }
+}

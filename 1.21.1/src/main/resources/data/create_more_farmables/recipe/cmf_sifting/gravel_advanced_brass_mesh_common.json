@@ -1,0 +1,53 @@
+{
+  "type": "createsifter:sifting",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:create_sifting_recipes",
+      "config": "advancedGravelSiftingOn"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "createsifter:advanced_brass_mesh"
+    },
+    {
+      "item": "minecraft:gravel"
+    }
+  ],
+  "processingTime": 500,
+  "results": [
+    {
+      "chance": 0.15,
+      "id": "create:crushed_raw_iron"
+    },
+    {
+      "chance": 0.25,
+      "id": "minecraft:iron_nugget"
+    },
+    {
+      "chance": 0.15,
+      "id": "create:zinc_nugget"
+    },
+    {
+      "chance": 0.15,
+      "id": "create:crushed_raw_zinc"
+    },
+    {
+      "chance": 0.55,
+      "id": "minecraft:flint"
+    },
+    {
+      "chance": 0.25,
+      "id": "minecraft:lapis_lazuli"
+    },
+    {
+      "chance": 0.05,
+      "id": "minecraft:emerald"
+    },
+    {
+      "chance": 0.05,
+      "id": "create:experience_nugget"
+    }
+  ],
+  "waterlogged": true
+}

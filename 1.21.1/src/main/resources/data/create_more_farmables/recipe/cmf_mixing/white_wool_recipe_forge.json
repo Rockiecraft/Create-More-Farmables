@@ -1,0 +1,26 @@
+{
+  "type": "create:mixing",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:automation_easier_recipes",
+      "config": "whiteWoolMakingOn"
+    }
+  ],
+  "ingredients": [
+    {
+      "count": 1,
+      "item": "create_more_farmables:wood_string_wool_block"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 50,
+      "fluid": "create_more_farmables:white_dyed_water"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "minecraft:white_wool"
+    }
+  ]
+}

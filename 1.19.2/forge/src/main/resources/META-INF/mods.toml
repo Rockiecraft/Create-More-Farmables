@@ -39,20 +39,20 @@ side = "BOTH"
 [[dependencies.create_more_farmables]]
 modId = "botarium"
 mandatory = true
-versionRange = "[1.9.2,)" # Last stable 1.19.2 version
+versionRange = "[1.8.2,)" # Last stable 1.19.2 version
 ordering = "AFTER"
 side = "BOTH"
 
 [[dependencies.create_more_farmables]]
 modId = "resourcefullib"
 mandatory = true
-versionRange = "[1.1.24,)" # Version compatible with 1.19.2
+versionRange = "[1.1.23,)" # Version compatible with 1.19.2
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.create_more_farmables]]
 modId = "create"
-mandatory = true
+mandatory = false
 versionRange = "[0.5.1.f,0.6.0)" # Current 1.19.2 stable branch
 ordering = "NONE"
 side = "BOTH"

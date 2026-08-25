@@ -1,0 +1,20 @@
+{
+  "type": "create_more_farmables:dye_splashing",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:concrete_dye_splashing",
+      "config": "brown"
+    }
+  ],
+  "color": "brown",
+  "ingredients": [
+    {
+      "tag": "create_more_farmables:concretes"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:brown_concrete"
+    }
+  ]
+}

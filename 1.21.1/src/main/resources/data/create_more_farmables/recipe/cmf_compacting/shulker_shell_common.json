@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:automation_easier_recipes",
+      "config": "shulkerShellMakingOn"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create_more_farmables:shulker_shell_fragment"
+    },
+    {
+      "item": "create_more_farmables:shulker_shell_fragment"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:shulker_shell",
+      "count": 1
+    }
+  ]
+}

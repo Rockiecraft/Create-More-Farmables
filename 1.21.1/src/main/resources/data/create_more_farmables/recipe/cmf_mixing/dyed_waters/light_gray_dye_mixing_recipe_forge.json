@@ -1,0 +1,26 @@
+{
+  "type": "create:mixing",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:dyed_water_mixing",
+      "config": "light_gray"
+    }
+  ],
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:light_gray_dye"
+    },
+    {
+      "type": "neoforge:single",
+      "fluid": "minecraft:water",
+      "amount": 50
+    }
+  ],
+  "results": [
+    {
+      "amount": 100,
+      "id": "create_more_farmables:light_gray_dyed_water"
+    }
+  ]
+}

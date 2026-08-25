@@ -1,0 +1,89 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {"type": "create_more_farmables:automation_easier_recipes", "config": "roseQuartzAssemblyMakingOn"}
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "fabric:all_mods_loaded",
+          "values": [
+            "forge"
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "create:sequenced_assembly",
+        "ingredient": {
+          "item": "minecraft:quartz"
+        },
+        "loops": 1,
+        "results": [
+          {
+            "chance": 100.0,
+            "item": "create:rose_quartz"
+          }
+        ],
+        "sequence": [
+          {
+            "type": "create:filling",
+            "ingredients": [
+
+              {
+                "amount": 100,
+                "fluid": "create_more_farmables:liquid_redstone"
+              },
+              {
+                "item": "minecraft:quartz"
+              }
+            ],
+            "results": [
+              {
+                "item": "minecraft:quartz"
+              }
+            ]
+          },
+          {
+            "type": "create:filling",
+            "ingredients": [
+
+              {
+                "amount": 100,
+                "fluid": "create_more_farmables:liquid_redstone"
+              },
+              {
+                "item": "minecraft:quartz"
+              }
+            ],
+            "results": [
+              {
+                "item": "minecraft:quartz"
+              }
+            ]
+          },
+          {
+            "type": "create:filling",
+            "ingredients": [
+              {
+                "amount": 100,
+                "fluid": "create_more_farmables:liquid_redstone"
+              },
+              {
+                "item": "minecraft:quartz"
+              }
+            ],
+            "results": [
+              {
+                "item": "minecraft:quartz"
+              }
+            ]
+          }
+        ],
+        "transitionalItem": {
+          "item": "minecraft:quartz"
+        }
+      }
+    }
+  ]
+}

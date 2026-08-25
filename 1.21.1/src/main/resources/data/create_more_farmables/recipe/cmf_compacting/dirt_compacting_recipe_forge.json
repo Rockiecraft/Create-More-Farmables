@@ -1,0 +1,25 @@
+{
+  "type": "create:compacting",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:automation_easier_recipes",
+      "config": "dirtMakingOn"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "minecraft:sand"
+    },
+    {
+      "type": "neoforge:single",
+      "fluid": "create_more_farmables:brown_dyed_water",
+      "amount": 250
+    }
+  ],
+  "results": [
+    {
+      "amount": 1,
+      "id": "minecraft:dirt"
+    }
+  ]
+}

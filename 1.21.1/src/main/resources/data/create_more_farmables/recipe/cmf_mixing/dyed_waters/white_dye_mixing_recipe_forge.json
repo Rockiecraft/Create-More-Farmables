@@ -1,0 +1,26 @@
+{
+  "type": "create:mixing",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:dyed_water_mixing",
+      "config": "white"
+    }
+  ],
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:white_dye"
+    },
+    {
+      "type": "neoforge:single",
+      "fluid": "minecraft:water",
+      "amount": 50
+    }
+  ],
+  "results": [
+    {
+      "amount": 100,
+      "id": "create_more_farmables:white_dyed_water"
+    }
+  ]
+}

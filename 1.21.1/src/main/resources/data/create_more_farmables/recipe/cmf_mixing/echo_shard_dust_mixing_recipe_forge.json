@@ -1,0 +1,24 @@
+{
+  "type": "create:mixing",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:item_recipes",
+      "config": "echoShardDustOn"
+    }
+  ],
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:flint"
+    },
+    {
+      "item": "create_more_farmables:ender_pearl_dust"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "create_more_farmables:echo_shard_dust"
+    }
+  ]
+}

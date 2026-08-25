@@ -1,0 +1,21 @@
+{
+  "type": "create:crushing",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:item_recipes",
+      "config": "enderpearlDustOn"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "minecraft:ender_pearl"
+    }
+  ],
+  "results": [
+    {
+      "id": "create_more_farmables:ender_pearl_dust",
+      "amount": 1
+    }
+  ],
+  "processingTime": 25
+}

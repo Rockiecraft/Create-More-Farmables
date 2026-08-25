@@ -1,0 +1,62 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "fabricloader"
+        }
+      ],
+      "fabric:load_conditions": [
+        {"condition": "create_more_farmables:automation_easier_recipes", "config": "netheriteScrapV2MakingOn"}
+      ],
+      "recipe": {
+        "type": "create:sequenced_assembly",
+        "ingredient": {
+          "item": "create_more_farmables:netherite_dust"
+        },
+        "transitionalItem": {
+          "item": "create_more_farmables:unprocessed_netherite_dust"
+        },
+        "sequence": [
+          {
+            "type": "create:deploying",
+            "ingredients": [
+              { "item": "create_more_farmables:unprocessed_netherite_dust" },
+              { "item": "create:experience_nugget" }
+            ],
+            "results": [
+              { "item": "create_more_farmables:unprocessed_netherite_dust" }
+            ]
+          },
+          {
+            "type": "create:filling",
+            "ingredients": [
+              { "item": "create_more_farmables:unprocessed_netherite_dust" },
+              { "fluid": "minecraft:lava", "amount": 40500 }
+            ],
+            "results": [
+              { "item": "create_more_farmables:unprocessed_netherite_dust" }
+            ]
+          },
+          {
+            "type": "create:pressing",
+            "ingredients": [
+              { "item": "create_more_farmables:unprocessed_netherite_dust" }
+            ],
+            "results": [
+              { "item": "create_more_farmables:unprocessed_netherite_dust" }
+            ]
+          }
+        ],
+        "results": [
+          { "item": "minecraft:netherite_scrap", "chance": 120.0 },
+          { "item": "create:powdered_obsidian", "chance": 5.0 },
+          { "item": "create:cinder_flour", "chance": 5.0 }
+        ],
+        "loops": 5
+      }
+    }
+  ]
+}

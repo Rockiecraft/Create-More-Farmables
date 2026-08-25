@@ -1,0 +1,46 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "fabric"
+        }
+      ],
+      "fabric:load_conditions": [
+        {"condition": "create_more_farmables:automation_easier_recipes", "config": "ae2CertusQuartzMakingOn"}
+      ],
+      "recipe": {
+        "type": "create:mixing",
+        "ingredients": [
+          {
+            "item": "ae2:certus_quartz_dust"
+          },
+          {
+            "item": "minecraft:quartz"
+          },
+          {
+            "item": "minecraft:quartz"
+          },
+          {
+            "item": "minecraft:quartz"
+          },
+          {
+            "item": "minecraft:quartz"
+          },
+          {
+            "fluid": "create_more_farmables:light_blue_dyed_water",
+            "amount": 8100
+          }
+        ],
+        "results": [
+          {
+            "item": "ae2:certus_quartz_crystal",
+            "count": 4
+          }
+        ]
+      }
+    }
+  ]
+}

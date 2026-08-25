@@ -1,0 +1,27 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {"type": "create_more_farmables:automation_easier_recipes", "config": "andesiteNetherrackMakingOn"}
+      ],
+      "fabric:load_conditions": [
+        {"condition": "create_more_farmables:automation_easier_recipes", "config": "andesiteNetherrackMakingOn"}
+      ],
+      "recipe": {
+        "type": "create:haunting",
+        "ingredients": [
+          {
+            "item": "minecraft:andesite"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:netherrack",
+            "amount": 1
+          }
+        ]
+      }
+    }
+  ]
+}

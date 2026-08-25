@@ -1,0 +1,31 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "fabricloader"
+        }
+      ],
+      "fabric:load_conditions": [
+        {"condition": "create_more_farmables:automation_easier_recipes", "config": "liquidQuartzMakingOn"}
+      ],
+      "recipe": {
+        "type": "create:mixing",
+        "heatRequirement": "heated",
+        "ingredients": [
+          {
+            "item": "minecraft:quartz"
+          }
+        ],
+        "results": [
+          {
+            "fluid": "create_more_farmables:liquid_quartz",
+            "amount": 16200
+          }
+        ]
+      }
+    }
+  ]
+}

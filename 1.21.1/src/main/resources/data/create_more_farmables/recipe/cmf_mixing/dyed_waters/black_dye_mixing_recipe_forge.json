@@ -1,0 +1,26 @@
+{
+  "type": "create:mixing",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:dyed_water_mixing",
+      "config": "black"
+    }
+  ],
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:black_dye"
+    },
+    {
+      "type": "neoforge:single",
+      "fluid": "minecraft:water",
+      "amount": 50
+    }
+  ],
+  "results": [
+    {
+      "amount": 100,
+      "id": "create_more_farmables:black_dyed_water"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {"type": "create_more_farmables:automation_easier_recipes", "config": "dioriteAssemblyMakingOn"}
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "fabric:all_mods_loaded",
+          "values": [
+            "forge"
+          ]
+        }
+      ],
+      "recipe": {
+        "type": "create:sequenced_assembly",
+        "ingredient": {
+          "item": "minecraft:cobblestone"
+        },
+        "loops": 1,
+        "results": [
+          {
+            "chance": 100.0,
+            "item": "minecraft:diorite"
+          }
+        ],
+        "sequence": [
+          {
+            "type": "create:filling",
+            "ingredients": [
+              {"fluid": "create_more_farmables:liquid_quartz","amount": 100},
+              {"item": "minecraft:cobblestone"}
+            ],
+            "results": [
+              {
+                "item": "minecraft:cobblestone"
+              }
+            ]
+          },
+          {
+            "type": "create:filling",
+            "ingredients": [
+              {"fluid": "create_more_farmables:liquid_quartz","amount": 100},
+              {"item": "minecraft:cobblestone"}
+            ],
+            "results": [
+              {
+                "item": "minecraft:cobblestone"
+              }
+            ]
+          }
+        ],
+        "transitionalItem": {
+          "item": "minecraft:cobblestone"
+        }
+      }
+    }
+  ]
+}

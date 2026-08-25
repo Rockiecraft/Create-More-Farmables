@@ -1,0 +1,69 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "fabricloader"
+        }
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "fabric:all_mods_loaded",
+          "values": [
+            "fabricloader",
+            "create_enchantment_industry"
+          ]
+        },
+        {"type": "create_more_farmables:automation_easier_recipes", "config": "netheriteScrapMakingOn"}
+      ],
+      "recipe": {
+        "type": "create:sequenced_assembly",
+        "ingredient": {
+          "item": "create_more_farmables:netherite_dust"
+        },
+        "transitionalItem": {
+          "item": "create_more_farmables:unprocessed_netherite_dust"
+        },
+        "sequence": [
+          {
+            "type": "create:filling",
+            "ingredients": [
+              { "item": "create_more_farmables:unprocessed_netherite_dust" },
+              { "fluid": "create_enchantment_industry:experience", "amount": 1215 }
+            ],
+            "results": [
+              { "item": "create_more_farmables:unprocessed_netherite_dust" }
+            ]
+          },
+          {
+            "type": "create:filling",
+            "ingredients": [
+              { "item": "create_more_farmables:unprocessed_netherite_dust" },
+              { "fluid": "minecraft:lava", "amount": 40500 }
+            ],
+            "results": [
+              { "item": "create_more_farmables:unprocessed_netherite_dust" }
+            ]
+          },
+          {
+            "type": "create:pressing",
+            "ingredients": [
+              { "item": "create_more_farmables:unprocessed_netherite_dust" }
+            ],
+            "results": [
+              { "item": "create_more_farmables:unprocessed_netherite_dust" }
+            ]
+          }
+        ],
+        "results": [
+          { "item": "minecraft:netherite_scrap", "chance": 120.0 },
+          { "item": "create:powdered_obsidian", "chance": 5.0 },
+          { "item": "create:cinder_flour", "chance": 5.0 }
+        ],
+        "loops": 5
+      }
+    }
+  ]
+}

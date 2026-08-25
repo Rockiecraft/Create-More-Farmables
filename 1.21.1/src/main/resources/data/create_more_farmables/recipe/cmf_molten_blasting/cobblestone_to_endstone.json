@@ -1,0 +1,14 @@
+{
+  "type": "create_more_farmables:molten_blasting",
+  "fluid": "create_more_farmables:molten_endstone",
+  "ingredients": [
+    {
+      "item": "minecraft:cobblestone"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:end_stone"
+    }
+  ]
+}

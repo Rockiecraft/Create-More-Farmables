@@ -1,0 +1,48 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {"type": "create_more_farmables:create_sifting_recipes", "config": "advancedSandSiftingOn"}
+      ],
+      "fabric:load_conditions": [
+        {"condition": "create_more_farmables:create_sifting_recipes", "config": "advancedSandSiftingOn"}
+      ],
+      "recipe": {
+        "type": "createsifter:sifting",
+        "ingredients": [
+          {
+            "item": "createsifter:advanced_brass_mesh"
+          },
+          {
+            "item": "minecraft:sand"
+          }
+        ],
+        "processingTime": 500,
+        "results": [
+          {
+            "chance": 0.25,
+            "item": "minecraft:clay_ball"
+          },
+          {
+            "chance": 0.35,
+            "item": "minecraft:scute"
+          },
+          {
+            "chance": 0.08,
+            "item": "minecraft:diamond"
+          },
+          {
+            "chance": 0.25,
+            "item": "minecraft:coal"
+          },
+          {
+            "chance": 0.15,
+            "item": "create:experience_nugget"
+          }
+        ],
+        "waterlogged": true
+      }
+    }
+  ]
+}

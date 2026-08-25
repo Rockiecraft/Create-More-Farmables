@@ -1,0 +1,15 @@
+{
+  "type": "create_more_farmables:molten_blasting",
+  "fluid": "create_more_farmables:liquid_redstone",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_nugget"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:redstone",
+      "count": 2
+    }
+  ]
+}

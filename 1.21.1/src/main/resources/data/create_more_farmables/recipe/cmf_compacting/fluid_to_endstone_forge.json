@@ -1,0 +1,34 @@
+{
+  "type": "create:compacting",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:automation_easier_recipes",
+      "config": "endstoneMakingOn"
+    }
+  ],
+  "ingredients": [
+    {
+      "type": "neoforge:single",
+      "amount": 500,
+      "fluid": "create_more_farmables:molten_endstone"
+    },
+    {
+      "item": "minecraft:cobblestone"
+    },
+    {
+      "item": "minecraft:cobblestone"
+    },
+    {
+      "item": "minecraft:cobblestone"
+    },
+    {
+      "item": "minecraft:cobblestone"
+    }
+  ],
+  "results": [
+    {
+      "count": 4,
+      "id": "minecraft:end_stone"
+    }
+  ]
+}

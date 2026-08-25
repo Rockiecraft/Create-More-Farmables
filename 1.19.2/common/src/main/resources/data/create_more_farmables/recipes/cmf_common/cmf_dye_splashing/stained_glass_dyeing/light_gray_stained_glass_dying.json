@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "create_more_farmables:stained_glass_dye_splashing",
+          "config": "light_gray"
+        }
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "create_more_farmables:stained_glass_dye_splashing",
+          "config": "light_gray"
+        }
+      ],
+      "recipe": {
+        "type": "create_more_farmables:dye_splashing",
+        "color": "light_gray",
+        "ingredients": [
+          {
+            "tag": "create_more_farmables:stained_glass"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:light_gray_stained_glass"
+          }
+        ]
+      }
+    }
+  ]
+}

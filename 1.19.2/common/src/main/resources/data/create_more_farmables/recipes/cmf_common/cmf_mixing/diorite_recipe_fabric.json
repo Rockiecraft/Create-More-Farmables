@@ -1,0 +1,36 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {"type": "create_more_farmables:automation_easier_recipes", "config": "dioriteMakingOn"}
+      ],
+      "fabric:load_conditions": [
+        {"condition": "create_more_farmables:automation_easier_recipes", "config": "dioriteMakingOn"}
+      ],
+      "recipe": {
+        "type": "create:mixing",
+        "ingredients": [
+          {
+            "item": "minecraft:cobblestone"
+          },
+          {
+            "item": "minecraft:cobblestone"
+          },
+          {
+            "item": "minecraft:quartz"
+          },
+          {
+            "item": "minecraft:quartz"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:diorite",
+            "count": 2
+          }
+        ]
+      }
+    }
+  ]
+}

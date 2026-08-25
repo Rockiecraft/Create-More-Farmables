@@ -1,0 +1,10 @@
+{
+  "type": "create_more_farmables:dye_splashing",
+  "color": "red",
+  "ingredients": [
+    { "item": "minecraft:sand" }
+  ],
+  "results": [
+    { "item": "minecraft:red_sand" }
+  ]
+}

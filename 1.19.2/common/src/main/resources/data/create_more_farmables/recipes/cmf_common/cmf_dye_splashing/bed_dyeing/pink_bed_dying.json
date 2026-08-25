@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "create_more_farmables:bed_dye_splashing",
+          "config": "pink"
+        }
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "create_more_farmables:bed_dye_splashing",
+          "config": "pink"
+        }
+      ],
+      "recipe": {
+        "type": "create_more_farmables:dye_splashing",
+        "color": "pink",
+        "ingredients": [
+          {
+            "tag": "minecraft:beds"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:pink_bed"
+          }
+        ]
+      }
+    }
+  ]
+}

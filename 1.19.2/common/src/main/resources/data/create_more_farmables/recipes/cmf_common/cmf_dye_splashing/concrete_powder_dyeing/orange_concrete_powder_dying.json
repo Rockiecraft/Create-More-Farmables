@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "create_more_farmables:concrete_powder_dye_splashing",
+          "config": "orange"
+        }
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "create_more_farmables:concrete_powder_dye_splashing",
+          "config": "orange"
+        }
+      ],
+      "recipe": {
+        "type": "create_more_farmables:dye_splashing",
+        "color": "orange",
+        "ingredients": [
+          {
+            "tag": "create_more_farmables:concrete_powders"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:orange_concrete_powder"
+          }
+        ]
+      }
+    }
+  ]
+}

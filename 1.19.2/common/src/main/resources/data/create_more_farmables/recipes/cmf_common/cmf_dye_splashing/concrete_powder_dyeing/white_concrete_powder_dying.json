@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "create_more_farmables:concrete_powder_dye_splashing",
+          "config": "white"
+        }
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "create_more_farmables:concrete_powder_dye_splashing",
+          "config": "white"
+        }
+      ],
+      "recipe": {
+        "type": "create_more_farmables:dye_splashing",
+        "color": "white",
+        "ingredients": [
+          {
+            "tag": "create_more_farmables:concrete_powders"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:white_concrete_powder"
+          }
+        ]
+      }
+    }
+  ]
+}

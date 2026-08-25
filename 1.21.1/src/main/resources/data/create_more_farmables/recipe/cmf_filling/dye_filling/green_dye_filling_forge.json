@@ -1,0 +1,24 @@
+{
+  "type": "create:filling",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:dye_template_filling",
+      "config": "green"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "create_more_farmables:dye_template"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 100,
+      "fluid": "create_more_farmables:green_dyed_water"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:green_dye"
+    }
+  ]
+}

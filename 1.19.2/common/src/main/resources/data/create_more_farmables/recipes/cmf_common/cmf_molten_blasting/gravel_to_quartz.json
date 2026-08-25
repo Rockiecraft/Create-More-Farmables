@@ -1,0 +1,15 @@
+{
+  "type": "create_more_farmables:molten_blasting",
+  "fluid": "create_more_farmables:liquid_quartz",
+  "ingredients": [
+    {
+      "item": "minecraft:gravel"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:quartz",
+      "chance": 0.5
+    }
+  ]
+}

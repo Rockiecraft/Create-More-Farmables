@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "create_more_farmables:wool_dye_splashing",
+          "config": "lime"
+        }
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "create_more_farmables:wool_dye_splashing",
+          "config": "lime"
+        }
+      ],
+      "recipe": {
+        "type": "create_more_farmables:dye_splashing",
+        "color": "lime",
+        "ingredients": [
+          {
+            "tag": "minecraft:wool"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:lime_wool"
+          }
+        ]
+      }
+    }
+  ]
+}

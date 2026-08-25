@@ -1,0 +1,20 @@
+{
+  "type": "create_more_farmables:dye_splashing",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:wool_dye_splashing",
+      "config": "green"
+    }
+  ],
+  "color": "green",
+  "ingredients": [
+    {
+      "tag": "minecraft:wool"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:green_wool"
+    }
+  ]
+}

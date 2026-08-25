@@ -1,0 +1,40 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "create_more_farmables:create_replacement_recipes",
+          "config": "scoriaToLapisLazuli"
+        }
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "create_more_farmables:create_replacement_recipes",
+          "config": "scoriaToLapisLazuli"
+        }
+      ],
+      "recipe": {
+        "type": "create:crushing",
+        "ingredients": [
+          {
+            "item": "create:scoria"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:lapis_lazuli",
+            "amount": 1,
+            "chance": 0.7
+          },
+          {
+            "item": "minecraft:lapis_lazuli",
+            "count": 3,
+            "chance": 0.35
+          }
+        ],
+        "processingTime": 250
+      }
+    }
+  ]
+}

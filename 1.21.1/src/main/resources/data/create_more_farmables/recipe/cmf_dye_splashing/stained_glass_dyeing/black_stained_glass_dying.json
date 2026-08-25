@@ -1,0 +1,20 @@
+{
+  "type": "create_more_farmables:dye_splashing",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:stained_glass_dye_splashing",
+      "config": "black"
+    }
+  ],
+  "color": "black",
+  "ingredients": [
+    {
+      "tag": "create_more_farmables:stained_glass"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:black_stained_glass"
+    }
+  ]
+}

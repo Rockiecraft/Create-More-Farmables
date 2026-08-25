@@ -1,0 +1,33 @@
+{
+  "type": "create:mixing",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:item_recipes",
+      "config": "shulkerShellFragmentOn"
+    }
+  ],
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "create_more_farmables:shulker_compound"
+    },
+    {
+      "item": "create_more_farmables:shulker_compound"
+    },
+    {
+      "item": "create_more_farmables:shulker_compound"
+    },
+    {
+      "item": "create_more_farmables:shulker_compound"
+    },
+    {
+      "item": "minecraft:end_stone"
+    }
+  ],
+  "results": [
+    {
+      "id": "create_more_farmables:shulker_shell_fragment",
+      "count": 2
+    }
+  ]
+}

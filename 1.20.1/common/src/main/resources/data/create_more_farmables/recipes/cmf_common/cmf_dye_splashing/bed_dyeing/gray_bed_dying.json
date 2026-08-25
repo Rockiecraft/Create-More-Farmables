@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "create_more_farmables:bed_dye_splashing",
+          "config": "gray"
+        }
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "create_more_farmables:bed_dye_splashing",
+          "config": "gray"
+        }
+      ],
+      "recipe": {
+        "type": "create_more_farmables:dye_splashing",
+        "color": "gray",
+        "ingredients": [
+          {
+            "tag": "minecraft:beds"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:gray_bed"
+          }
+        ]
+      }
+    }
+  ]
+}

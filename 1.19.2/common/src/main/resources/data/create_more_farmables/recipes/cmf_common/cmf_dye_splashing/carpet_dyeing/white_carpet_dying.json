@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "create_more_farmables:carpet_dye_splashing",
+          "config": "white"
+        }
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "create_more_farmables:carpet_dye_splashing",
+          "config": "white"
+        }
+      ],
+      "recipe": {
+        "type": "create_more_farmables:dye_splashing",
+        "color": "white",
+        "ingredients": [
+          {
+            "tag": "create_more_farmables:carpets"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:white_carpet"
+          }
+        ]
+      }
+    }
+  ]
+}

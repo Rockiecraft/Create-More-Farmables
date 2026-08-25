@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "create_more_farmables:carpet_dye_splashing",
+          "config": "orange"
+        }
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "create_more_farmables:carpet_dye_splashing",
+          "config": "orange"
+        }
+      ],
+      "recipe": {
+        "type": "create_more_farmables:dye_splashing",
+        "color": "orange",
+        "ingredients": [
+          {
+            "tag": "create_more_farmables:carpets"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:orange_carpet"
+          }
+        ]
+      }
+    }
+  ]
+}

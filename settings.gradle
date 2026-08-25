@@ -8,7 +8,7 @@ pluginManagement {
 }
 
 
-includeBuild '1.19.2'
-includeBuild '1.20.1'
+//includeBuild '1.19.2'
+//includeBuild '1.20.1'
 
-//includeBuild '1.21.1'
+includeBuild '1.21.1'

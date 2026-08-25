@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "create_more_farmables:concrete_dye_splashing",
+          "config": "light_blue"
+        }
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "create_more_farmables:concrete_dye_splashing",
+          "config": "light_blue"
+        }
+      ],
+      "recipe": {
+        "type": "create_more_farmables:dye_splashing",
+        "color": "light_blue",
+        "ingredients": [
+          {
+            "tag": "create_more_farmables:concretes"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:light_blue_concrete"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "type": "create:sequenced_assembly",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:automation_easier_recipes",
+      "config": "roseQuartzAssemblyMakingOn"
+    }
+  ],
+  "ingredient": {
+    "item": "minecraft:quartz"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "chance": 100.0,
+      "id": "create:rose_quartz"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "type": "neoforge:single",
+          "amount": 100,
+          "fluid": "create_more_farmables:liquid_redstone"
+        },
+        {
+          "item": "minecraft:quartz"
+        }
+      ],
+      "results": [
+        {
+          "id": "minecraft:quartz"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "type": "neoforge:single",
+          "amount": 100,
+          "fluid": "create_more_farmables:liquid_redstone"
+        },
+        {
+          "item": "minecraft:quartz"
+        }
+      ],
+      "results": [
+        {
+          "id": "minecraft:quartz"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "type": "neoforge:single",
+          "amount": 100,
+          "fluid": "create_more_farmables:liquid_redstone"
+        },
+        {
+          "item": "minecraft:quartz"
+        }
+      ],
+      "results": [
+        {
+          "id": "minecraft:quartz"
+        }
+      ]
+    }
+  ],
+  "transitionalItem": {
+    "item": "minecraft:quartz"
+  }
+}

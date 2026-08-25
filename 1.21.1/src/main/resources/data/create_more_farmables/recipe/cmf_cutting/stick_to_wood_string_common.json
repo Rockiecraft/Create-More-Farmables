@@ -1,0 +1,22 @@
+{
+  "type": "create:cutting",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:item_recipes",
+      "config": "woodStringOn"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "minecraft:stick"
+    }
+  ],
+  "results": [
+    {
+      "id": "create_more_farmables:wood_string",
+      "count": 2,
+      "amount": 2
+    }
+  ],
+  "processingTime": 50
+}

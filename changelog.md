@@ -1,44 +1,64 @@
 
-## DEV 0.9
+## IN DEV 1.0.0
 
 ### New Additions -
 
-- ### Port - 1.19.2
+#### Platform Support -
+- Full Fabric support for 1.19.2 and 1.20.1
+- NeoForge support for 1.21.1 (Create Fabric skipping 1.21.1 entirely)
+- Combined Fabric/Forge jars using [Forgix](https://github.com/PacifistMC/Forgix)
 
-#### Items -
-
+#### New Items -
 - Echo Shard dust + Recipe
-- Ender Pearl Dust + recipe
-- Heart of the Sea fragment + Recipe
-- Heart of the Sea can now be crafted with 2 Heart of the Sea Fragments
-- Nautilus Shell Fragment + recipe
-- Nautilus Shells can now be crafted with 2 Nautilus Shell Fragments
+- Ender Pearl Dust + Recipe
+- Heart of the Sea fragments (craftable into full Heart of the Sea with 2 fragments)
+- Nautilus Shell fragments (craftable into Nautilus Shell with 2 fragments)
+- Redstone Link Frequency items (1-32) for frequency management
 
-#### Config -
+#### New Custom Processing Types -
+- Dye Splashing (fan-based dyeing with dyed waters)
+- Molten Blasting (custom fluid smelting/processing)
+- Advanced Assembly (Sequenced assembly with more recipe types available)
 
-- There is now a Config to disable recipes for anything
+#### Fluid Interactions & Mechanics -
+- Molten Endstone, Liquid Redstone, and Liquid Quartz now deal fire damage when stepped in
+- Molten Endstone, Liquid Redstone, and Liquid Quartz now react with water, producing specific blocks
+- Dyed Waters can dye items with dyed variants (Stained Glass, Wool, Terracotta, etc.)
+- Items now properly interact with all CMF fluids (burning in molten fluids, floating in dyed waters)
+- All molten fluids and dyed waters have custom sounds and particles
+
+
+#### Configuration System -
+- Master config system to disable recipes by category and individual recipe level
+- Toggle Molten/Liquid Redstone/Quartz water interactions
+- Configurable blocks produced when molten fluids touch water
 
 ### Changes & Balances -
-#### Mod Infrastructure & Combined jars
-- #### CMF now runs on [Architectury API](https://modrinth.com/mod/architectury-api), [Botarium](https://modrinth.com/mod/botarium), [Resourcefullib](https://modrinth.com/mod/resourceful-lib) & [ResourcefulConfig](https://modrinth.com/mod/resourceful-config) allowing for both forge and fabric to have parity through one set of code & to manage fluids better
-- #### Forge and Fabric will be shipped in the same jar using [forgix](https://github.com/PacifistMC/Forgix)
 
-#### Create sifting -
-- Balanced sifting recipes as they were op and are not anymore
-#### CMF liquid Interactions
-- Molten Endstone, Liquid Redstone and Liquid Quartz now deal fire damage when stepped in
-- Molten Endstone, Liquid Redstone and Liquid Quartz now have a reaction when touching water producing a block
+#### Architecture & Infrastructure -
+- 1.19.2 & 1.20.1: Complete rewrite from single-platform Forge to multi-platform using [Architectury API](https://modrinth.com/mod/architectury-api)
+- 1.21.1: purely Neoforge, fabric support dropped.
+- All versions: Adopted [ResourcefulLib](https://modrinth.com/mod/resourceful-lib) and [ResourcefulConfig](https://modrinth.com/mod/resourceful-config) for configuration management
 
+
+#### Dependency Updates -
+- 1.19.2: Create 0.5.1.i 
+- 1.20.1: Create 6.0.8
+- 1.21.1: Create 6.0.10-280+
+- All versions use Create 0.5.1+ or later versions
+- ResourcefulLib and ResourcefulConfig 
 
 ### Fixes -
 
-- liquid amounts in recipes on Fabric
+- Fixed liquid amounts in recipes on Fabric platforms
+- Improved fluid tank and basin compatibility across platforms
 
-### Credits - 
+### Credits -
 
-- Echo shard dust & Ender Pearl dust textures - [v3lsk](https://github.com/v3lsk)
-- Nautilus Shell fragment & Heart of the sea fragment textures - [v3lsk](https://github.com/v3lsk)
-- Molten Endstone Bucket, Liquid Redstone bucket And Liquid Quartz Bucket textures - [v3lsk](https://github.com/v3lsk)
+#### Textures -
+- Echo Shard dust & Ender Pearl dust - [v3lsk](https://github.com/v3lsk)
+- Nautilus Shell fragment & Heart of the Sea fragment - [v3lsk](https://github.com/v3lsk)
+- Molten Endstone, Liquid Redstone, and Liquid Quartz buckets - [v3lsk](https://github.com/v3lsk)
 
 ---
 ## 0.8.2

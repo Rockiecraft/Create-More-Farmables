@@ -1,0 +1,27 @@
+{
+  "type": "create:mixing",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:automation_easier_recipes",
+      "config": "calciteMakingOn"
+    }
+  ],
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "count": 1,
+      "item": "minecraft:stone"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 200,
+      "fluid": "create_more_farmables:white_dyed_water"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "minecraft:calcite"
+    }
+  ]
+}

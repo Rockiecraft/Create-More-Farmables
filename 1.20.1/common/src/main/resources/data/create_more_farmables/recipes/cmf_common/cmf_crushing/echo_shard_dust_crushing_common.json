@@ -1,0 +1,28 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {"type": "create_more_farmables:item_recipes", "config": "echoShardDustCrushingOn"}
+      ],
+      "fabric:load_conditions": [
+        {"condition": "create_more_farmables:item_recipes", "config": "echoShardDustCrushingOn"}
+      ],
+      "recipe": {
+        "type": "create:crushing",
+        "ingredients": [
+          {
+            "item": "minecraft:echo_shard"
+          }
+        ],
+        "results": [
+          {
+            "item": "create_more_farmables:echo_shard_dust",
+            "amount": 1
+          }
+        ],
+        "processingTime": 25
+      }
+    }
+  ]
+}

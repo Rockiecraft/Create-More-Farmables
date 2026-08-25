@@ -1,0 +1,24 @@
+{
+  "type": "create:mixing",
+  "neoforge:conditions": [
+    {
+      "type": "create_more_farmables:automation_easier_recipes",
+      "config": "echoShardMakingOn"
+    }
+  ],
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:amethyst_shard"
+    },
+    {
+      "item": "create_more_farmables:echo_shard_dust"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "minecraft:echo_shard"
+    }
+  ]
+}

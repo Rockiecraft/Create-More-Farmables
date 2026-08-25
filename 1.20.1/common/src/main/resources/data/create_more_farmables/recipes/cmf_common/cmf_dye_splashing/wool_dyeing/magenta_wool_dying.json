@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "create_more_farmables:wool_dye_splashing",
+          "config": "magenta"
+        }
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "create_more_farmables:wool_dye_splashing",
+          "config": "magenta"
+        }
+      ],
+      "recipe": {
+        "type": "create_more_farmables:dye_splashing",
+        "color": "magenta",
+        "ingredients": [
+          {
+            "tag": "minecraft:wool"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:magenta_wool"
+          }
+        ]
+      }
+    }
+  ]
+}

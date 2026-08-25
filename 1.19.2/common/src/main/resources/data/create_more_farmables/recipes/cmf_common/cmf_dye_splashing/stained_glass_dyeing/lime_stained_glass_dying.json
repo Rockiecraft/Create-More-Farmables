@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "create_more_farmables:stained_glass_dye_splashing",
+          "config": "lime"
+        }
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "create_more_farmables:stained_glass_dye_splashing",
+          "config": "lime"
+        }
+      ],
+      "recipe": {
+        "type": "create_more_farmables:dye_splashing",
+        "color": "lime",
+        "ingredients": [
+          {
+            "tag": "create_more_farmables:stained_glass"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:lime_stained_glass"
+          }
+        ]
+      }
+    }
+  ]
+}

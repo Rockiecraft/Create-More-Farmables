@@ -1,0 +1,31 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "fabricloader"
+        }
+      ],
+      "fabric:load_conditions": [
+        {"condition": "create_more_farmables:automation_easier_recipes", "config": "liquidRedstoneMakingOn"}
+      ],
+      "recipe": {
+        "type": "create:mixing",
+        "heatRequirement": "heated",
+        "ingredients": [
+          {
+            "item": "minecraft:redstone"
+          }
+        ],
+        "results": [
+          {
+            "fluid": "create_more_farmables:liquid_redstone",
+            "amount": 16200
+          }
+        ]
+      }
+    }
+  ]
+}

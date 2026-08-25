@@ -1,0 +1,34 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "fabricloader"
+        }
+      ],
+      "fabric:load_conditions": [
+        {"condition": "create_more_farmables:automation_easier_recipes", "config": "dirtMakingOn"}
+      ],
+      "recipe": {
+        "type": "create:compacting",
+        "ingredients": [
+          {
+            "item": "minecraft:sand"
+          },
+          {
+            "fluid": "create_more_farmables:brown_dyed_water",
+            "amount": 20250
+          }
+        ],
+        "results": [
+          {
+            "amount": 1,
+            "item": "minecraft:dirt"
+          }
+        ]
+      }
+    }
+  ]
+}

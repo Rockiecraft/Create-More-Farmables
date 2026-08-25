@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "create_more_farmables:carpet_dye_splashing",
+          "config": "brown"
+        }
+      ],
+      "fabric:load_conditions": [
+        {
+          "condition": "create_more_farmables:carpet_dye_splashing",
+          "config": "brown"
+        }
+      ],
+      "recipe": {
+        "type": "create_more_farmables:dye_splashing",
+        "color": "brown",
+        "ingredients": [
+          {
+            "tag": "create_more_farmables:carpets"
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:brown_carpet"
+          }
+        ]
+      }
+    }
+  ]
+}

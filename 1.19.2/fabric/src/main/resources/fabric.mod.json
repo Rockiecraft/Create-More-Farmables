@@ -16,18 +16,18 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.rockiecraft.fabric.CreateMoreFarmablesFabric"
+      "net.rockiecraft.v1_19_2.fabric.CreateMoreFarmablesFabric"
     ],
     "client": [
-      "net.rockiecraft.fabric.client.CreateMoreFarmablesFabricClient"
+      "net.rockiecraft.v1_19_2.fabric.client.CreateMoreFarmablesFabricClient"
     ],
     "modmenu": [
-      "net.rockiecraft.common.config.fabric.ModMenuConfig"
+      "net.rockiecraft.v1_19_2.common.config.fabric.ModMenuConfig"
+    ],
+    "jei_mod_plugin": [
+      "net.rockiecraft.foundation.compat.jei.CreateMoreFarmablesJEI"
     ]
   },
-  "mixins": [
-    "create_more_farmables.mixins.json"
-  ],
   "depends": {
     "fabricloader": ">=0.18.4",
     "minecraft": "~1.19.2",

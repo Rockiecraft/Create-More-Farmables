@@ -1,0 +1,46 @@
+{
+  "type": "create_more_farmables:advanced_assembly",
+  "ingredient": {
+    "item": "minecraft:raw_iron"
+  },
+  "transitional_item": {
+    "id": "minecraft:iron_nugget",
+    "count": 1
+  },
+  "sequence": [
+    {
+      "type": "minecraft:blasting",
+      "ingredient": {
+        "item": "minecraft:iron_nugget"
+      },
+      "result": {
+        "id": "minecraft:iron_nugget",
+        "count": 1
+      },
+      "experience": 0.1,
+      "cookingtime": 100
+    },
+    {
+      "type": "create_more_farmables:dye_splashing",
+      "color": "light_gray",
+      "ingredients": [
+        {
+          "item": "minecraft:iron_nugget"
+        }
+      ],
+      "results": [
+        {
+          "id": "minecraft:iron_nugget"
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:iron_ingot",
+      "count": 1,
+      "chance": 1.0
+    }
+  ],
+  "loops": 1
+}
